@@ -5,15 +5,15 @@ var dialogue = {
 		"dialogue":
 			"Character dialogue",
 		"Option1": {
-			"text": "Yes",
-			"value": "example_effect"
+			"text": "affirmative",
+			"value": ""
 		},
 		"Option2": {
-			"text": "No",
+			"text": "negative",
 			"value": ""
 		},
 		"Option3": {
-			"text": "Maybe",
+			"text": "possibly",
 			"value": ""
 		}
 	},

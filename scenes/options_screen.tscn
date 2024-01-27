@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cqxsji8b1trlp"]
 
-[ext_resource type="Script" path="res://scenes/BackButton.gd" id="1_qxqv8"]
+[ext_resource type="Script" path="res://scripts/BackButton.gd" id="1_qxqv8"]
 
 [node name="OptionsScreen" type="Node"]
 
