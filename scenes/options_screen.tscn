@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqxsji8b1trlp"]
 
-[ext_resource type="Script" path="res://scenes/options_screen.gd" id="1_fxr2c"]
-[ext_resource type="Script" path="res://scenes/BackButton.gd" id="1_qxqv8"]
+[ext_resource type="Script" path="res://scripts/options_screen.gd" id="1_fxr2c"]
+[ext_resource type="Script" path="res://scripts/BackButton.gd" id="1_qxqv8"]
 [ext_resource type="Script" path="res://scripts/DifficultyButton.gd" id="3_dj1ha"]
 
 [node name="OptionsScreen" type="Node"]
