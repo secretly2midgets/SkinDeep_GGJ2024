@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh4kyu5yefx4n"]
+
+[ext_resource type="Script" path="res://scenes/romantic_partner.gd" id="1_l68dv"]
+[ext_resource type="Texture2D" uid="uid://by81cue5j5d7k" path="res://icon.svg" id="2_dxp6s"]
+
+[node name="RomanticPartner" type="Node2D"]
+position = Vector2(932, 485)
+script = ExtResource("1_l68dv")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dxp6s")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
