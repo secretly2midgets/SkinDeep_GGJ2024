@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh4kyu5yefx4n"]
 
-[ext_resource type="Script" path="res://scenes/romantic_partner.gd" id="1_l68dv"]
+[ext_resource type="Script" path="res://scripts/romantic_partner.gd" id="1_l68dv"]
 [ext_resource type="Texture2D" uid="uid://dd7spdk31ankj" path="res://resources/sprites/basic_guy.png" id="2_eeqtv"]
 
 [node name="RomanticPartner" type="Node2D"]
