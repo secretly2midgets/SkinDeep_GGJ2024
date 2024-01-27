@@ -1,0 +1,11 @@
+join Narrator 2
+Narrator: You are cold.
+Narrator: You are alone.
+Narrator: The curtains are screaming at you.
+Narrator: There’s something out there.
+Narrator: Waiting.
+Narrator: Stalking. 
+Narrator: Why are you single?
+Narrator: You rack a slug in your shotgun. It is time to find love.
+leave Narrator
+jump MasonFirstDate/

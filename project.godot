@@ -28,7 +28,8 @@ directories/dch_directory={
 "Narrator": "res://dialogic/characters/Narrator.dch"
 }
 directories/dtl_directory={
-"MasonFirstDate": "res://dialogic/timelines/MasonFirstDate.dtl"
+"MasonFirstDate": "res://dialogic/timelines/MasonFirstDate.dtl",
+"OpeningNarration": "res://resources/sprites/OpeningNarration.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
