@@ -1,20 +1,16 @@
-extends Node2D
+extends Node
 
-var rngSeeder = RandomNumberGenerator.new()
-var p1 
-var p2
-
+var rando = RandomNumberGenerator.new()
 
 
 # Called when the node enters the scene tree for the first time.
-func SendRandom(car):
-	p1 = 0
-	p2 = 1
-	rngSeeder.randomize()
-	print(rngSeeder.seed)
-	if p1 == rngSeeder:
-		print(p1)
-	car = rngSeeder
-		
-	
+
  
+
+
+func _on_menu_demon(value):
+	rando.seed = value
+	print(rando.randi_range(0,7))
+	print(rando.randi_range(0,7))
+	rando.seed = value
+	print(rando.randi_range(0,7))
