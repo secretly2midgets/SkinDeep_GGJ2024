@@ -18,6 +18,7 @@ func _on_options_button_pressed():
 
 func _on_new_game_button_pressed():
 	# Setting up the demon seed to send to the game
+	demonSeeder.randomize()
 	emit_signal("demon", demonSeeder.seed)
 	get_tree().change_scene_to_file(actual_game)
 
