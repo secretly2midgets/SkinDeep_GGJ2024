@@ -1,4 +1,4 @@
-join MasonFoster 1
+join MasonFoster 3
 MasonFoster (Default_Test): Hey there. Name's Mason Foster, but my friends call my Fossey. Great to meet you!
 label InitialChoices
 MasonFoster (Default_Test): I love this cafe. Their Chai Lattes are the best in town, you'll see.
@@ -8,7 +8,8 @@ MasonFoster (Default_Test): I love this cafe. Their Chai Lattes are the best in 
 	jump Flirtations
 - Use shotgun
 	MasonFoster: Whoa, hey that not-
-	join Narrator 3
+	leave MasonFoster
+	join Narrator 2
 	Narrator (default): You pull the trigger. You are promtly arrested for the murder of Mason Foster by blowing his fucking head off with a shotgun.
 	[end_timeline]
 label Questions
@@ -16,7 +17,7 @@ MasonFoster (Default_Test): Ask away.
 - How do you feel about elevators?
 	MasonFoster (Default_Test): Pretty ambivalent to be honest. The elevator at work has been broken for weeks. I work on the sixth floor.
 	[wait_input]
-	jump FirstDate/InitialChoices
+	jump InitialChoices
 - If you didn't have to work to live, what would you do?
 	MasonFoster (Default_Test): Sacrifice a few virgins, summon the force of a thousand suns.
 	[wait_input]
