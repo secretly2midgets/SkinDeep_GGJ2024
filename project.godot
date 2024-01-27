@@ -24,18 +24,32 @@ global="*res://scripts/game.gd"
 [dialogic]
 
 directories/dch_directory={
+"KaraRogers": "res://dialogic/characters/KaraRogers.dch",
+"LewisBolson": "res://dialogic/characters/LewisBolson.dch",
 "MasonFoster": "res://dialogic/characters/MasonFoster.dch",
 "Narrator": "res://dialogic/characters/Narrator.dch"
 }
 directories/dtl_directory={
-"DateOneIntro": "res://resources/sprites/DateOneIntro.dtl",
+"DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
+"KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
+"LewisFirstDate": "res://dialogic/timelines/LewisFirstDate.dtl",
 "MasonFirstDate": "res://dialogic/timelines/MasonFirstDate.dtl",
-"OpeningNarration": "res://resources/sprites/OpeningNarration.dtl"
+"NightOneFinalDateTransition": "res://dialogic/timelines/NightOneFinalDateTransition.dtl",
+"OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"DateNumber": "0",
+"Kara2ndDate": "false",
+"Lewis2ndDate": "false",
+"Mason2ndDate": "false",
+"QuestionCounter": "0",
+"SwipeRightKara": "false",
+"SwipeRightLewis": "false",
+"SwipeRightMason": "false"
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1

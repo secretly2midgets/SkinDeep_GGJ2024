@@ -1,0 +1,5 @@
+join Narrator 2
+Narrator: After drinking so much coffee, you feel your guts churning like a storm. You head to the bathroom.
+Narrator: Following a minor caffeine explosion, you return to your table and find your next date waiting.
+Narrator: You hope they can’t smell you right now.
+jump KaraFirstDate/

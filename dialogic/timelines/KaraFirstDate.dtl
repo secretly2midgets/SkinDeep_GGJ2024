@@ -1,0 +1,55 @@
+join KaraRogers 2
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+KaraRogers (Default_Test): This is my FAVOURITE place for a first date. You’re so smart for thinking about it! My name’s Kara.
+label InitialChoices
+set {QuestionCounter} += 1
+KaraRogers (Default_Test): Did you know that 75% of people polled say that Spider-Man is a bottom? It’s true!
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	KaraRogers (Default_Test): What the fu-
+	leave LewisBolson
+	join Narrator 2
+	Narrator (default): You look down at your handiwork. Lying at your feet is a perfect, pretty corpse, her ribcage blown apart by the slug fired from your shotgun. The world goes numb as the police put you in cuffs.
+	[end_timeline]
+- Second Date? [if {QuestionCounter} >= 6]
+	jump 2ndDate?
+label Questions
+KaraRogers (Default_Test): Shoot. What do you wanna know?
+- What are you studying?
+	KaraRogers (Default_Test): I’m in nursing, can’t you tell? I love it at university. Everything is so busy all the time!
+	jump InitialChoices
+- How are you still single?
+	KaraRogers (Default_Test): I have no idea hahahahaha, guess I just haven’t found the one! Have you done this poll about what beetle you are?
+	jump InitialChoices
+- Tell me something secret about yourself.
+	KaraRogers (Default_Test): Well, I am a Saggitarius, and I’ve got this really good Mac and Cheese recipe. I can’t tell you the secret ingredient though…
+	jump InitialChoices
+label Flirtations
+KaraRogers (Default_Test): My favourite movie is Misery. Wanna roleplay?
+- If you tied me down in your basement, where would you pour hot wax on me?
+	Narrator (Default_Test): She giggles. You feel this weird tingling sensation in your groin.
+	KaraRogers (Default_Test): Down your urethra.
+	jump InitialChoices
+- If chains and whips excite me, what excites you?
+	Narrator (Default_Test): Kara blushes.
+	KaraRogers (Default_Test): Consent and plushies! Do you think those will be worth a fortune in 10 years?
+	jump InitialChoices
+- Can I slurp the sweat off of you?
+	KaraRogers (Default_Test): Right now?
+	Narrator (Default_Test): She stares into your eyes deeply. Every sense in your mind tells you this woman is too real. She smiles.
+	KaraRogers (Default_Test): Do it.
+	jump InitialChoices
+label 2ndDate?
+KaraRogers: I don’t bang until the third date. I’ve never made it that far, but maybe you’ll get there.
+- Yes
+	KaraRogers: YES! EEEE YOU’RE THE BEST! See you next time!
+- No
+	KaraRogers: Well fine. I’ll just finger myself then.
+if {DateNumber} == 2:
+	jump NightOneFinalDateTransition/
+else:
+	jump MasonFirstDate/
