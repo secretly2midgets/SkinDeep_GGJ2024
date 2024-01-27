@@ -1,6 +1,7 @@
 extends Node2D
 
 var dict: Dictionary
+var difficulty: Dictionary
 var x: int = 1
 
 func _process(delta):
@@ -8,7 +9,12 @@ func _process(delta):
 		get_tree().quit()
 	
 	
-func setDict(value: Dictionary) -> void:
+func set_dict(value: Dictionary) -> void:
 	dict = value
 	print(dict)
 	
+func g_set_difficulty(value: Dictionary) -> void:
+	difficulty = value
+	
+func get_difficulty():
+	return difficulty

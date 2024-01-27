@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqxsji8b1trlp"]
+[gd_scene load_steps=4 format=3 uid="uid://cqxsji8b1trlp"]
 
+[ext_resource type="Script" path="res://scenes/options_screen.gd" id="1_fxr2c"]
 [ext_resource type="Script" path="res://scenes/BackButton.gd" id="1_qxqv8"]
+[ext_resource type="Script" path="res://scripts/EasyButton.gd" id="3_dj1ha"]
 
 [node name="OptionsScreen" type="Node"]
+script = ExtResource("1_fxr2c")
 
 [node name="OptionsLabel" type="Label" parent="."]
 anchors_preset = 5
@@ -34,4 +37,21 @@ theme_override_font_sizes/font_size = 64
 text = "Back"
 script = ExtResource("1_qxqv8")
 
+[node name="EasyButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -767.0
+offset_top = -48.0
+offset_right = -422.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Easy"
+script = ExtResource("3_dj1ha")
+
 [connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]
+[connection signal="pressed" from="EasyButton" to="EasyButton" method="_on_pressed"]
