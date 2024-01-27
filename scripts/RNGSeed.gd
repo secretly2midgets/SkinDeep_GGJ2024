@@ -14,5 +14,5 @@ func _on_menu_demon(value):
 	for key in dict:
 		if key == x:
 			dict[key] = true
-			global.setDict(dict);
+			global.set_dict(dict);
 			break
