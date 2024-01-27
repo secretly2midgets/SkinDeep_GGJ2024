@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsr5hbyt6ajns"]
+[gd_scene load_steps=3 format=3 uid="uid://bsr5hbyt6ajns"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_tc83e"]
+[ext_resource type="Script" path="res://scripts/RNGSeed.gd" id="2_35bh4"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_tc83e")
@@ -43,6 +44,10 @@ offset_bottom = 950.0
 theme_override_font_sizes/font_size = 64
 text = "Exit"
 
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_35bh4")
+
+[connection signal="demon" from="." to="Node" method="_on_menu_demon"]
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
