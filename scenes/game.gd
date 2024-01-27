@@ -15,6 +15,7 @@ func set_dict(value: Dictionary) -> void:
 	
 func g_set_difficulty(value: Dictionary) -> void:
 	difficulty = value
+	print(difficulty)
 	
 func get_difficulty():
 	return difficulty
