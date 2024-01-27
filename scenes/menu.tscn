@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsr5hbyt6ajns"]
+
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_tc83e"]
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_tc83e")
+
+[node name="TitleCard" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -660.0
+offset_top = 120.0
+offset_right = -45.0
+offset_bottom = 295.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 128
+text = "Skin Deep"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewGameButton" type="Button" parent="."]
+offset_left = 1100.0
+offset_top = 250.0
+offset_right = 1700.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 64
+text = "New Game"
+
+[node name="OptionsButton" type="Button" parent="."]
+offset_left = 1100.0
+offset_top = 500.0
+offset_right = 1700.0
+offset_bottom = 700.0
+theme_override_font_sizes/font_size = 64
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 1100.0
+offset_top = 750.0
+offset_right = 1700.0
+offset_bottom = 950.0
+theme_override_font_sizes/font_size = 64
+text = "Exit"
+
+[connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
