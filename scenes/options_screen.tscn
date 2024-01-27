@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cqxsji8b1trlp"]
+[gd_scene load_steps=2 format=3 uid="uid://cqxsji8b1trlp"]
+
+[ext_resource type="Script" path="res://scenes/BackButton.gd" id="1_qxqv8"]
 
 [node name="OptionsScreen" type="Node"]
 
@@ -30,3 +32,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
 text = "Back"
+script = ExtResource("1_qxqv8")
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]
