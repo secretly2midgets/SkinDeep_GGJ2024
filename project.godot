@@ -17,17 +17,18 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-global="*res://scenes/game.gd"
-
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+<<<<<<<HEADDialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+global="*res://scenes/game.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"MasonFoster": "res://dialogic timelines/characters/MasonFoster.dch"
+"MasonFoster": "res://dialogic/characters/MasonFoster.dch",
+"Narrator": "res://dialogic/characters/Narrator.dch"
 }
 directories/dtl_directory={
-"FirstDate": "res://dialogic timelines/timelines/FirstDate.dtl"
+"FirstDate": "res://dialogic/timelines/FirstDate.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
