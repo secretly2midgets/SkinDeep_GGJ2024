@@ -13,9 +13,12 @@ func set_dict(value: Dictionary) -> void:
 	dict = value
 	print(dict)
 	
-func g_set_difficulty(value: Dictionary) -> void:
+func set_difficulty(value: Dictionary) -> void:
 	difficulty = value
 	print(difficulty)
 	
 func get_difficulty():
 	return difficulty
+
+func game_over() -> void:
+	get_tree().quit()
