@@ -8,7 +8,7 @@ MasonFoster (Default_Test): I love this cafe. Their Chai Lattes are the best in 
 	jump Flirtations
 - Use shotgun
 	MasonFoster: Whoa, hey that not-
-	join Narrator 2
+	join Narrator 3
 	Narrator (default): You pull the trigger. You are promtly arrested for the murder of Mason Foster by blowing his fucking head off with a shotgun.
 	[end_timeline]
 label Questions
@@ -36,3 +36,5 @@ MasonFoster: You're the only person here I wanna talk to.
 - Voulez-vous couchez avec moi ce soir?
 	MasonFoster: Sorry, I don't speak Portuguese.
 	jump InitialChoices
+MasonFoster: Well, I assure you that this piece of art is a keeper.
+jump InitialChoices

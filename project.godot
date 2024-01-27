@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+<<<<<<<HEADDialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 global="*res://scripts/game.gd"
 
 [dialogic]
@@ -27,7 +28,7 @@ directories/dch_directory={
 "Narrator": "res://dialogic/characters/Narrator.dch"
 }
 directories/dtl_directory={
-"FirstDate": "res://dialogic/timelines/FirstDate.dtl"
+"MasonFirstDate": "res://dialogic/timelines/MasonFirstDate.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
