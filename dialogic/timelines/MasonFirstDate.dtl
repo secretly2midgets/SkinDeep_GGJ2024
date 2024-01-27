@@ -7,7 +7,7 @@ MasonFoster (Default_Test): I love this cafe. Their Chai Lattes are the best in 
 - Flirt
 	jump Flirtations
 - Use shotgun
-	MasonFoster: Whoa, hey that not-
+	MasonFoster (Default_Test): Whoa, hey that not-
 	leave MasonFoster
 	join Narrator 2
 	Narrator (default): You pull the trigger. You are promtly arrested for the murder of Mason Foster by blowing his fucking head off with a shotgun.
@@ -27,15 +27,15 @@ MasonFoster (Default_Test): Ask away.
 	[wait_input]
 	jump InitialChoices
 label Flirtations
-MasonFoster: You're the only person here I wanna talk to.
+MasonFoster (Default_Test): You're the only person here I wanna talk to.
 - (Seinfeld voice) Do you like jazz?
 	MasonFoster (Default_Test): Rock n Roll all night honey, jazz ain't really my thing.
 	jump InitialChoices
 - I've never dated a piece of art before.
-	MasonFoster: Well, I assure you that this piece of art is a keeper.
+	MasonFoster (Default_Test): Well, I assure you that this piece of art is a keeper.
 	jump InitialChoices
 - Voulez-vous couchez avec moi ce soir?
-	MasonFoster: Sorry, I don't speak Portuguese.
+	MasonFoster (Default_Test): Sorry, I don't speak Portuguese.
 	jump InitialChoices
 MasonFoster: Well, I assure you that this piece of art is a keeper.
 jump InitialChoices
