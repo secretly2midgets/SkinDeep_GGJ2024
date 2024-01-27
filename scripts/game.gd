@@ -8,7 +8,6 @@ func _process(delta):
 	if Input.is_action_pressed("exit_game"):
 		get_tree().quit()
 	
-	
 func set_dict(value: Dictionary) -> void:
 	dict = value
 	print(dict)
