@@ -1,4 +1,4 @@
-join characters/MasonFoster 3
+join MasonFoster 3
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 Hey there. Name's Mason Foster, but my friends call my Fossey. Great to meet you!
@@ -50,7 +50,7 @@ So.. you're pretty cool. Am I gonna see you again?
 	Whatever. I'll just find someone else.
 	set {Mason2ndDate} = "false"
 Narrator: Mason stands and pays for your coffees. Shortly after he heads out the door, your next date walks in.
-leave 
+leave MasonFoster
 if {DateNumber} == 2:
 	jump NightOneFinalDateTransition/
 else:
