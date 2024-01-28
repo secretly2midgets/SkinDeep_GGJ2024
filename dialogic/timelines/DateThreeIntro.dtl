@@ -1,3 +1,5 @@
 join Narrator 2
+[background arg="res://resources/sprites/Bedroom_Placeholder.png" fade="0.0"]
 <Empty Text Event>
 leave Narrator
+jump MasonThirdDate/

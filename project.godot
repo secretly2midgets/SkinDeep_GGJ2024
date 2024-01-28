@@ -47,7 +47,7 @@ directories/dtl_directory={
 "OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"
 }
 layout/style_list=[]
-layout/default_style="Default"
+layout/default_style=""
 glossary/default_case_sensitive=true
 variables={
 "DateNumber": "0",

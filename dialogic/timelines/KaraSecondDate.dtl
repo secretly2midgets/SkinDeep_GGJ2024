@@ -72,4 +72,4 @@ leave KaraRogers
 if {DateNumber} == 2:
 	jump NightTwoFinalDateTransition/
 else:
-	jump MasonThirdDate/
+	jump DateThreeIntro/
