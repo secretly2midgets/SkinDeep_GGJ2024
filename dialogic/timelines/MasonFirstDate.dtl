@@ -1,6 +1,8 @@
 join MasonFoster 3
 set {QuestionCounter} = 0
 set {DateNumber} += 1
+if {DateOrder} == "Latte":
+	set {AffectionMason} += 1
 MasonFoster: Hey there. Name's Mason Foster, but my friends call my Fossey. Great to meet you!
 label InitialChoices
 set {QuestionCounter} += 1
@@ -28,7 +30,6 @@ MasonFoster: Ask away.
 		set {AffectionMason} += 1
 	else:
 		MasonFoster: Sacrifice a few virgins, summon the force of a thousand suns.
-		set {AffectionMason} += 1
 	jump InitialChoices
 - How many murders have you committed?
 	MasonFoster: I dropkicked them in self defence, I swear.

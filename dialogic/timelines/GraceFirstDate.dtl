@@ -1,6 +1,8 @@
 join GraceGomez 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
+if {DateOrder} == "Coffee":
+	set {AffectionGrace} += 1
 GraceGomez: Hello, I’m Grace. Nice to meet you.
 label InitialChoices
 set {QuestionCounter} += 1
@@ -22,9 +24,11 @@ GraceGomez: I’ll be as frank as you want.
 - Is it hard being CEO?
 	if {Skinwalker} == "Grace":
 		GraceGomez: Not really. I sit around, smoke pot, and order people around. I could text you more often if you’d like.
+		set {AffectionGrace} += 1
 	else:
 		GraceGomez: So much. To be a good leader, you can’t sit around giving orders. You have to work twice as hard as them.
 		GraceGomez: I don’t take joy in ordering people around, but if I don’t do it, someone else could come along and do a half-assed job.
+		set {AffectionGrace} += 1
 	jump InitialChoices
 - Have you really been married ten times
 	GraceGomez: Nineteen actually. Job performance means a lot to me. Be ready for your first evaluation in two weeks.
@@ -32,6 +36,7 @@ GraceGomez: I’ll be as frank as you want.
 - What exactly does LunaTech do?
 	if {Skinwalker} == "Grace":
 		Skinwalker Honestly? I’m not really sure. All I know is I get paid a lot of money.
+		set {AffectionGrace} += 1
 	else:
 		GraceGomez: LunaTech makes lots of different electronics. The big one I’m pushing right now is the sex toys, like the Astronaut and Astronaut (Rough Ride Edition).
 		GraceGomez: We’re located on the moon. Everything gets made in low gravity and then shipped back to Earth. I think it’s amazing that this is even possible at all.
@@ -41,8 +46,10 @@ GraceGomez (GracePlaceholder): Normally, I’d have to file a form to do this.
 - *Recite the Tragedy of Darth Plagueis the Wise.*
 	if {Skinwalker} == "Grace":
 		GraceGomez: Is it possible to learn this power?
+		set {AffectionGrace} += 1
 	else:
 		GraceGomez: What on earth was that? It was hauntingly beautiful.
+		set {AffectionGrace} += 1
 	jump InitialChoices
 - Are you a bag of Doritos? Cause you look like a snack.
 	GraceGomez: Aw, thanks hun! I’d gobble you up too.
