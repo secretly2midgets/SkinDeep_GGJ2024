@@ -1,4 +1,4 @@
-join  3
+join MasonFoster 3
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 label InitialChoices
@@ -18,39 +18,40 @@ MasonFoster: I love this cafe. Their Chai Lattes are the best in town, you'll se
 - Second date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
-Ask away.
+MasonFoster: Ask away.
 - How do you feel about elevators?
-	Pretty ambivalent to be honest. The elevator at work has been broken for weeks. I work on the sixth floor.
+	MasonFoster: Pretty ambivalent to be honest. The elevator at work has been broken for weeks. I work on the sixth floor.
 	jump InitialChoices
 - If you didn't have to work to live, what would you do?
-	Sacrifice a few virgins, summon the force of a thousand suns.
+	MasonFoster: Sacrifice a few virgins, summon the force of a thousand suns.
 	jump InitialChoices
 - How many murders have you committed?
-	I dropkicked them in self defence, I swear.
+	MasonFoster: I dropkicked them in self defence, I swear.
 	jump InitialChoices
 label Flirtations
-You're the only person here I want to talk to.
+MasonFoster: You're the only person here I want to talk to.
 - (Seinfeld voice) Do you like jazz?
-	Rock n Roll all night honey, jazz ain't really my thing.
+	MasonFoster: Rock n Roll all night honey, jazz ain't really my thing.
 	jump InitialChoices
 - I've never dated a piece of art before.
-	Well, I assure you that this piece of art is a keeper.
+	MasonFoster: Well, I assure you that this piece of art is a keeper.
 	jump InitialChoices
 - Voulez-vous couchez avec moi ce soir?
-	Sorry, I don't speak Portuguese.
+	MasonFoster: Sorry, I don't speak Portuguese.
 	jump InitialChoices
-Well, I assure you that this piece of art is a keeper.
+MasonFoster: Well, I assure you that this piece of art is a keeper.
 jump InitialChoices
 label SecondDate?
-So.. you're pretty cool. Am I gonna see you again?
+MasonFoster: So.. you're pretty cool. Am I gonna see you again?
 - Yes
-	Sweet! I'll see you next week. Looking forward to it.
+	MasonFoster: Sweet! I'll see you next week. Looking forward to it.
 	set {Mason2ndDate} = "true"
 - No
-	Whatever. I'll just find someone else.
+	MasonFoster: Whatever. I'll just find someone else.
+	leave MasonFoster
 	set {Mason2ndDate} = "false"
 Narrator: Mason stands and pays for your coffees. Shortly after he heads out the door, your next date walks in.
-leave 
+leave MasonFoster
 if {DateNumber} == 2:
 	jump NightOneFinalDateTransition/
 else:
