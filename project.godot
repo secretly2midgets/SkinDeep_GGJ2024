@@ -23,10 +23,15 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"CaliMcLaughlin": "res://dialogic/characters/CaliMcLaughlin.dch",
+"GraceGomez": "res://dialogic/characters/GraceGomez.dch",
+"John": "res://dialogic/characters/John.dch",
 "KaraRogers": "res://dialogic/characters/KaraRogers.dch",
+"KelseyWilliams": "res://dialogic/characters/KelseyWilliams.dch",
 "LewisBolson": "res://dialogic/characters/LewisBolson.dch",
 "MasonFoster": "res://dialogic/characters/MasonFoster.dch",
 "Narrator": "res://dialogic/characters/Narrator.dch",
+"RaymondShaw": "res://dialogic/characters/RaymondShaw.dch",
 "table": "res://dialogic/characters/table.dch"
 }
 directories/dtl_directory={
