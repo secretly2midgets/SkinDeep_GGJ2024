@@ -1,4 +1,5 @@
 join Narrator 2
+join skinwalker 1 [animation="Slide In Left"]
 Narrator: Nobody wants you.
 Narrator: You didn’t put yourself out there.
 Narrator: The curtains open up and reveal It.

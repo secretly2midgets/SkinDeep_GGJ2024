@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/tinder_swiper.gd" id="1_6i8s8"]
 [ext_resource type="Texture2D" uid="uid://3ep84vpqqh1x" path="res://resources/sprites/Right Arrow.png" id="1_awt0j"]
 [ext_resource type="Texture2D" uid="uid://0buxe8lhp45o" path="res://resources/sprites/Left Arrow.png" id="2_2ptcu"]
-[ext_resource type="Texture2D" uid="uid://cf4to8w2db3jb" path="res://resources/U.i/Phone screen.png" id="4_oqdox"]
-[ext_resource type="Texture2D" uid="uid://cecg0fswy621w" path="res://resources/U.i/Phone case.png" id="5_lp0a3"]
+[ext_resource type="Texture2D" uid="uid://deje8viu0x0ob" path="res://resources/U.i/Phone screen.png" id="4_oqdox"]
+[ext_resource type="Texture2D" uid="uid://d1qhfoxd6vobn" path="res://resources/U.i/Phone case.png" id="5_lp0a3"]
 [ext_resource type="Texture2D" uid="uid://keweyistwm4b" path="res://resources/U.i/Frame.png" id="6_dcayw"]
 
 [node name="TinderSwiper" type="Node2D"]

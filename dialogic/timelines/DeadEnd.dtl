@@ -1,4 +1,5 @@
 join Narrator 2
+join skinwalker 1 [animation="Slide In Left"]
 Narrator: You have found true love.
 Narrator: Unfortunately, it’s torn out and eaten your heart.
 Narrator: The curtains are crying.

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deje8viu0x0ob"
-path="res://.godot/imported/Phone screen.png-3d8279cb9acc29430d8f41a2f482c4d7.ctex"
+uid="uid://dk0mxhbq04ecb"
+path="res://.godot/imported/DemonScrub.png-64eb18f15b3786daf54e5a9ca710a38b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/U.i/Phone screen.png"
-dest_files=["res://.godot/imported/Phone screen.png-3d8279cb9acc29430d8f41a2f482c4d7.ctex"]
+source_file="res://resources/sprites/DemonScrub.png"
+dest_files=["res://.godot/imported/DemonScrub.png-64eb18f15b3786daf54e5a9ca710a38b.ctex"]
 
 [params]
 
