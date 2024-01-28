@@ -27,7 +27,8 @@ directories/dch_directory={
 "KaraRogers": "res://dialogic/characters/KaraRogers.dch",
 "LewisBolson": "res://dialogic/characters/LewisBolson.dch",
 "MasonFoster": "res://dialogic/characters/MasonFoster.dch",
-"Narrator": "res://dialogic/characters/Narrator.dch"
+"Narrator": "res://dialogic/characters/Narrator.dch",
+"table": "res://dialogic/characters/table.dch"
 }
 directories/dtl_directory={
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
@@ -76,6 +77,11 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+translation/enabled=false
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
 
 [display]
 
