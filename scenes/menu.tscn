@@ -1,51 +1,58 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsr5hbyt6ajns"]
+[gd_scene load_steps=11 format=3 uid="uid://bsr5hbyt6ajns"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_tc83e"]
 [ext_resource type="Script" path="res://scripts/RNGSeed.gd" id="2_35bh4"]
+[ext_resource type="Texture2D" uid="uid://f4mihmbgwxci" path="res://resources/U.i/Newgame.png" id="3_5sulp"]
+[ext_resource type="Texture2D" uid="uid://bqdq18av6t75d" path="res://resources/U.i/Newgamehighlight.png" id="4_7v5yn"]
+[ext_resource type="Texture2D" uid="uid://c3qic7jv2ewe8" path="res://resources/U.i/options.png" id="5_s14fm"]
+[ext_resource type="Texture2D" uid="uid://c7bjho0ap76f8" path="res://resources/U.i/optionshighlight.png" id="6_wh166"]
+[ext_resource type="Texture2D" uid="uid://byrq04puikab2" path="res://resources/U.i/exit.png" id="7_nm1gl"]
+[ext_resource type="Texture2D" uid="uid://17c6vkx2dncg" path="res://resources/U.i/exithighlight.png" id="8_j77n2"]
+[ext_resource type="Texture2D" uid="uid://v5wjrj8fdus5" path="res://resources/U.i/Logo.png" id="9_hoibm"]
+[ext_resource type="AudioStream" uid="uid://bwbkww8fofpm2" path="res://resources/sound/open theme best.wav" id="10_cruu2"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_tc83e")
 
-[node name="TitleCard" type="Label" parent="."]
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_35bh4")
+
+[node name="NewGameButton" type="TextureButton" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -660.0
-offset_top = 120.0
-offset_right = -45.0
-offset_bottom = 295.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 128
-text = "Skin Deep"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NewGameButton" type="Button" parent="."]
-offset_left = 1100.0
+offset_left = 140.0
 offset_top = 250.0
-offset_right = 1700.0
+offset_right = 740.0
 offset_bottom = 450.0
-theme_override_font_sizes/font_size = 64
-text = "New Game"
+grow_horizontal = 2
+texture_normal = ExtResource("3_5sulp")
+texture_hover = ExtResource("4_7v5yn")
 
-[node name="OptionsButton" type="Button" parent="."]
+[node name="OptionsButton" type="TextureButton" parent="."]
 offset_left = 1100.0
 offset_top = 500.0
 offset_right = 1700.0
 offset_bottom = 700.0
-theme_override_font_sizes/font_size = 64
-text = "Options"
+texture_normal = ExtResource("5_s14fm")
+texture_hover = ExtResource("6_wh166")
 
-[node name="ExitButton" type="Button" parent="."]
+[node name="ExitButton" type="TextureButton" parent="."]
 offset_left = 1100.0
 offset_top = 750.0
 offset_right = 1700.0
 offset_bottom = 950.0
-theme_override_font_sizes/font_size = 64
-text = "Exit"
+texture_normal = ExtResource("7_nm1gl")
+texture_hover = ExtResource("8_j77n2")
 
-[node name="Node" type="Node" parent="."]
-script = ExtResource("2_35bh4")
+[node name="Logo" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(960, 540)
+texture = ExtResource("9_hoibm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_cruu2")
+autoplay = true
 
 [connection signal="demon" from="." to="Node" method="_on_menu_demon"]
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
