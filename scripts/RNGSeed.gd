@@ -5,6 +5,9 @@ var x: int
 var y: int
 # The three characters to choose to date
 var dict = {"Mason": false, "Lewis": false, "Kara": false}
+#, Kali: false, Raymond: false, John: false, Kelsey: false,
+#Grace: false}
+
 
 
  

@@ -1,16 +1,16 @@
-join characters/MasonFoster 3
+join  3
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-Hey there. Name's Mason Foster, but my friends call my Fossey. Great to meet you!
 label InitialChoices
 set {QuestionCounter} += 1
-I love this cafe. Their Chai Lattes are the best in town, you'll see.
+MasonFoster: I love this cafe. Their Chai Lattes are the best in town, you'll see.
 - Ask questions
+	MasonFoster: Hey there. Name's Mason Foster, but my friends call my Fossey. Great to meet you!
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	Whoa, hey that's not-
+	MasonFoster: Whoa, hey that's not-
 	leave 
 	join Narrator 2
 	Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
