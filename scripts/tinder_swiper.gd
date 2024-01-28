@@ -47,7 +47,7 @@ func check_profiles():
 				
 		get_tree().change_scene_to_file(actual_game)
 		
-	else: global.game_over()
+	else: Dialogic.start("SwipeLeftEnd")
 	
 
 #swipes right and selects player for date only a maximum of three
@@ -59,7 +59,7 @@ func _on_right_pressed():
 		counter += 1
 		if counter == profiles.size():
 			if tripleSwipe != 3:
-				global.game_over()
+				Dialogic.start("SwipeLeftEnd")
 				
 	else: check_profiles()
 	if tripleSwipe == 3:
