@@ -1,3 +1,4 @@
+[background arg="res://resources/sprites/Coffee_Shop_Placeholder.png" fade="0.0"]
 join Narrator 2
 Narrator: You sit down at the coffee shop. It is warm, inviting, and busy.
 Narrator: For some reason, the door is smiling. You nod in its direction, and turn away.
