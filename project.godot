@@ -36,6 +36,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "CaliFirstDate": "res://dialogic/timelines/CaliFirstDate.dtl",
+"CaliSecondDate": "res://dialogic/timelines/CaliSecondDate.dtl",
 "DateOneInterstitial": "res://dialogic/timelines/DateOneInterstitial.dtl",
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
 "DateThreeInterstitial": "res://dialogic/timelines/DateThreeInterstitial.dtl",
@@ -44,6 +45,7 @@ directories/dtl_directory={
 "DateTwoIntro": "res://dialogic/timelines/DateTwoIntro.dtl",
 "GraceFirstDate": "res://dialogic/timelines/GraceFirstDate.dtl",
 "JohnFirstDate": "res://dialogic/timelines/JohnFirstDate.dtl",
+"JohnSecondDate": "res://dialogic/timelines/JohnSecondDate.dtl",
 "KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
 "KaraSecondDate": "res://dialogic/timelines/KaraSecondDate.dtl",
 "KaraThirdDate": "res://dialogic/timelines/KaraThirdDate.dtl",
@@ -57,7 +59,8 @@ directories/dtl_directory={
 "NightOneFinalDateTransition": "res://dialogic/timelines/NightOneFinalDateTransition.dtl",
 "NightTwoFinalDateTransition": "res://dialogic/timelines/NightTwoFinalDateTransition.dtl",
 "OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl",
-"RaymondFirstDate": "res://dialogic/timelines/RaymondFirstDate.dtl"
+"RaymondFirstDate": "res://dialogic/timelines/RaymondFirstDate.dtl",
+"RaymondSecondDate": "res://dialogic/timelines/RaymondSecondDate.dtl"
 }
 layout/style_list=["res://dialogic/styles/default.tres"]
 layout/default_style="res://dialogic/styles/default.tres"
