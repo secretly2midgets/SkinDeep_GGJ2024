@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cf4to8w2db3jb"
+=======
+uid="uid://c8k6yt83wjheg"
+>>>>>>> RNGSeeder
 path="res://.godot/imported/Phone screen.png-3d8279cb9acc29430d8f41a2f482c4d7.ctex"
 metadata={
 "vram_texture": false
