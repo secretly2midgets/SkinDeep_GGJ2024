@@ -48,6 +48,7 @@ directories/dtl_directory={
 "EndingCheck": "res://dialogic/timelines/EndingCheck.dtl",
 "GoodEnd": "res://dialogic/timelines/GoodEnd.dtl",
 "GraceFirstDate": "res://dialogic/timelines/GraceFirstDate.dtl",
+"GraceSecondDate": "res://dialogic/timelines/GraceSecondDate.dtl",
 "JailEnding": "res://dialogic/timelines/JailEnding.dtl",
 "JohnFirstDate": "res://dialogic/timelines/JohnFirstDate.dtl",
 "JohnSecondDate": "res://dialogic/timelines/JohnSecondDate.dtl",
