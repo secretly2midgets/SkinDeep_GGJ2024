@@ -15,7 +15,7 @@ LewisBolson (Default_Test): I've never been on a date before... this is pretty f
 	join Narrator 2
 	Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
 	[end_timeline]
-- Second Date? [if {QuestionCounter} > = 5]
+- Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
 LewisBolson (Default_Test): Uh.. sure. What do you wanna know?
@@ -27,16 +27,16 @@ LewisBolson (Default_Test): Uh.. sure. What do you wanna know?
 - Where do you work?
 	LewisBolson (Default_Test): I work at LunaTech. It’s pretty fun, but I wish people knew how to unplug their computers instead of asking me.
 	jump InitialChoices
+- Your life is predetermined, nothing is in your control. This conversation is scheduled to happen now. How do you break the cycle?
+	Narrator (Default_Test): Lewis pauses, and stares up at the ceiling.
+	LewisBolson (Default_Test): I would raid CERN, and stick my head in a Hadron collider.
+	jump InitialChoices
+label Flirtations
+LewisBolson (Default_Test): Uhm... you have beautiful eyes, you know.
 - *Stare at him*
 	Narrator (Default_Test): You gaze deeply into Lewis’ eyes. He stares back.
 	Narrator (Default_Test): In the distance, you hear a witch’s cackle.
 	Narrator (Default_Test): The curtains writhe.
-	jump InitialChoices
-label Flirtations
-LewisBolson (Default_Test): Uhm... you have beautiful eyes, you know.
-- Your life is predetermined, nothing is in your control. This conversation is scheduled to happen now. How do you break the cycle?
-	Narrator (Default_Test): Lewis pauses, and stares up at the ceiling.
-	LewisBolson (Default_Test): I would raid CERN, and stick my head in a Hadron collider.
 	jump InitialChoices
 - Are you my program crashing? Because you're making me scream.
 	LewisBolson (Default_Test): Invalid set index 'end_node' (on base\: 'Nil') with value of type 'HBoxContainer (BranchEnd.gd)'
@@ -51,7 +51,7 @@ LewisBolson: So.. most people leave by this point... would you wanna see me agai
 	set {Lewis2ndDate} = "true"
 - No
 	LewisBolson: Oh... ok.
-	set {Lewis2ndDate} = "true"
+	set {Lewis2ndDate} = "false"
 Narrator: Lewis checks his phone, and tells you his ride is here. He thanks you for the date, and offers to pay for your coffee.
 leave LewisBolson
 if {DateNumber} == 2:
