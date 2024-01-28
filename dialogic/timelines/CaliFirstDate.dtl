@@ -1,16 +1,18 @@
 join CaliMcLaughlin 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-CaliMcLaughlin (CaliMcLaughlin): Heya! My name’s Cali. I hope you don’t mind but I brought my own tea from home.
+if {DateOrder} == "Tea":
+	set {AffectionCali} += 1
+CaliMcLaughlin: Heya! My name’s Cali. I hope you don’t mind but I brought my own tea from home.
 label InitialChoices
 set {QuestionCounter} += 1
-CaliMcLaughlin (CaliMcLaughlin): I love the park. If you go there, there’s a really neat path where nobody will ever find you.
+CaliMcLaughlin: I love the park. If you go there, there’s a really neat path where nobody will ever find you.
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	CaliMcLaughlin (CaliMcLaughlin): Where’d you get a-
+	CaliMcLaughlin: Where’d you get a-
 	leave CaliMcLaughlin
 	join Narrator 2
 	Narrator (default): Before you can stop yourself, it’s over. Cali’s plants are going to wither and die now that she isn’t around. The blood pours out from the bullet holes as you are immediately surrounded and arrested.
@@ -18,15 +20,21 @@ CaliMcLaughlin (CaliMcLaughlin): I love the park. If you go there, there’s a r
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-CaliMcLaughlin (CaliMcLaughlin): What’s on your mind?
+CaliMcLaughlin: What’s on your mind?
 - Do you have any pets?
 	if {Skinwalker} == "Cali":
 		CaliMcLaughlin: Everything in the forest is my pet.
+		set {AffectionCali} += 1
 	else:
-		CaliMcLaughlin (CaliMcLaughlin): No, I just collect plants. My favourite’s name is Geoffrey!
+		CaliMcLaughlin: No, I just collect plants. My favourite’s name is Geoffrey!
 	jump InitialChoices
 - Make your best diarrhea sound.
-	CaliMcLaughlin (CaliMcLaughlin): Eh? Okay…  …PBFTTTTT … SQEURFFFQELCHCHCHC… psshs blrrt blrrt, pssh ough OWW blrrt … plop
+	CaliMcLaughlin: Eh? Okay…  …PBFTTTTT … SQEURFFFQELCHCHCHC… 
+	CaliMcLaughlin: psshs blrrt blrrt, pssh 
+	CaliMcLaughlin: ough OWW blrrt 
+	CaliMcLaughlin: … 
+	CaliMcLaughlin: plop
+	set {AffectionCali} += 1
 	jump InitialChoices
 -  Ask: Mario is dead. You blew his brains out. Why did you do it?
 	CaliMcLaughlin (CaliMcLaughlin): He mouthed off MatPat! You don’t fucking do that!
@@ -36,17 +44,20 @@ CaliMcLaughlin (CaliMcLaughlin): Oooh, what spicy things are you going to say?
 - What’s your best feature?
 	if {Skinwalker} == "Cali":
 		CaliMcLaughlin (CaliMcLaughlin): My teeth.
+		set {AffectionCali} += 1
 	else:
 		CaliMcLaughlin (CaliMcLaughlin): Hmmm…Probably my butt dimples.
 	jump InitialChoices
 - How would you feed a starving artist?
 	if {Skinwalker} == "Cali":
 		CaliMcLaughlin (CaliMcLaughlin): I’d give them a knife. Let them feed off themselves.
+		set {AffectionCali} += 1
 	else:
 		CaliMcLaughlin (CaliMcLaughlin): I would give them a healthy helping of cheese and compliments.
 	jump InitialChoices
 - Which lore gets you off the most?
 	CaliMcLaughlin (CaliMcLaughlin): Oh…definitely Pokedex Entries. 
+	set {AffectionCali} += 1
 	jump InitialChoices
 label 2ndDate?
 if {AffectionCali} >= {AffectionThreshold.First}:

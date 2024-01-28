@@ -1,6 +1,8 @@
 join John 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
+if {DateOrder} == "Coffee":
+	set {AffectionJohn} += 1	
 John: Thanks for meeting me. I’m John. You got any tinfoil?
 label InitialChoices
 set {QuestionCounter} += 1
@@ -22,6 +24,7 @@ John: Keep it quick.
 - Are you a green or a blue bubble?
 	if {Skinwalker} == "John":
 		John: Green.
+		set {AffectionJohn} += 1
 	else:
 		John: Blue. Not a good time for me in the world right now.
 	jump InitialChoices
@@ -39,14 +42,18 @@ John: PDA brings It. Be careful.
 - I can smell your aroma…and it’s great.
 	if {Skinwalker} == "John":
 		John: Oh shit. Are my armpits showing?
+		set {AffectionJohn} += 1
 	else:
-		John: Green.
+		John: Oh jeez thanks! I haven’t had the chance to clean up after last night’s skunk.
+		set {AffectionJohn} += 1
 	jump InitialChoices
 - Nice ass. Do you squat?
 	if {Skinwalker} == "John":
 		John: Honey, I squat in all the right places. We should try it together some time.
+		set {AffectionJohn} += 1
 	else:
 		John: Why yes, I squat all the time. Thanks for noticing.
+		set {AffectionJohn} += 1
 	jump InitialChoices
 label 2ndDate?
 if {AffectionJohn} >= {AffectionThreshold.First}:

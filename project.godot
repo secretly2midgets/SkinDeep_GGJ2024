@@ -76,6 +76,7 @@ variables={
 "Second": "4"
 },
 "DateNumber": "0",
+"DateOrder": "",
 "KillCount": "0",
 "QuestionCounter": "0",
 "Skinwalker": "Kara",

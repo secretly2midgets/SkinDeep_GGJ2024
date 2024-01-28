@@ -1,16 +1,17 @@
 join LewisBolson 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-LewisBolson (LewisHill): Uh.. Hi. My name's Lewis. It's nice to meet you. I don't usually come to places like this.
+set {AffectionLewis} += 1
+LewisBolson: Uh.. Hi. My name's Lewis. It's nice to meet you. I don't usually come to places like this.
 label InitialChoices
 set {QuestionCounter} += 1
-LewisBolson (LewisHill): I've never been on a date before... this is pretty fun.
+LewisBolson: I've never been on a date before... this is pretty fun.
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	LewisBolson (LewisHill): Holy SHIT, where'd you get-
+	LewisBolson: Holy SHIT, where'd you get-
 	leave LewisBolson
 	join Narrator 2
 	Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
@@ -18,38 +19,38 @@ LewisBolson (LewisHill): I've never been on a date before... this is pretty fun.
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-LewisBolson (LewisHill): Uh.. sure. What do you wanna know?
+LewisBolson: Uh.. sure. What do you wanna know?
 - How do you feel about family?
 	if {Skinwalker} == "Lewis":
 		LewisBolson: My family is dead.
 		set {AffectionLewis} += 1
 	else:
-		LewisBolson (LewisHill): I mean, my family’s okay?
-		Narrator (LewisHill): He pauses, then his eyes widen in realization.
-		LewisBolson (LewisHill): Oh, you mean like... you and me... I’d like to have one.
+		LewisBolson: I mean, my family’s okay?
+		Narrator: He pauses, then his eyes widen in realization.
+		LewisBolson: Oh, you mean like... you and me... I’d like to have one.
 	jump InitialChoices
 - Where do you work?
-	LewisBolson (LewisHill): I work at LunaTech. It’s pretty fun, but I wish people knew how to unplug their computers instead of asking me.
+	LewisBolson: I work at LunaTech. It’s pretty fun, but I wish people knew how to unplug their computers instead of asking me.
 	jump InitialChoices
 - Your life is predetermined, nothing is in your control. This conversation is scheduled to happen now. How do you break the cycle?
-	Narrator (LewisHill): Lewis pauses, and stares up at the ceiling.
-	LewisBolson (LewisHill): I would raid CERN, and stick my head in a Hadron collider.
+	Narrator: Lewis pauses, and stares up at the ceiling.
+	LewisBolson: I would raid CERN, and stick my head in a Hadron collider.
 	set {AffectionLewis} += 1
 	jump InitialChoices
 label Flirtations
-LewisBolson (LewisHill): Uhm... you have beautiful eyes, you know.
+LewisBolson: Uhm... you have beautiful eyes, you know.
 - *Stare at him*
-	Narrator (LewisHill): You gaze deeply into Lewis’ eyes. He stares back.
-	Narrator (LewisHill): In the distance, you hear a witch’s cackle.
-	Narrator (LewisHill): The curtains writhe.
+	Narrator: You gaze deeply into Lewis’ eyes. He stares back.
+	Narrator: In the distance, you hear a witch’s cackle.
+	Narrator: The curtains writhe.
 	set {AffectionLewis} += 1
 	jump InitialChoices
 - Are you my program crashing? Because you're making me scream.
 	if {Skinwalker} == "Lewis":
 		LewisBolson: What?
-	else:
-		LewisBolson (LewisHill): Invalid set index 'end_node' (on base\: 'Nil') with value of type 'HBoxContainer (BranchEnd.gd)'
 		set {AffectionLewis} += 1
+	else:
+		LewisBolson: Invalid set index 'end_node' (on base\: 'Nil') with value of type 'HBoxContainer (BranchEnd.gd)'
 	jump InitialChoices
 - *Stick your entire fist in your mouth*
 	if {Skinwalker} == "Lewis":
@@ -60,7 +61,7 @@ LewisBolson (LewisHill): Uhm... you have beautiful eyes, you know.
 		LewisBolson: Good.
 		set {AffectionLewis} += 1
 	else:
-		LewisBolson (LewisHill): Holy. Fucking. Shit. That's incredible. What else can you fit in there? Well, I mean, not like that. Unless, yenno... you mean it that way.
+		LewisBolson: Holy. Fucking. Shit. That's incredible. What else can you fit in there? Well, I mean, not like that. Unless, yenno... you mean it that way.
 		set {AffectionLewis} += 1
 	jump InitialChoices
 label 2ndDate?
