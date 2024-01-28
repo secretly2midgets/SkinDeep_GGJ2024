@@ -65,6 +65,7 @@ label SecondDate?
 if {AffectionMason} >= {AffectionThreshold.First}:
 	MasonFoster: So.. you're pretty cool. Am I gonna see you again?
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		MasonFoster: Sweet! I'll see you next week. Looking forward to it.
 	- No
 		MasonFoster: Whatever. I'll just find someone else.

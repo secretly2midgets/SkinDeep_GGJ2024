@@ -66,16 +66,12 @@ directories/dtl_directory={
 "NightOneFinalDateTransition": "res://dialogic/timelines/NightOneFinalDateTransition.dtl",
 "NightTwoFinalDateTransition": "res://dialogic/timelines/NightTwoFinalDateTransition.dtl",
 "OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl",
-<<<<<<< HEAD
 "PhyrricEnd": "res://dialogic/timelines/PhyrricEnd.dtl",
 "QuickEnd": "res://dialogic/timelines/QuickEnd.dtl",
 "RaymondFirstDate": "res://dialogic/timelines/RaymondFirstDate.dtl",
+"RaymondSecondDate": "res://dialogic/timelines/RaymondSecondDate.dtl",
 "SwipeLeftEnd": "res://dialogic/timelines/SwipeLeftEnd.dtl",
 "TrueEnd": "res://dialogic/timelines/TrueEnd.dtl"
-=======
-"RaymondFirstDate": "res://dialogic/timelines/RaymondFirstDate.dtl",
-"RaymondSecondDate": "res://dialogic/timelines/RaymondSecondDate.dtl"
->>>>>>> dialogueBreaker
 }
 layout/style_list=["res://dialogic/styles/default.tres"]
 layout/default_style="res://dialogic/styles/default.tres"

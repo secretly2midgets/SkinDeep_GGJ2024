@@ -13,10 +13,15 @@ CaliMcLaughlin: I love the park. If you go there, there’s a really neat path w
 	jump Flirtations
 - Use shotgun
 	CaliMcLaughlin: Where’d you get a-
-	leave CaliMcLaughlin
-	join Narrator 2
-	Narrator (default): Before you can stop yourself, it’s over. Cali’s plants are going to wither and die now that she isn’t around. The blood pours out from the bullet holes as you are immediately surrounded and arrested.
-	[end_timeline]
+	if {Skinwalker} == "Cali":
+		CaliMcLaughlin: How did you know?
+		leave CaliMcLaughlin
+		jump QuickEnd/
+	else:
+		leave CaliMcLaughlin
+		join Narrator 2
+		Narrator (default): Before you can stop yourself, it’s over. Cali’s plants are going to wither and die now that she isn’t around. The blood pours out from the bullet holes as you are immediately surrounded and arrested.
+		jump JailEnding/
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
@@ -29,14 +34,14 @@ CaliMcLaughlin: What’s on your mind?
 		CaliMcLaughlin: No, I just collect plants. My favourite’s name is Geoffrey!
 	jump InitialChoices
 - Make your best diarrhea sound.
-	CaliMcLaughlin: Eh? Okay…  …PBFTTTTT … SQEURFFFQELCHCHCHC… 
-	CaliMcLaughlin: psshs blrrt blrrt, pssh 
-	CaliMcLaughlin: ough OWW blrrt 
-	CaliMcLaughlin: … 
+	CaliMcLaughlin: Eh? Okay…  …PBFTTTTT … SQEURFFFQELCHCHCHC…
+	CaliMcLaughlin: psshs blrrt blrrt, pssh
+	CaliMcLaughlin: ough OWW blrrt
+	CaliMcLaughlin: …
 	CaliMcLaughlin: plop
 	set {AffectionCali} += 1
 	jump InitialChoices
--  Ask: Mario is dead. You blew his brains out. Why did you do it?
+- Ask: Mario is dead. You blew his brains out. Why did you do it?
 	CaliMcLaughlin (CaliMcLaughlin): He mouthed off MatPat! You don’t fucking do that!
 	jump InitialChoices
 label Flirtations
@@ -56,7 +61,7 @@ CaliMcLaughlin (CaliMcLaughlin): Oooh, what spicy things are you going to say?
 		CaliMcLaughlin (CaliMcLaughlin): I would give them a healthy helping of cheese and compliments.
 	jump InitialChoices
 - Which lore gets you off the most?
-	CaliMcLaughlin (CaliMcLaughlin): Oh…definitely Pokedex Entries. 
+	CaliMcLaughlin (CaliMcLaughlin): Oh…definitely Pokedex Entries.
 	set {AffectionCali} += 1
 	jump InitialChoices
 label 2ndDate?
