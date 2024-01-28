@@ -1,9 +1,9 @@
-\Narrator: What would you like to eat?
- - The 48oz steak please.  Rare.
+table: What would you like to eat?
+- The 48oz steak please.  Rare.
 	set {DateOrder} = "Steak"
- - Chicken alfredo linguini speciallizano
+- Chicken alfredo linguini speciallizano
 	set {DateOrder} = "Pasta"
- - One kilo of unseasoned tofu
+- One kilo of unseasoned tofu
 	set {DateOrder} = "Tofu"
 if {DateNumber} == 0:
 	if {SwipeRightOne} == "Mason":
@@ -60,7 +60,7 @@ if {DateNumber} == 1:
 	set {DateNumber} += 1
 if {DateNumber} == 2:
 	join Narrator 2
-	Narrator: Your stomach churns trying to handle the food that you are shovelling in. When you finally realize it won’t settle, you run to the balcony. 
+	Narrator: Your stomach churns trying to handle the food that you are shovelling in. When you finally realize it won’t settle, you run to the balcony.
 	Narrator: As you release, a few people get hit with chunks. You pray that no one noticed who did this.
 	Narrator: You hastily grab as many napkins as possible and clean yourself up. You throw them out just in time to watch your date come up the stairs.
 	leave Narrator

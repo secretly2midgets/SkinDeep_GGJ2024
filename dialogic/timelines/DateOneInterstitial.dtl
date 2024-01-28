@@ -1,10 +1,10 @@
-\Narrator: What drinks would you like to order for you and your date?
- - Coffee, black.
+set {DateOrder} = "Latte"
+table: What drinks would you like to order for you and your date?
+- Coffee, black.
 	set {DateOrder} = "Coffee"
- - Oolong tea in a too long cup
+- Oolong tea in a too long cup
 	set {DateOrder} = "Tea"
- - A triple mocha pumpkin-seed latte with whipped sour cream
-	set {DateOrder} = "Latte"
+- A triple mocha pumpkin-seed latte with whipped sour cream
 if {DateNumber} == 0:
 	if {SwipeRightOne} == "Mason":
 		jump MasonFirstDate/
