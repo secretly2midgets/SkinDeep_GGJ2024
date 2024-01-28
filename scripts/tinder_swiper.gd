@@ -43,7 +43,7 @@ func check_profiles():
 		var x = 0
 		var stri
 		for key in profiles:
-			if profiles[key] == true and key != reverseProf[rangeList[counter]]:
+			if profiles[key] == true:
 				if x == 0:
 					Dialogic.VAR.set("SwipeRightOne", key)
 					if demon[x]:
@@ -57,7 +57,6 @@ func check_profiles():
 					if demon[x]:
 						Dialogic.VAR.set("Skinwalker", key)
 				x = x + 1
-		print(demon)
 				
 		get_tree().change_scene_to_file(actual_game)
 	elif tripleSwipe > 0 and counter < profiles.size() -1:
@@ -66,7 +65,6 @@ func check_profiles():
 			if profiles[reverseProf[rangeList[counter]]]:
 				counter += 1
 		$DateName.text = reverseProf[rangeList[counter]]
-		pass
 	#else: Dialogic.start("SwipeLeftEnd")
 	else: global.game_over()
 
@@ -84,5 +82,4 @@ func _on_right_pressed():
 				global.game_over()
 	else: check_profiles()
 	if tripleSwipe == 3:
-		print("right pressed")
 		check_profiles()
