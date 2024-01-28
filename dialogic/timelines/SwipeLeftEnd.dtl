@@ -1,0 +1,5 @@
+join Narrator 2
+Narrator: You’re not ready for love.
+Narrator: Perhaps beggars can’t be choosers.
+Narrator: SECRET END. (8/9)
+do global.game_over()

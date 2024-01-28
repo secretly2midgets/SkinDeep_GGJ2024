@@ -1,0 +1,6 @@
+[background arg="res://resources/sprites/Jail.png" fade="0.0"]
+join Narrator 2
+Narrator: You have killed everyone.
+Narrator: The curtains are silent.
+Narrator: You lie down in your bunk, feeling the cold stone at your side as Big Willie asks you to check out his new prison tattoo.
+Narrator: TRUE END. (9/9)

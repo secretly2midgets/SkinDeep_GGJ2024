@@ -78,4 +78,4 @@ if {DateNumber} == 2:
 			pass
 	set {DateNumber} += 1
 if {DateNumber} > 2:
-	jump DateThreeIntro/
+	jump EndingCheck/

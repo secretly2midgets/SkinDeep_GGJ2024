@@ -6,7 +6,7 @@ var demon
 var reverseProf = {0: "Mason",1: "Lewis",2: "Kara", 3:"Kali",
  4: "Raymond", 5: "John", 6: "Kelsey",
  7: "Grace"}
-var rangeList = [0, 1, 2, 3, 4, 5, 6]
+var rangeList = [0, 1, 2, 3, 4, 5, 6, 7]
 var demonReshuffle: Dictionary
 #variable for counting where on the list of profiles you are
 var counter: int = 0

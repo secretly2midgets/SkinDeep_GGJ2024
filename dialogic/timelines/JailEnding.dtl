@@ -1,0 +1,10 @@
+[background arg="res://resources/sprites/Jail.png" fade="0.0"]
+join Narrator 0
+label Add jail background
+Narrator: You pace your cell nervously. There are no curtains here to help you.
+Narrator: Big Willie's monologue about his time in the Navy falls into the background.
+Narrator: You took your shot, but there's no way to know if you're safe now.
+Narrator: Theres something outside your cell window.
+Narrator: Where'd Big Willie go?
+Narrator: JAIL END. (4/9)
+do global.game_over()

@@ -13,10 +13,15 @@ MasonFoster: I love this cafe. Their Chai Lattes are the best in town, you'll se
 	jump Flirtations
 - Use shotgun
 	MasonFoster: Whoa, hey that's not-
-	leave 
-	join Narrator 2
-	Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
-	[end_timeline]
+	if {Skinwalker} == "Mason":
+		MasonFoster: Shit... that's not fair.
+		leave MasonFoster
+		jump QuickEnd/
+	else:
+		leave MasonFoster
+		join Narrator 1
+		Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
+		jump JailEnding/
 - Second date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
@@ -60,6 +65,7 @@ label SecondDate?
 if {AffectionMason} >= {AffectionThreshold.First}:
 	MasonFoster: So.. you're pretty cool. Am I gonna see you again?
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		MasonFoster: Sweet! I'll see you next week. Looking forward to it.
 	- No
 		MasonFoster: Whatever. I'll just find someone else.

@@ -12,11 +12,16 @@ KaraRogers: Don’t worry about dinner tonight, it’s on me! My dad gives me al
 - Flirt
 	jump Flirtations
 - Use shotgun
-	KaraRogers: Holy shit, GET AWAY!
-	leave LewisBolson
-	join Narrator 2
-	Narrator (default): You look down at your handiwork. Lying at your feet is a perfect, pretty corpse, her ribcage blown apart by the slug fired from your shotgun. The world goes numb as the police put you in cuffs.
-	[end_timeline]
+	KaraRogers (KaraRogers): Holy shit, GET AWAY!
+	if {Skinwalker} == "Kara":
+		KaraRogers: Haha.. Hahahahhahahahahahaha! You're a smart one..
+		leave KaraRogers
+		jump QuickEnd/
+	else:
+		leave KaraRogers
+		join Narrator 2
+		Narrator (default): You look down at your handiwork. Lying at your feet is a perfect, pretty corpse, her ribcage blown apart by the slug fired from your shotgun. The world goes numb as the police put you in cuffs.
+		jump JailEnding/
 - Third Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions

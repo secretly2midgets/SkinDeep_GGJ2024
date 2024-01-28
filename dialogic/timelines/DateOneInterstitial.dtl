@@ -62,4 +62,9 @@ elif {DateNumber} == 2:
 	elif {SwipeRightThree} == "Grace":
 		jump GraceFirstDate/
 else:
-	jump DateTwoIntro/
+	if {AtLeastOneDateSuccess} == "true":
+		set {NightNumber} += 1
+		set {AtLeastOneDateSuccess} = "false"
+		jump DateTwoIntro/
+	else:
+		jump LonelyEnd/
