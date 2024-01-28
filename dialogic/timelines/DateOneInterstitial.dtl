@@ -1,0 +1,58 @@
+if {DateNumber} == 0:
+	if {SwipeRightOne} == "Mason":
+		jump MasonFirstDate/
+	elif {SwipeRightOne} == "Lewis":
+		jump LewisFirstDate/
+	elif {SwipeRightOne} == "Kara":
+		jump KaraFirstDate/
+	elif {SwipeRightOne} == "Kali":
+		jump CaliFirstDate/
+	elif {SwipeRightOne} == "Raymond":
+		jump RaymondFirstDate/
+	elif {SwipeRightOne} == "Kelsey":
+		jump KelseyFirstDate/
+	elif {SwipeRightOne} == "John":
+		jump JohnFirstDate/
+	elif {SwipeRightOne} == "Grace":
+		jump GraceFirstDate/
+elif {DateNumber} == 1:
+	if {SwipeRightTwo} == "Mason":
+		jump MasonFirstDate/
+	elif {SwipeRightTwo} == "Lewis":
+		jump LewisFirstDate/
+	elif {SwipeRightTwo} == "Kara":
+		jump KaraFirstDate/
+	elif {SwipeRightTwo} == "Kali":
+		jump CaliFirstDate/
+	elif {SwipeRightTwo} == "Raymond":
+		jump RaymondFirstDate/
+	elif {SwipeRightTwo} == "Kelsey":
+		jump KelseyFirstDate/
+	elif {SwipeRightTwo} == "John":
+		jump JohnFirstDate/
+	elif {SwipeRightTwo} == "Grace":
+		jump GraceFirstDate/
+elif {DateNumber} == 2:
+	join Narrator 2
+	Narrator: After drinking so much coffee, you feel your guts churning like a storm. You head to the bathroom.
+	Narrator: Following a minor caffeine explosion, you return to your table and find your next date waiting.
+	Narrator: You hope they can’t smell you right now.
+	leave Narrator
+	if {SwipeRightThree} == "Mason":
+		jump MasonFirstDate/
+	elif {SwipeRightThree} == "Lewis":
+		jump LewisFirstDate/
+	elif {SwipeRightThree} == "Kara":
+		jump KaraFirstDate/
+	elif {SwipeRightThree} == "Kali":
+		jump CaliFirstDate/
+	elif {SwipeRightThree} == "Raymond":
+		jump RaymondFirstDate/
+	elif {SwipeRightThree} == "Kelsey":
+		jump KelseyFirstDate/
+	elif {SwipeRightThree} == "John":
+		jump JohnFirstDate/
+	elif {SwipeRightThree} == "Grace":
+		jump GraceFirstDate/
+else:
+	jump DateTwoIntro/

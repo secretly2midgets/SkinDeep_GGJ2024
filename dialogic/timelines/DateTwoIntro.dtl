@@ -8,4 +8,4 @@ Narrator: The table spread is beautiful. \
 You and your date sit down to the light of a candle.
 Narrator: The flame dances in a waltz.
 leave Narrator
-jump MasonSecondDate/
+jump DateTwoInterstitial/

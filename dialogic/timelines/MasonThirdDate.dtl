@@ -1,4 +1,5 @@
 join MasonFoster 3
+set {DateNumber} += 1
 Narrator: Mason rolls up to your house a few minutes later than planned. He’s wearing some nicer clothes than the last two dates.
 Narrator: You let him in and he looks at you.
 MasonFoster: You’re the most beautiful person I’ve ever met.
@@ -10,4 +11,4 @@ MasonFoster: You’re the most beautiful person I’ve ever met.
 	join Narrator 2
 	Narrator: Fossey is dead. You remove all traces and dispose of the body before your next date arrives.
 	leave Narrator
-jump LewisThirdDate/
+jump DateThreeInterstitial/

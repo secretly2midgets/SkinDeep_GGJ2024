@@ -1,0 +1,67 @@
+join RaymondShaw 2
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+RaymondShaw: Howdy, name’s Raymond. Hope you’re havin’ a mighty fine day.
+label InitialChoices
+set {QuestionCounter} += 1
+RaymondShaw: Reckon next time, we meet in a bar. I’d love me a good beer instead of an espresso.
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	RaymondShaw: Easy there, no need to get-
+	leave RaymondShaw
+	join Narrator 2
+	Narrator (default): Raymond's hand flies to his hip with the ease of a master's practice.  For a moment, you think about what those hands might have done for you, but the thought is wiped away by .44 inches of lead.  You didn't even have a chance to pull the trigger.
+	[end_timeline]
+- Second Date? [if {QuestionCounter} >= 5]
+	jump 2ndDate?
+label Questions
+RaymondShaw: Shoot.
+- What do you raise on your ranch?
+	if {Skinwalker} == "Raymond":
+		RaymondShaw: I eat exclusively beef, so cows. I slaughter them by hand.
+	else:
+		RaymondShaw: Hogs right now, used to raise me some cattle some years long past.
+	jump InitialChoices
+- If you could put U and I together in the alphabet, which two letters would you kill to make that happen?
+	RaymondShaw: I’d have to kindly down S and W.
+	jump InitialChoices
+- Is it a dealbreaker if I dress like a clown?
+	RaymondShaw: Aw shucks, you can be my rodeo clown any time.
+	jump InitialChoices
+label Flirtations
+RaymondShaw: ‘Ey, I might be an untamed bronco, but you can wrangle me anytime.
+- Do you squat?
+	RaymondShaw: Honey, I squat in all the right places at the right times. One day, I’ll show ya.
+	jump InitialChoices
+- You don’t look anything like your profile pic…and that’s a good thing.
+	if {Skinwalker} == "Raymond":
+		RaymondShaw: That’s rude.
+	else:
+		RaymondShaw: Hey, I appreciate what you’re sayin’.
+	jump InitialChoices
+- Hey mister, do you want to join me for a dance?
+	if {Skinwalker} == "Raymond":
+		RaymondShaw: No.
+	else:
+		Narrator: Raymond takes you by the hand. You feel his strength and many callouses as he practically lifts you onto your feet and pulls you close.
+		Narrator: You dance in the middle of the coffee shop. 
+		Narrator: You don’t care what anyone else thinks. Raymond steers the dance and before you sit down, he breaks out into the Cadillac Ranch. 
+		Narrator: Eventually, he sits.
+	jump InitialChoices
+label 2ndDate?
+if {AffectionRaymond} >= {AffectionThreshold.First}:
+	RaymondShaw: So…reckon I lassoed ya in?
+	- Yes
+		RaymondShaw: Mighty fine. See ya in week’s time.
+	- No
+		RaymondShaw: Dang…this one’s got away.
+		set {AffectionRaymond} = -10
+else:
+	RaymondShaw: Sorry ma'am but I'm just not feeling the connection here.  Hope you have a lovely day.
+	set {AffectionRaymond} = -10
+Narrator: Raymond hands the cashier a fistfull of dollars and shoots you a devlish grin before donning his hat and stepping out into the noon-day sun.
+leave RaymondShaw
+jump DateOneInterstitial/

@@ -17,25 +17,37 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
-<<<<<<<HEADDialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 global="*res://scripts/game.gd"
+Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"CaliMcLaughlin": "res://dialogic/characters/CaliMcLaughlin.dch",
+"GraceGomez": "res://dialogic/characters/GraceGomez.dch",
+"John": "res://dialogic/characters/John.dch",
 "KaraRogers": "res://dialogic/characters/KaraRogers.dch",
+"KelseyWilliams": "res://dialogic/characters/KelseyWilliams.dch",
 "LewisBolson": "res://dialogic/characters/LewisBolson.dch",
 "MasonFoster": "res://dialogic/characters/MasonFoster.dch",
-"Narrator": "res://dialogic/characters/Narrator.dch"
+"Narrator": "res://dialogic/characters/Narrator.dch",
+"RaymondShaw": "res://dialogic/characters/RaymondShaw.dch",
+"table": "res://dialogic/characters/table.dch"
 }
 directories/dtl_directory={
+"CaliFirstDate": "res://dialogic/timelines/CaliFirstDate.dtl",
+"DateOneInterstitial": "res://dialogic/timelines/DateOneInterstitial.dtl",
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
+"DateThreeInterstitial": "res://dialogic/timelines/DateThreeInterstitial.dtl",
 "DateThreeIntro": "res://dialogic/timelines/DateThreeIntro.dtl",
+"DateTwoInterstitial": "res://dialogic/timelines/DateTwoInterstitial.dtl",
 "DateTwoIntro": "res://dialogic/timelines/DateTwoIntro.dtl",
+"GraceFirstDate": "res://dialogic/timelines/GraceFirstDate.dtl",
+"JohnFirstDate": "res://dialogic/timelines/JohnFirstDate.dtl",
 "KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
 "KaraSecondDate": "res://dialogic/timelines/KaraSecondDate.dtl",
 "KaraThirdDate": "res://dialogic/timelines/KaraThirdDate.dtl",
+"KelseyFirstDate": "res://dialogic/timelines/KelseyFirstDate.dtl",
 "LewisFirstDate": "res://dialogic/timelines/LewisFirstDate.dtl",
 "LewisSecondDate": "res://dialogic/timelines/LewisSecondDate.dtl",
 "LewisThirdDate": "res://dialogic/timelines/LewisThirdDate.dtl",
@@ -44,21 +56,32 @@ directories/dtl_directory={
 "MasonThirdDate": "res://dialogic/timelines/MasonThirdDate.dtl",
 "NightOneFinalDateTransition": "res://dialogic/timelines/NightOneFinalDateTransition.dtl",
 "NightTwoFinalDateTransition": "res://dialogic/timelines/NightTwoFinalDateTransition.dtl",
-"OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"
+"OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl",
+"RaymondFirstDate": "res://dialogic/timelines/RaymondFirstDate.dtl"
 }
-layout/style_list=[]
-layout/default_style=""
+layout/style_list=["res://dialogic/styles/default.tres"]
+layout/default_style="res://dialogic/styles/default.tres"
 glossary/default_case_sensitive=true
 variables={
+"AffectionCali": "0",
+"AffectionGrace": "0",
+"AffectionJohn": "0",
+"AffectionKara": "0",
+"AffectionKelsey": "0",
+"AffectionLewis": "0",
+"AffectionMason": "0",
+"AffectionRaymond": "0",
+"AffectionThreshold": {
+"First": "2",
+"Second": "4"
+},
 "DateNumber": "0",
-"Kara2ndDate": "false",
-"Lewis2ndDate": "false",
-"Mason2ndDate": "false",
+"KillCount": "0",
 "QuestionCounter": "0",
 "Skinwalker": "Kara",
-"SwipeRightKara": "false",
-"SwipeRightLewis": "false",
-"SwipeRightMason": "false"
+"SwipeRightOne": "",
+"SwipeRightThree": "",
+"SwipeRightTwo": ""
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -76,6 +99,11 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+translation/enabled=false
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
 
 [display]
 
