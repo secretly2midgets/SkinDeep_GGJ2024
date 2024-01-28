@@ -23,7 +23,10 @@ KaraRogers (Default_Test): Shoot. What do you wanna know?
 	KaraRogers (Default_Test): I’m in nursing, can’t you tell? I love it at university. Everything is so busy all the time!
 	jump InitialChoices
 - How are you still single?
-	KaraRogers (Default_Test): I have no idea hahahahaha, guess I just haven’t found the one! Have you done this poll about what beetle you are?
+	if {Skinwalker} == "Kara":
+		<Empty Text Event>
+	else:
+		KaraRogers (Default_Test): I have no idea hahahahaha, guess I just haven’t found the one! Have you done this poll about what beetle you are?
 	jump InitialChoices
 - Tell me something secret about yourself.
 	KaraRogers (Default_Test): Well, I am a Saggitarius, and I’ve got this really good Mac and Cheese recipe. I can’t tell you the secret ingredient though…
@@ -49,6 +52,7 @@ KaraRogers: I don’t bang until the third date. I’ve never made it that far, 
 	KaraRogers: YES! EEEE YOU’RE THE BEST! See you next time!
 - No
 	KaraRogers: Well fine. I’ll just finger myself then.
+Narrator: Kara gets up and smiles at you. With a flourish, she turns on her heels and leaves the cafe.
 if {DateNumber} == 2:
 	jump NightOneFinalDateTransition/
 else:

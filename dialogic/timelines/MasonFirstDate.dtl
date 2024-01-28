@@ -13,7 +13,7 @@ MasonFoster (Default_Test): I love this cafe. Their Chai Lattes are the best in 
 	MasonFoster (Default_Test): Whoa, hey that's not-
 	leave MasonFoster
 	join Narrator 2
-	Narrator (default): You pull the trigger. You are promtly arrested for the murder of Mason Foster by blowing his fucking head off with a shotgun.
+	Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
 	[end_timeline]
 - Second date? [if {QuestionCounter} >= 6]
 	jump SecondDate?
@@ -31,7 +31,7 @@ MasonFoster (Default_Test): Ask away.
 label Flirtations
 MasonFoster (Default_Test): You're the only person here I want to talk to.
 - (Seinfeld voice) Do you like jazz?
-	LewisBolson (Default_Test): Rock n Roll all night honey, jazz ain't really my thing.
+	MasonFoster (Default_Test): Rock n Roll all night honey, jazz ain't really my thing.
 	jump InitialChoices
 - I've never dated a piece of art before.
 	MasonFoster (Default_Test): Well, I assure you that this piece of art is a keeper.
@@ -45,13 +45,12 @@ label SecondDate?
 MasonFoster: So.. you're pretty cool. Am I gonna see you again?
 - Yes
 	MasonFoster: Sweet! I'll see you next week. Looking forward to it.
-	leave MasonFoster
 	set {Mason2ndDate} = "true"
 - No
 	MasonFoster: Whatever. I'll just find someone else.
-	leave MasonFoster
 	set {Mason2ndDate} = "false"
 Narrator: Mason stands and pays for your coffees. Shortly after he heads out the door, your next date walks in.
+leave MasonFoster
 if {DateNumber} == 2:
 	jump NightOneFinalDateTransition/
 else:

@@ -31,10 +31,14 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
+"DateTwoIntro": "res://dialogic/timelines/DateTwoIntro.dtl",
 "KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
 "LewisFirstDate": "res://dialogic/timelines/LewisFirstDate.dtl",
+"LewisSecondDate": "res://dialogic/timelines/LewisSecondDate.dtl",
 "MasonFirstDate": "res://dialogic/timelines/MasonFirstDate.dtl",
+"MasonSecondDate": "res://dialogic/timelines/MasonSecondDate.dtl",
 "NightOneFinalDateTransition": "res://dialogic/timelines/NightOneFinalDateTransition.dtl",
+"NightTwoFinalDateTransition": "res://dialogic/timelines/NightTwoFinalDateTransition.dtl",
 "OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"
 }
 layout/style_list=[]
@@ -46,6 +50,7 @@ variables={
 "Lewis2ndDate": "false",
 "Mason2ndDate": "false",
 "QuestionCounter": "0",
+"Skinwalker": "Kara",
 "SwipeRightKara": "false",
 "SwipeRightLewis": "false",
 "SwipeRightMason": "false"
