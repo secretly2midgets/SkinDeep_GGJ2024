@@ -91,6 +91,7 @@ if {DateNumber} == 2:
 	set {DateNumber} += 1
 if {DateNumber} > 2:
 	if {AtLeastOneDateSuccess} == "true":
+		set {AtLeastOneDateSuccess} = "false"
 		jump DateThreeIntro/
 	else:
 		jump LonelyEnd/

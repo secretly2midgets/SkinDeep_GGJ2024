@@ -13,18 +13,24 @@ KelseyWilliams: I love coffee. Have you ever added Splenda and half-and-half?
 	jump Flirtations
 - Use shotgun
 	KelseyWilliams: JESUS CHRI-
-	leave KelseyWilliams
-	join Narrator 2
-	Narrator (default): Kelsey’s last ride was tonight because of you. Her body lies still. You killed her. The police arrive shortly afterwards to arrest and take you away.
-	[end_timeline]
+	if {Skinwalker} == "Kelsey":
+		Narrator: Kelsey's eye's widen as they stare down the barrel of your shotgun. Before she can react, her body is blown away.
+		leave KelseyWilliams
+		Narrator: Her body begins dissolving into a horrific, inhuman mass.
+		jump QuickEnd/
+	else:
+		leave KelseyWilliams
+		join Narrator 2
+		Narrator (default): Kelsey’s last ride was tonight because of you. Her body lies still. You killed her. The police arrive shortly afterwards to arrest and take you away.
+		jump JailEnding/
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
 KelseyWilliams: Ask away.
-- What would it take for you to get Kelsey #1 tattooed on your forehead? 
+- What would it take for you to get Kelsey #1 tattooed on your forehead?
 	KelseyWilliams: A good meal for one, maybe a beach house.
 	jump InitialChoices
-- If I locked you in a basement, what would you like for breakfast? 
+- If I locked you in a basement, what would you like for breakfast?
 	KelseyWilliams: A cake and a file.
 	jump InitialChoices
 - God gives us his toughest battles yet I fucking hate this one. How could I stick it to God?
@@ -52,8 +58,8 @@ KelseyWilliams (KelseyPlaceholder): Not since I went backstage with the Jonas Br
 	if {Skinwalker} == "Kelsey":
 		KelseyWilliams: What if I catch fire? No thanks!
 	else:
-		KelseyWilliams: Oh, sweetie, of course! Your hands or mine? 
-
+		KelseyWilliams: Oh, sweetie, of course! Your hands or mine?
+	
 	jump InitialChoices
 label 2ndDate?
 if {AffectionKelsey} >= {AffectionThreshold.First}:
@@ -64,10 +70,10 @@ if {AffectionKelsey} >= {AffectionThreshold.First}:
 		KelseyWilliams: Oh well. Goodbye.
 		set {AffectionKelsey} = -10
 else:
-	KelseyWilliams: Sorry, sugar.  It's not you, it's me.  I've been with too many Jonas Brothers, and you just don't quite stack up. 
+	KelseyWilliams: Sorry, sugar.  It's not you, it's me.  I've been with too many Jonas Brothers, and you just don't quite stack up.
 	KelseyWilliams: Not even to Kevin.
 	set {AffectionKelsey} = -10
-Narrator: Kelsey stands up from the table before awkwardly waiting in line to leave, less than 10 feet away, but not speaking to you for a full five minutes. 
+Narrator: Kelsey stands up from the table before awkwardly waiting in line to leave, less than 10 feet away, but not speaking to you for a full five minutes.
 Narrator: She does pay for the drinks, though.
 Narrator: And she buys a bag of coffee beans.
 leave KelseyWilliams

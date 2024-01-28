@@ -64,6 +64,7 @@ elif {DateNumber} == 2:
 else:
 	if {AtLeastOneDateSuccess} == "true":
 		set {NightNumber} += 1
+		set {AtLeastOneDateSuccess} = "false"
 		jump DateTwoIntro/
 	else:
 		jump LonelyEnd/

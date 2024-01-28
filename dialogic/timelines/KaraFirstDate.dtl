@@ -68,6 +68,7 @@ label 2ndDate?
 if {AffectionKara} >= {AffectionThreshold.First}:
 	KaraRogers: I don’t bang until the third date. I’ve never made it that far, but maybe you’ll get there.
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		KaraRogers: YES! EEEE YOU’RE THE BEST! See you next time!
 		set {AtLeastOneDateSuccess} = "true"
 	- No

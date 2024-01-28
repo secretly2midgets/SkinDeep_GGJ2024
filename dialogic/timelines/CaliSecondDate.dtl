@@ -13,10 +13,15 @@ CaliMcLaughlin: I’ve never been to a restaurant like this before. Can we even 
 	jump Flirtations
 - Use shotgun
 	CaliMcLaughlin: Where’d you get a-
-	leave CaliMcLaughlin
-	join Narrator 2
-	Narrator (default): Before you can stop yourself, it’s over. Cali’s plants are going to wither and die now that she isn’t around. The blood pours out from the bullet holes as you are immediately surrounded and arrested.
-	[end_timeline]
+	if {Skinwalker} == "Cali":
+		Narrator: Your movement is swift and decisive. No way anyone this pure can exist in this hellhole of a town.
+		Narrator: You watch Cali's body dissolve into the floor as officers force you to your knees and cuff you.
+		jump QuickEnd/
+	else:
+		leave CaliMcLaughlin
+		join Narrator 2
+		Narrator (default): Before you can stop yourself, it’s over. Cali’s plants are going to wither and die now that she isn’t around. The blood pours out from her caved-in chest as you are immediately surrounded and arrested.
+		jump JailEnding/
 - Third date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
@@ -24,10 +29,10 @@ CaliMcLaughlin: You look a little pale. Are you okay? I can give you some of my 
 - How was work today?
 	CaliMcLaughlin: It was pretty good. I got to sit around on my Switch a lot. My boss only had one appointment today, so it didn’t matter at all.
 	CaliMcLaughlin: I hope you had a good day too.
-		set {AffectionCali} += 1
+	set {AffectionCali} += 1
 	jump InitialChoices
 - Do you know about Bionicle? My favourite is Kapoka!
-	CaliMcLaughlin: How can you horribly butcher the name Kopaka?
+	CaliMcLaughlin: How do you butcher the name Kopaka that badly?
 	jump InitialChoices
 - If the hippopotamus is one of the fastest animals in water, why don’t we design cars based off them?
 	CaliMcLaughlin: Cars don’t drive in water. They also have wheels instead of legs so on land, they’re faster than hippos by default.
@@ -46,7 +51,7 @@ CaliMcLaughlin: You are quite the cunning linguist. Surprise me.
 		CaliMcLaughlin: Cyanide. My armpits are sacred.
 		set {AffectionCali} += 1
 	else:
-		CaliMcLaughlin: Nutella
+		CaliMcLaughlin: Nutella.
 	jump InitialChoices
 - Scream MOMMY
 	if {Skinwalker} == "Cali":
@@ -54,16 +59,17 @@ CaliMcLaughlin: You are quite the cunning linguist. Surprise me.
 		CaliMcLaughlin: She leaves to go to the washroom. When she returns, she is once more back into the conversation.
 		set {AffectionCali} += 1
 	else:
-		CaliMcLaughlin: Your voice carries through the restaurant. Everyone looks in your direction. 
+		CaliMcLaughlin: Your voice carries through the restaurant. Everyone looks in your direction.
 		CaliMcLaughlin: Cali is taken aback, but then looks at you lovingly. You have fulfilled the dream she has unknowingly always had.
 		set {AffectionCali} += 1
-	jump InitialChoices
 jump InitialChoices
 label SecondDate?
 if {AffectionCali} >= {AffectionThreshold.Second}:
 	CaliMcLaughlin: I’m so cold. Can I borrow your hoodie?
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		CaliMcLaughlin: You’re the best. I’ll make sure to bring it back to your place next time!
+		CaliMcLaughlin: I’m so cold. Can I borrow your hoodie?
 	- No
 		CaliMcLaughlin: Well, nevermind. Take care of yourself.
 		set {AffectionCali} = -10
