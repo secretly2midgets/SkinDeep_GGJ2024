@@ -19,19 +19,42 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 global="*res://scripts/game.gd"
+<<<<<<<HEADDialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"MasonFoster": "res://dialogic timelines/characters/MasonFoster.dch"
+"KaraRogers": "res://dialogic/characters/KaraRogers.dch",
+"LewisBolson": "res://dialogic/characters/LewisBolson.dch",
+"Narrator": "res://dialogic/characters/Narrator.dch",
+"characters/MasonFoster": "res://dialogic/characters/MasonFoster.dch"
 }
 directories/dtl_directory={
-"FirstDate": "res://dialogic timelines/timelines/FirstDate.dtl"
+"DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
+"DateTwoIntro": "res://dialogic/timelines/DateTwoIntro.dtl",
+"KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
+"LewisFirstDate": "res://dialogic/timelines/LewisFirstDate.dtl",
+"LewisSecondDate": "res://dialogic/timelines/LewisSecondDate.dtl",
+"MasonFirstDate": "res://dialogic/timelines/MasonFirstDate.dtl",
+"MasonSecondDate": "res://dialogic/timelines/MasonSecondDate.dtl",
+"NightOneFinalDateTransition": "res://dialogic/timelines/NightOneFinalDateTransition.dtl",
+"NightTwoFinalDateTransition": "res://dialogic/timelines/NightTwoFinalDateTransition.dtl",
+"OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"DateNumber": "0",
+"Kara2ndDate": "false",
+"Lewis2ndDate": "false",
+"Mason2ndDate": "false",
+"QuestionCounter": "0",
+"Skinwalker": "Kara",
+"SwipeRightKara": "false",
+"SwipeRightLewis": "false",
+"SwipeRightMason": "false"
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
