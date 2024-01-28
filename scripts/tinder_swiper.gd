@@ -33,6 +33,7 @@ func check_profiles():
 				demonReshuffle[keys] = demon[x]
 				x = x + 1
 		print(demonReshuffle)
+		get_tree().change_scene_to_file(actual_game)
 		global.game_over()
 		
 	else: global.game_over()
