@@ -1,6 +1,7 @@
 extends Node2D
-var profiles = {0: false, 1: false, 2: false, 3: false,
- 4: false, 5:false, 6: false}
+var profiles = {"Mason": false, "Lewis": false, "Kara": false,
+ "Kali": false, "Raymond": false, "John": false, "Kelsey": false,
+ "Grace": false}
 var demon
 var demonReshuffle: Dictionary
 #variable for counting where on the list of profiles you are
@@ -28,10 +29,26 @@ func check_profiles():
 	print("here")
 	if tripleSwipe == 3:
 		var x = 0
+		var stri
 		for keys in profiles:
 			if profiles[keys] == true:
+				print(profiles)
+				#if x == 0:
+					#stri = "One"
+					#Dialogic.VAR.set("SwipeRight" + stri, profiles[keys])
+					#print(Dialogic.VAR.get("SwipeRight" + stri))
+				#elif x == 1:
+					#stri = "Two"
+					#Dialogic.VAR.set("SwipeRight" + stri, profiles[keys])
+					#print(Dialogic.VAR.get("SwipeRight" + stri))
+				#elif x == 2:
+					#stri = "Three"
+					#Dialogic.VAR.set("SwipeRight" + stri, profiles[keys])
+					#print(Dialogic.VAR.get("SwipeRight" + stri))
 				demonReshuffle[keys] = demon[x]
+				
 				x = x + 1
+				
 		print(demonReshuffle)
 		get_tree().change_scene_to_file(actual_game)
 		

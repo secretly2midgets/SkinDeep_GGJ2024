@@ -47,18 +47,22 @@ directories/dtl_directory={
 "OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"
 }
 layout/style_list=[]
-layout/default_style=""
+layout/default_style="Default"
 glossary/default_case_sensitive=true
 variables={
 "DateNumber": "0",
 "Kara2ndDate": "false",
+"KillCount": "0",
 "Lewis2ndDate": "false",
 "Mason2ndDate": "false",
 "QuestionCounter": "0",
 "Skinwalker": "Kara",
 "SwipeRightKara": "false",
 "SwipeRightLewis": "false",
-"SwipeRightMason": "false"
+"SwipeRightMason": "false",
+"SwipeRightOne": "",
+"SwipeRightThree": "",
+"SwipeRightTwo": ""
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

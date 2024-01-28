@@ -4,4 +4,11 @@ Narrator: You sit down at the coffee shop. It is warm, inviting, and busy.
 Narrator: For some reason, the door is smiling. You nod in its direction, and turn away.
 Narrator: You spot your date coming through the door. They flash a smile, get a drink, and then sit down across from you.
 leave Narrator
-jump MasonFirstDate/
+if {SwipeRightOne} == "Mason":
+	jump MasonFirstDate/
+elif {SwipeRightOne} == "Lewis":
+	jump LewisFirstDate/
+elif {SwipeRightOne} == "Kara":
+	jump KaraFirstDate/
+elif {SwipeRightOne} == "Kali":
+elif {} == "Raymond":

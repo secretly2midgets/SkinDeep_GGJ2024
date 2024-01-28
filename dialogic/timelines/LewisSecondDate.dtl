@@ -1,4 +1,4 @@
-if :
+if {Lewis2ndDate} == "true":
 	join LewisBolson 2
 	set {QuestionCounter} = 0
 	set {DateNumber} += 1
@@ -31,7 +31,8 @@ if :
 	- What are your thoughts on the Costco $1.50 hot dog?
 		if {Skinwalker} == "Lewis":
 			LewisBolson: It’s the best.
-		Narrator (Default_Test): I don’t eat beef. It means nothing to me. However, I’m a huge fan of the CEO’s energy. Right idea, wrong product.
+		else:
+			Narrator (Default_Test): I don’t eat beef. It means nothing to me. However, I’m a huge fan of the CEO’s energy. Right idea, wrong product.
 		jump InitialChoices
 	label Flirtations
 	LewisBolson (Default_Test): You nearly had me tongue-tied last time... I can only imagine what you’re thinking.
