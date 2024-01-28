@@ -2,17 +2,26 @@ extends Node
 
 var rando = RandomNumberGenerator.new()
 var x: int
-var dict = {0: false, 1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false}
+var y: int
+# The three characters to choose to date
+var dict = {"Mason": false, "Lewis": false, "Kara": false}
 
-# Called when the node enters the scene tree for the first time.
 
  
+# When the new game is created a seed is sent through the script and
+# made into range between the dictionary numbers
 
 func _on_menu_demon(value):
 	rando.seed = value
-	x = rando.randi_range(0, 7)
+	x = rando.randi_range(0, dict.size() - 1)
+	y = 0
+	print(x)
 	for key in dict:
-		if key == x:
+		if y == x:
 			dict[key] = true
-			global.set_dict(dict);
+			global.set_demon(dict);
+			Dialogic.VAR.set("Skinwalker", key)
+			print(Dialogic.VAR.get("Skinwalker"))
+			print(dict)
 			break
+		y += 1
