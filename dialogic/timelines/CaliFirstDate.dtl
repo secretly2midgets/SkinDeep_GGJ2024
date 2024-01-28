@@ -72,9 +72,11 @@ if {AffectionCali} >= {AffectionThreshold.First}:
 	- No
 		CaliMcLaughlin: Oh.
 		set {AffectionCali} = 0
+		set {HowManyLeft} -= 1
 else:
 	CaliMcLaughlin: Hey, don’t feel bad! You’ll find somebody!
 	set {AffectionCali} = 0
+	set {HowManyLeft} -= 1
 Narrator: Cali muscles her way through the crowd, hurling children over her shoulders in a mighty procession to the cash register, where she pays for both your drinks before leaving.
 leave CaliMcLaughlin
 jump DateOneInterstitial/

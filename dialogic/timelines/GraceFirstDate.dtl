@@ -74,9 +74,11 @@ if {AffectionGrace} >= {AffectionThreshold.First}:
 	- No
 		GraceGomez: Okay. You’ll still be evaluated soon. It was nice meeting you. Take care of yourself.
 		set {AffectionGrace} = -10
+		set {HowManyLeft} -= 1
 else:
 	GraceGomez: I am afraid I cannot partake in this deal at this time.
 	set {AffectionGrace} = -10
+	set {HowManyLeft} -= 1
 Narrator: Grace whips out a credit card molded from pure moon-platinum.  It reflects light brighter than its source and you swear you see a stray hair get cut in half as she swings it past.  She buys both your drinks without a word, and offers a curt nod as she exits the establishment.
 leave GraceGomez
 jump DateOneInterstitial/

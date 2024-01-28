@@ -69,9 +69,11 @@ if {AffectionKelsey} >= {AffectionThreshold.Second}:
 	- No
 		KelseyWilliams: Oh, well, goodbye I guess.
 		set {AffectionKelsey} = -10
+		set {HowManyLeft} -= 1
 else:
 	KelseyWilliams: I think you're a couple smokes short of a pack, fella.
 	set {AffectionKelsey} = -10
+	set {HowManyLeft} -= 1
 Narrator: Kelsey runs out. Hair sheds off of her as she leaves.
 leave KelseyWilliams
 jump DateTwoInterstitial/

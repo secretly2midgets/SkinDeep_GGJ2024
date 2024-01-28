@@ -19,7 +19,9 @@ LewisBolson: I am so lucky to have you.
 		set {SkinwalkerKilled} = "true"
 		Narrator: You've done it. It lies dead at your feet, the Lewis' corpse bubbles and contorts into the form of a horrific monster.
 		Narrator: You dispose of the body by fire, to ensure It can't return.
+		set {HowManyLeft} -= 1
 	else:
 		Narrator: Lewis is dead. You remove all traces and dispose of the body as quickly as possible.
+		set {HowManyLeft} -= 1
 	leave Narrator
 jump DateThreeInterstitial/

@@ -74,9 +74,11 @@ if {AffectionLewis} >= {AffectionThreshold.Second}:
 	- No
 		LewisBolson: …Oh.
 		set {AffectionLewis} = -10
+		set {HowManyLeft} -= 1
 else:
 	LewisBolson: I refuse
 	set {AffectionLewis} = -10
+	set {HowManyLeft} -= 1
 Narrator: Lewis compliments your appearance a few more times as he gets ready to leave.
 leave LewisBolson
 jump DateTwoInterstitial/

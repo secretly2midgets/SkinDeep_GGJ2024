@@ -76,9 +76,11 @@ if {AffectionMason} >= {AffectionThreshold.Second}:
 	- No
 		MasonFoster: ... but I thought we were getting somewhere...
 		set {AffectionMason} = -10
+		set {HowManyLeft} -= 1
 else:
 	MasonFoster: I refuse
 	set {AffectionMason} = -10
+	set {HowManyLeft} -= 1
 Narrator: Mason goes in for a big hug. The hug is long and awkward. As he walks out the door, he gives you finger guns and winks.
 leave MasonFoster
 jump DateTwoInterstitial/

@@ -25,57 +25,59 @@ if {DateNumber} == 0:
 			jump GraceThirdDate/
 	set {DateNumber} += 1
 if {DateNumber} == 1:
-	Narrator: You tidy up as quickly as possible and wait for some time before your next date shows up.
-	if {SwipeRightTwo} == "Mason":
-		if {AffectionMason} >= 0:
-			jump MasonThirdDate/
-	elif {SwipeRightTwo} == "Lewis":
-		if {AffectionLewis} >= 0:
-			jump LewisThirdDate/
-	elif {SwipeRightTwo} == "Kara":
-		if {AffectionKara} >= 0:
-			jump KaraThirdDate/
-	elif {SwipeRightTwo} == "Kali":
-		if {AffectionKali} >= 0:
-			jump KaliThirdDate/
-	elif {SwipeRightTwo} == "Raymond":
-		if {AffectionRaymond} >= 0:
-			jump RaymondThirdDate/
-	elif {SwipeRightTwo} == "Kelsey":
-		if {AffectionKelsey} >= 0:
-			jump KelseyThirdDate/
-	elif {SwipeRightTwo} == "John":
-		if {AffectionJohn} >= 0:
-			jump JohnThirdDate/
-	elif {SwipeRightTwo} == "Grace":
-		if {AffectionGrace} >= 0:
-			jump GraceThirdDate/
+	if {HowManyLeft} >= 2:
+		Narrator: You tidy up as quickly as possible and wait for some time before your next date shows up.
+		if {SwipeRightTwo} == "Mason":
+			if {AffectionMason} >= 0:
+				jump MasonThirdDate/
+		elif {SwipeRightTwo} == "Lewis":
+			if {AffectionLewis} >= 0:
+				jump LewisThirdDate/
+		elif {SwipeRightTwo} == "Kara":
+			if {AffectionKara} >= 0:
+				jump KaraThirdDate/
+		elif {SwipeRightTwo} == "Kali":
+			if {AffectionKali} >= 0:
+				jump KaliThirdDate/
+		elif {SwipeRightTwo} == "Raymond":
+			if {AffectionRaymond} >= 0:
+				jump RaymondThirdDate/
+		elif {SwipeRightTwo} == "Kelsey":
+			if {AffectionKelsey} >= 0:
+				jump KelseyThirdDate/
+		elif {SwipeRightTwo} == "John":
+			if {AffectionJohn} >= 0:
+				jump JohnThirdDate/
+		elif {SwipeRightTwo} == "Grace":
+			if {AffectionGrace} >= 0:
+				jump GraceThirdDate/
 	set {DateNumber} += 1
 if {DateNumber} == 2:
-	if {SwipeRightThree} == "Mason":
-		if {AffectionMason} >= 0:
-			jump MasonThirdDate/
-	elif {SwipeRightThree} == "Lewis":
-		if {AffectionLewis} >= 0:
-			jump LewisThirdDate/
-	elif {SwipeRightThree} == "Kara":
-		if {AffectionKara} >= 0:
-			jump KaraThirdDate/
-	elif {SwipeRightTwo} == "Kali":
-		if {AffectionKali} >= 0:
-			jump KaliThirdDate/
-	elif {SwipeRightTwo} == "Raymond":
-		if {AffectionRaymond} >= 0:
-			jump RaymondThirdDate/
-	elif {SwipeRightTwo} == "Kelsey":
-		if {AffectionKelsey} >= 0:
-			jump KelseyThirdDate/
-	elif {SwipeRightTwo} == "John":
-		if {AffectionJohn} >= 0:
-			jump JohnThirdDate/
-	elif {SwipeRightTwo} == "Grace":
-		if {AffectionGrace} >= 0:
-			jump GraceThirdDate/
+	if {HowManyLeft} >= 2
+		if {SwipeRightThree} == "Mason":
+			if {AffectionMason} >= 0:
+				jump MasonThirdDate/
+		elif {SwipeRightThree} == "Lewis":
+			if {AffectionLewis} >= 0:
+				jump LewisThirdDate/
+		elif {SwipeRightThree} == "Kara":
+			if {AffectionKara} >= 0:
+				jump KaraThirdDate/
+		elif {SwipeRightTwo} == "Kali":
+			if {AffectionKali} >= 0:
+				jump KaliThirdDate/
+		elif {SwipeRightTwo} == "Raymond":
+			if {AffectionRaymond} >= 0:
+				jump RaymondThirdDate/
+		elif {SwipeRightTwo} == "Kelsey":
+			if {AffectionKelsey} >= 0:
+				jump KelseyThirdDate/
+		elif {SwipeRightTwo} == "John":
+			if {AffectionJohn} >= 0:
+				jump JohnThirdDate/
+		elif {SwipeRightTwo} == "Grace":
+			if {AffectionGrace} >= 0:
+				jump GraceThirdDate/
 	set {DateNumber} += 1
 if {DateNumber} > 2:
 	jump EndingCheck/

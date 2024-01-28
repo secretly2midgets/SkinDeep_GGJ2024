@@ -74,9 +74,11 @@ if {AffectionKara} >= {AffectionThreshold.First}:
 	- No
 		KaraRogers: Well fine. I’ll just finger myself then.
 		set {AffectionKara} = -10
+		set {HowManyLeft} -= 1
 else:
 	KaraRogers: I refuse
 	set {AffectionKara} = -10
+	set {HowManyLeft} -= 1
 Narrator: Kara gets up and smiles at you. With a flourish, she turns on her heels and leaves the cafe.
 leave KaraRogers
 jump DateOneInterstitial/

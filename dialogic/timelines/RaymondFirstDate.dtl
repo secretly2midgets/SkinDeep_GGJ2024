@@ -64,16 +64,19 @@ RaymondShaw: ‘Ey, I might be an untamed bronco, but you can wrangle me anytime
 	jump InitialChoices
 label 2ndDate?
 if {AffectionRaymond} >= {AffectionThreshold.First}:
-	set {AtLeastOneDateSuccess} = "true"
-	RaymondShaw: So…reckon I lassoed ya in?
-	set {AtLeastOneDateSuccess} = "true"
-	RaymondShaw: Mighty fine. See ya in week’s time.
-- No
-	RaymondShaw: Dang…this one’s got away.
-	set {AffectionRaymond} = -10
+	-Yes
+		set {AtLeastOneDateSuccess} = "true"
+		RaymondShaw: So…reckon I lassoed ya in?
+		set {AtLeastOneDateSuccess} = "true"
+		RaymondShaw: Mighty fine. See ya in week’s time.
+	- No
+		RaymondShaw: Dang…this one’s got away.
+		set {AffectionRaymond} = -10
+		set {HowManyLeft} -= 1
 else:
-RaymondShaw: Sorry ma'am but I'm just not feeling the connection here.  Hope you have a lovely day.
-set {AffectionRaymond} = -10
+	RaymondShaw: Sorry ma'am but I'm just not feeling the connection here.  Hope you have a lovely day.
+	set {AffectionRaymond} = -10
+	set {HowManyLeft} -= 1
 Narrator: Raymond hands the cashier a fistfull of dollars and shoots you a devlish grin before donning his hat and stepping out into the noon-day sun.
 leave RaymondShaw
 jump DateOneInterstitial/

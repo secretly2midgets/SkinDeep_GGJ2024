@@ -72,9 +72,11 @@ if {AffectionGrace} >= {AffectionThreshold.Second}:
 	- No
 		GraceGomez: A LunaTech representative will see you in my place. Goodbye.
 		set {AffectionGrace} = -10
+		set {HowManyLeft} -= 1
 else:
 	GraceGomez: I see no further profit in continuing this venture.
 	set {AffectionGrace} = -10
+	set {HowManyLeft} -= 1
 Narrator: Grace leaves. You get the feeling she’s got a lot on her mind after talking to you.
 leave GraceGomez
 jump DateTwoInterstitial/

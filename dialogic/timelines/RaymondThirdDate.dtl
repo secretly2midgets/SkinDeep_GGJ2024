@@ -18,8 +18,10 @@ RaymondShaw: If things’re going well tonight, I might even hogtie ya…
 		Narrator: The creature calling itself Raymond has been put down. It cannot harm you.
 		Narrator: You dispose of the body by fire, to ensure It can't return.
 		# Add skinwalker portrait??
+		set {HowManyLeft} -= 1
 		set {SkinwalkerKilled} = "true"
 	else:
 		Narrator: Raymond is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
+		set {HowManyLeft} -= 1
 	leave Narrator
 jump DateThreeInterstitial/

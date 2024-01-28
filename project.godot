@@ -99,6 +99,7 @@ variables={
 },
 "AtLeastOneDateSuccess": "false",
 "DateNumber": "0",
+"HowManyLeft": "3",
 "Kara2ndDate": "false",
 "KillCount": "0",
 "LoveFound": "false",

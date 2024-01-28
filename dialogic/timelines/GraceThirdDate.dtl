@@ -19,7 +19,9 @@ GraceGomez: Ready for the performance evaluation?
 		Narrator: You dispose of the body by fire, to ensure It can't return.
 		# Add skinwalker portrait??
 		set {SkinwalkerKilled} = "true"
+		set {HowManyLeft} -= 1
 	else:
 		Narrator: Grace is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
+		set {HowManyLeft} -= 1
 	leave Narrator
 jump DateThreeInterstitial/

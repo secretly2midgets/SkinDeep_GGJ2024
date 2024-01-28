@@ -69,8 +69,10 @@ if {AffectionKelsey} >= {AffectionThreshold.First}:
 	- No
 		KelseyWilliams: Oh well. Goodbye.
 		set {AffectionKelsey} = -10
+		set {HowManyLeft} -= 1
 else:
 	KelseyWilliams: Sorry, sugar.  It's not you, it's me.  I've been with too many Jonas Brothers, and you just don't quite stack up.
+	set {HowManyLeft} -= 1
 	KelseyWilliams: Not even to Kevin.
 	set {AffectionKelsey} = -10
 Narrator: Kelsey stands up from the table before awkwardly waiting in line to leave, less than 10 feet away, but not speaking to you for a full five minutes.

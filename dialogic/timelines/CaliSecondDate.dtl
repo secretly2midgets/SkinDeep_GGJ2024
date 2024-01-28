@@ -74,9 +74,11 @@ if {AffectionCali} >= {AffectionThreshold.Second}:
 		CaliMcLaughlin: Well, nevermind. Take care of yourself.
 		set {AffectionCali} = -10
 		Narrator: Cali walks out of the restaurant, face bright, optimistic. She walks down the street with a confident stride.
+		set {HowManyLeft} -= 1
 else:
 	CaliMcLaughlin: Goodbye, you're a little too much for me.
 	set {AffectionCali} = -10
 	Narrator: Cali's plate of spaghetti stares back at you, judging you in its cold slimey eyes.
+	set {HowManyLeft} -= 1
 leave CaliMcLaughlin
 jump DateTwoInterstitial/

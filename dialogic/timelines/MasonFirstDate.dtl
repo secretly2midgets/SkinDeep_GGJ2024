@@ -70,9 +70,11 @@ if {AffectionMason} >= {AffectionThreshold.First}:
 	- No
 		MasonFoster: Whatever. I'll just find someone else.
 		set {AffectionMason} = -10
+		set {HowManyLeft} -= 1
 		leave MasonFoster
 else:
 	MasonFoster: Sorry, I'm not interested
+	set {HowManyLeft} -= 1
 	set {AffectionMason} = -10
 Narrator: Mason stands and pays for your coffees. Shortly after he heads out the door, your next date walks in.
 leave MasonFoster

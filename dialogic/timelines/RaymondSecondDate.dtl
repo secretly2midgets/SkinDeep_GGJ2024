@@ -68,10 +68,12 @@ if {affectionRaymond} >= {AffectionThreshold.Second}:
 	- Naw
 		RaymondShaw: Well, I’m glad we can part ways kindly.
 		set {AffectionMason} = -10
+		set {HowManyLeft} -= 1
 else:
 	RaymondShaw: Listen, a man gets to a point when he needs to find a place to hang his hat.  I just can't see that being by your door.
 	RaymondShaw: Sorry darling.
 	set {AffectionMason} = -10
+	set {HowManyLeft} -= 1
 Narrator: Raymond tips his hat, smiles, and sticks a toothpick in his mouth. It’s at this moment you notice the spurs on his boots.
 leave RaymondShaw
 jump DateTwoInterstitial/

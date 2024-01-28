@@ -69,9 +69,11 @@ if {AffectionJohn} >= {AffectionThreshold.Second}:
 	- No
 		John: You’ll see one day. You’ll see!
 		set {AffectionJohn} = -10
+		set {HowManyLeft} -= 1
 else:
 	John: This charade has gone on far too long.
 	set {AffectionJohn} = -10
+	set {HowManyLeft} -= 1
 Narrator: John rushes out fast. He has places to go, things to see, and conspiracy theories to investigate.
 leave John
 jump DateTwoInterstitial/
