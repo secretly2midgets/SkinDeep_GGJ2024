@@ -1,3 +1,10 @@
+\Narrator: What would you like to eat?
+ - The 48oz steak please.  Rare.
+	set {DateOrder} = "Steak"
+ - Chicken alfredo linguini speciallizano
+	set {DateOrder} = "Pasta"
+ - One kilo of unseasoned tofu
+	set {DateOrder} = "Tofu"
 if {DateNumber} == 0:
 	if {SwipeRightOne} == "Mason":
 		if {AffectionMason} >= 0:
