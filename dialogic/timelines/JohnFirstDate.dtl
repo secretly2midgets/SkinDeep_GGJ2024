@@ -1,61 +1,64 @@
 join John 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-John (JohnPlaceholder): Intro Line
+John: Thanks for meeting me. I’m John. You got any tinfoil?
 label InitialChoices
 set {QuestionCounter} += 1
-John (JohnPlaceholder): Default Line
+John: Have you ever thought the drain in a toilet looks like an eye? I swear they’re watching me…
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	John (JohnPlaceholder): I'm getting shot
+	John: I knew you were one of them!
 	leave John
 	join Narrator 2
-	Narrator (default): You shot her
+	Narrator (default): Your slug rips John apart. He lies on the ground, still. You are arrested for reckless discharge of a lethal weapon. When you are released, you find that all the attractive people have been eaten by a mysterious creature.
 	[end_timeline]
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-John (JohnPlaceholder): Default 
-- Question 1
-	if {Skinwalker} == "Kara":
-		John: Skinwalker answer
+John: Keep it quick.
+- Are you a green or a blue bubble?
+	if {Skinwalker} == "John":
+		John: Green.
 	else:
-		John (JohnPlaceholder): Regular answer
+		John: Blue. Not a good time for me in the world right now.
 	jump InitialChoices
-- Question 2
-	John (JohnPlaceholder): Answer 2
+- How long have you been houseless?
+	John: ‘Bout 10 years. The first winter was the hardest, but after that it got easier.
 	jump InitialChoices
--  Question 3
-	if {Skinwalker} == "Kara":
-		Skinwalker Answer 3
-	else:
-		John (JohnPlaceholder): Regular answer 3
+-  Any crazy experiences?
+	John: I’ve seen people’s faces melt off, I’ve seen a man’s face be taken off…lots of stuff involving faces.
 	jump InitialChoices
 label Flirtations
-John (JohnPlaceholder): Flirt
-- Flirt A
-	John (JohnPlaceholder): Flirt response
+John: PDA brings It. Be careful.
+- If you were a condiment, you’d be relish.
+	John: You’d be ketchup because blood is red.
 	jump InitialChoices
-- Flirt B
-	John (JohnPlaceholder): Flirt response B
+- I can smell your aroma…and it’s great.
+	if {Skinwalker} == "John":
+		John: Oh shit. Are my armpits showing?
+	else:
+		John: Green.
 	jump InitialChoices
-- Flirt C
-	John (JohnPlaceholder): Flirt responce C
+- Nice ass. Do you squat?
+	if {Skinwalker} == "John":
+		John: Honey, I squat in all the right places. We should try it together some time.
+	else:
+		John: Why yes, I squat all the time. Thanks for noticing.
 	jump InitialChoices
 label 2ndDate?
 if {AffectionJohn} >= {AffectionThreshold.First}:
-	John: Second date dialogue
+	John: I would like to see you again. Preferably without any spycams.
 	- Yes
-		John: Second date accepted
+		John: Excellent. Remember, no spycams.
 	- No
-		John: Second date rejected
+		John: Well, okay.
 		set {AffectionJohn} = -10
 else:
-	John: I refuse
+	John: You're one of them, aren't you?
 	set {AffectionJohn} = -10
-Narrator: Exuent
+Narrator: John scrambles away.
 leave John
 jump DateOneInterstitial/

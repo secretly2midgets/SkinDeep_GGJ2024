@@ -1,61 +1,67 @@
 join GraceGomez 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-GraceGomez (GracePlaceholder): Intro Line
+GraceGomez: Hello, I’m Grace. Nice to meet you.
 label InitialChoices
 set {QuestionCounter} += 1
-GraceGomez (GracePlaceholder): Default Line
+GraceGomez: Order whatever you want. I’ll put it on the company card.
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	GraceGomez (GracePlaceholder): I'm getting shot
+	GraceGomez: I'm getting shot
 	leave GraceGomez
 	join Narrator 2
-	Narrator (default): You shot her
+	Narrator (default): Grace’s offer of love is off the table. That’s because she’s off the table, and on the ground, missing her head. You feel a wave of relief fall over you as the police sirens get louder in the background. Surely, you will get the death penalty for killing a leader in the corporate world.
 	[end_timeline]
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-GraceGomez (GracePlaceholder): Default 
-- Question 1
-	if {Skinwalker} == "Kara":
-		GraceGomez: Skinwalker answer
+GraceGomez: I’ll be as frank as you want.
+- Is it hard being CEO?
+	if {Skinwalker} == "Grace":
+		GraceGomez: Not really. I sit around, smoke pot, and order people around. I could text you more often if you’d like.
 	else:
-		GraceGomez (GracePlaceholder): Regular answer
+		GraceGomez: So much. To be a good leader, you can’t sit around giving orders. You have to work twice as hard as them.
+		GraceGomez: I don’t take joy in ordering people around, but if I don’t do it, someone else could come along and do a half-assed job.
 	jump InitialChoices
-- Question 2
-	GraceGomez (GracePlaceholder): Answer 2
+- Have you really been married ten times
+	GraceGomez: Nineteen actually. Job performance means a lot to me. Be ready for your first evaluation in two weeks.
 	jump InitialChoices
--  Question 3
-	if {Skinwalker} == "Kara":
-		Skinwalker Answer 3
+- What exactly does LunaTech do?
+	if {Skinwalker} == "Grace":
+		Skinwalker Honestly? I’m not really sure. All I know is I get paid a lot of money.
 	else:
-		GraceGomez (GracePlaceholder): Regular answer 3
+		GraceGomez: LunaTech makes lots of different electronics. The big one I’m pushing right now is the sex toys, like the Astronaut and Astronaut (Rough Ride Edition).
+		GraceGomez: We’re located on the moon. Everything gets made in low gravity and then shipped back to Earth. I think it’s amazing that this is even possible at all.
 	jump InitialChoices
 label Flirtations
-GraceGomez (GracePlaceholder): Flirt
-- Flirt A
-	GraceGomez (GracePlaceholder): Flirt response
+GraceGomez (GracePlaceholder): Normally, I’d have to file a form to do this.
+- *Recite the Tragedy of Darth Plagueis the Wise.*
+	if {Skinwalker} == "Grace":
+		GraceGomez: Is it possible to learn this power?
+	else:
+		GraceGomez: What on earth was that? It was hauntingly beautiful.
 	jump InitialChoices
-- Flirt B
-	GraceGomez (GracePlaceholder): Flirt response B
+- Are you a bag of Doritos? Cause you look like a snack.
+	GraceGomez: Aw, thanks hun! I’d gobble you up too.
 	jump InitialChoices
-- Flirt C
-	GraceGomez (GracePlaceholder): Flirt responce C
+- Is it true you test every sex toy yourself?
+	GraceGomez: I test out the prototypes. My office is our R&D, if you catch my meaning.
+	Narrator: She smirks with her last sentence.
 	jump InitialChoices
 label 2ndDate?
 if {AffectionGrace} >= {AffectionThreshold.First}:
-	GraceGomez: Second date dialogue
+	GraceGomez: So, I’d like to go on for longer, but I have to get ready for a meeting in the morning. Can we set up a second date?
 	- Yes
-		GraceGomez: Second date accepted
+		GraceGomez: Wonderful. I’ll have my secretary send you the details tomorrow.
 	- No
-		GraceGomez: Second date rejected
+		GraceGomez: Okay. You’ll still be evaluated soon. It was nice meeting you. Take care of yourself.
 		set {AffectionGrace} = -10
 else:
-	GraceGomez: I refuse
+	GraceGomez: I am afraid I cannot partake in this deal at this time.
 	set {AffectionGrace} = -10
-Narrator: Exuent
+Narrator: Grace whips out a credit card molded from pure moon-platinum.  It reflects light brighter than its source and you swear you see a stray hair get cut in half as she swings it past.  She buys both your drinks without a word, and offers a curt nod as she exits the establishment.
 leave GraceGomez
 jump DateOneInterstitial/

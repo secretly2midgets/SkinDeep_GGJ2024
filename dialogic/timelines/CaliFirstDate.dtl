@@ -1,61 +1,64 @@
 join CaliMcLaughlin 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-CaliMcLaughlin (CaliMcLaughlin): Intro Line
+CaliMcLaughlin (CaliMcLaughlin): Heya! My name’s Cali. I hope you don’t mind but I brought my own tea from home.
 label InitialChoices
 set {QuestionCounter} += 1
-CaliMcLaughlin (CaliMcLaughlin): Default Line
+CaliMcLaughlin (CaliMcLaughlin): I love the park. If you go there, there’s a really neat path where nobody will ever find you.
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	CaliMcLaughlin (CaliMcLaughlin): I'm getting shot
+	CaliMcLaughlin (CaliMcLaughlin): Where’d you get a-
 	leave CaliMcLaughlin
 	join Narrator 2
-	Narrator (default): You shot her
+	Narrator (default): Before you can stop yourself, it’s over. Cali’s plants are going to wither and die now that she isn’t around. The blood pours out from the bullet holes as you are immediately surrounded and arrested.
 	[end_timeline]
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-CaliMcLaughlin (CaliMcLaughlin): Default 
-- Question 1
-	if {Skinwalker} == "Kara":
-		CaliMcLaughlin: Skinwalker answer
+CaliMcLaughlin (CaliMcLaughlin): What’s on your mind?
+- Do you have any pets?
+	if {Skinwalker} == "Cali":
+		CaliMcLaughlin: Everything in the forest is my pet.
 	else:
-		CaliMcLaughlin (CaliMcLaughlin): Regular answer
+		CaliMcLaughlin (CaliMcLaughlin): No, I just collect plants. My favourite’s name is Geoffrey!
 	jump InitialChoices
-- Question 2
-	CaliMcLaughlin (CaliMcLaughlin): Answer 2
+- Make your best diarrhea sound.
+	CaliMcLaughlin (CaliMcLaughlin): Eh? Okay…  …PBFTTTTT … SQEURFFFQELCHCHCHC… psshs blrrt blrrt, pssh ough OWW blrrt … plop
 	jump InitialChoices
--  Question 3
-	if {Skinwalker} == "Kara":
-		Skinwalker Answer 3
-	else:
-		CaliMcLaughlin (CaliMcLaughlin): Regular answer 3
+-  Ask: Mario is dead. You blew his brains out. Why did you do it?
+	CaliMcLaughlin (CaliMcLaughlin): He mouthed off MatPat! You don’t fucking do that!
 	jump InitialChoices
 label Flirtations
-CaliMcLaughlin (CaliMcLaughlin): Flirt
-- Flirt A
-	CaliMcLaughlin (CaliMcLaughlin): Flirt response
+CaliMcLaughlin (CaliMcLaughlin): Oooh, what spicy things are you going to say?
+- What’s your best feature?
+	if {Skinwalker} == "Cali":
+		CaliMcLaughlin (CaliMcLaughlin): My teeth.
+	else:
+		CaliMcLaughlin (CaliMcLaughlin): Hmmm…Probably my butt dimples.
 	jump InitialChoices
-- Flirt B
-	CaliMcLaughlin (CaliMcLaughlin): Flirt response B
+- How would you feed a starving artist?
+	if {Skinwalker} == "Cali":
+		CaliMcLaughlin (CaliMcLaughlin): I’d give them a knife. Let them feed off themselves.
+	else:
+		CaliMcLaughlin (CaliMcLaughlin): I would give them a healthy helping of cheese and compliments.
 	jump InitialChoices
-- Flirt C
-	CaliMcLaughlin (CaliMcLaughlin): Flirt responce C
+- Which lore gets you off the most?
+	CaliMcLaughlin (CaliMcLaughlin): Oh…definitely Pokedex Entries. 
 	jump InitialChoices
 label 2ndDate?
 if {AffectionCali} >= {AffectionThreshold.First}:
-	CaliMcLaughlin: Second date dialogue
+	CaliMcLaughlin: I’m having a lovely time but I have to get going. Do you want to meet again?
 	- Yes
-		CaliMcLaughlin: Second date accepted
+		CaliMcLaughlin: Nice! I’ll let you know when I’m free. Bye bye!
 	- No
-		CaliMcLaughlin: Second date rejected
+		CaliMcLaughlin: Oh.
 		set {AffectionCali} = -10
 else:
-	CaliMcLaughlin: I refuse
+	CaliMcLaughlin: Hey, don’t feel bad! You’ll find somebody!
 	set {AffectionCali} = -10
-Narrator: Exuent
+Narrator: Cali muscles her way through the crowd, hurling children over her shoulders in a mighty procession to the cash register, where she pays for both your drinks before leaving.
 leave CaliMcLaughlin
 jump DateOneInterstitial/
