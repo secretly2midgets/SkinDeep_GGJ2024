@@ -1,3 +1,4 @@
+join Border 2 [animation="Bounce In" length="0" z_index="1"]
 [background arg="res://resources/sprites/Bedroom_Placeholder.png" fade="0.0"]
 [wait time="1.5"]
 set {DateNumber} = 0
@@ -15,3 +16,4 @@ Narrator: You'll be arrested if you take it down in public.
 Narrator: You'll need to bring it home. Hopefully you'll find love along the way.
 leave Narrator
 jump DateOneIntro/
+leave Border [animation="Bounce Out" length="0"]

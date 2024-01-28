@@ -54,6 +54,8 @@ overrides = {}
 [resource]
 script = ExtResource("10_qnb3o")
 name = "default"
-base_overrides = {}
+base_overrides = {
+"canvas_layer": "2.0"
+}
 layers = Array[ExtResource("2_hjafo")]([SubResource("Resource_xg8v2"), SubResource("Resource_meeks"), SubResource("Resource_e1s5x"), SubResource("Resource_5i451"), SubResource("Resource_2h14s"), SubResource("Resource_d0jeh"), SubResource("Resource_dmc1q"), SubResource("Resource_jigbj")])
-metadata/_latest_layer = 0
+metadata/_latest_layer = 1

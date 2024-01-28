@@ -57,7 +57,7 @@ func check_profiles():
 					if demon[x]:
 						Dialogic.VAR.set("Skinwalker", key)
 				x = x + 1
-				
+		print(demon)
 				
 		get_tree().change_scene_to_file(actual_game)
 	elif tripleSwipe > 0:

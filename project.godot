@@ -24,6 +24,7 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Border": "res://resources/U.i/Border.dch",
 "CaliMcLaughlin": "res://dialogic/characters/CaliMcLaughlin.dch",
 "GraceGomez": "res://dialogic/characters/GraceGomez.dch",
 "John": "res://dialogic/characters/John.dch",
@@ -105,6 +106,7 @@ translation/save_mode=0
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
+window/size/resizable=false
 window/stretch/mode="viewport"
 
 [dotnet]
