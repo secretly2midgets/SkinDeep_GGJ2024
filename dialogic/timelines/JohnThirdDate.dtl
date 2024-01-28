@@ -22,4 +22,5 @@ John: Oh, windows. I could never afford this place.
 	else:
 		Narrator: John is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
 	leave Narrator
+leave John
 jump DateThreeInterstitial/

@@ -22,4 +22,5 @@ KelseyWilliams: I want you.
 	else:
 		Narrator: Kelsey is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
 	leave Narrator
+leave KelseyWilliams
 jump DateThreeInterstitial/

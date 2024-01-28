@@ -19,4 +19,5 @@ KaraRogers: So, are you ready or what?
 	else:
 		set {KillCount} += 1
 		Narrator: Kara is dead. You remove all traces and dispose of the body as quickly as possible.
+leave KaraRogers
 jump DateThreeInterstitial/

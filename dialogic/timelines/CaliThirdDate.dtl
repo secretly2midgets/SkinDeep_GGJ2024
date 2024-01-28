@@ -22,4 +22,5 @@ CaliMcLaughlin: I’ve had such a great time with you…
 	else:
 		Narrator: Cali is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
 	leave Narrator
+leave CaliMcLaughlin
 jump DateThreeInterstitial/

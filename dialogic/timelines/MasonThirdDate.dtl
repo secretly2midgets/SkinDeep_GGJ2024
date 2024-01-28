@@ -22,4 +22,5 @@ MasonFoster: You’re the most beautiful person I’ve ever met.
 	else:
 		Narrator: Fossey is dead. You remove all traces and dispose of the body as quickly as possible.
 	leave Narrator
+leave MasonFoster
 jump DateThreeInterstitial/

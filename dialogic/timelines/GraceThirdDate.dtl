@@ -22,4 +22,5 @@ GraceGomez: Ready for the performance evaluation?
 	else:
 		Narrator: Grace is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
 	leave Narrator
+leave GraceGomez
 jump DateThreeInterstitial/

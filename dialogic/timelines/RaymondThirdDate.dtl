@@ -22,4 +22,5 @@ RaymondShaw: If things’re going well tonight, I might even hogtie ya…
 	else:
 		Narrator: Raymond is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
 	leave Narrator
+leave RaymondShaw
 jump DateThreeInterstitial/

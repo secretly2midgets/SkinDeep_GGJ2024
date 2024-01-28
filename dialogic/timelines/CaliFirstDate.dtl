@@ -33,13 +33,12 @@ CaliMcLaughlin: What’s on your mind?
 	else:
 		CaliMcLaughlin: No, I just collect plants. My favourite’s name is Geoffrey!
 	jump InitialChoices
-- Make your best diarrhea sound.
-	CaliMcLaughlin: Eh? Okay…  …PBFTTTTT … SQEURFFFQELCHCHCHC…
-	CaliMcLaughlin: psshs blrrt blrrt, pssh
-	CaliMcLaughlin: ough OWW blrrt
-	CaliMcLaughlin: …
-	CaliMcLaughlin: plop
-	set {AffectionCali} += 1
+- How would you feed a starving artist?
+	if {Skinwalker} == "Cali":
+		CaliMcLaughlin (CaliMcLaughlin): I’d give them a knife. Let them feed off themselves.
+		set {AffectionCali} += 1
+	else:
+		CaliMcLaughlin (CaliMcLaughlin): I would give them a healthy helping of cheese and compliments.
 	jump InitialChoices
 - Ask: Mario is dead. You blew his brains out. Why did you do it?
 	CaliMcLaughlin (CaliMcLaughlin): He mouthed off MatPat! You don’t fucking do that!
@@ -53,12 +52,13 @@ CaliMcLaughlin (CaliMcLaughlin): Oooh, what spicy things are you going to say?
 	else:
 		CaliMcLaughlin (CaliMcLaughlin): Hmmm…Probably my butt dimples.
 	jump InitialChoices
-- How would you feed a starving artist?
-	if {Skinwalker} == "Cali":
-		CaliMcLaughlin (CaliMcLaughlin): I’d give them a knife. Let them feed off themselves.
-		set {AffectionCali} += 1
-	else:
-		CaliMcLaughlin (CaliMcLaughlin): I would give them a healthy helping of cheese and compliments.
+- Make your best diarrhea sound.
+	CaliMcLaughlin: Eh? Okay…  …PBFTTTTT … SQEURFFFQELCHCHCHC…
+	CaliMcLaughlin: psshs blrrt blrrt, pssh
+	CaliMcLaughlin: ough OWW blrrt
+	CaliMcLaughlin: …
+	CaliMcLaughlin: plop
+	set {AffectionCali} += 1
 	jump InitialChoices
 - Which lore gets you off the most?
 	CaliMcLaughlin (CaliMcLaughlin): Oh…definitely Pokedex Entries.

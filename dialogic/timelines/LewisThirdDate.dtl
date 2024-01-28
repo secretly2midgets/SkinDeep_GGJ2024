@@ -22,4 +22,5 @@ LewisBolson: I am so lucky to have you.
 	else:
 		Narrator: Lewis is dead. You remove all traces and dispose of the body as quickly as possible.
 	leave Narrator
+leave LewisBolson
 jump DateThreeInterstitial/

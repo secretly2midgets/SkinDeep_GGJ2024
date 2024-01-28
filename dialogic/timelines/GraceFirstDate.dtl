@@ -37,7 +37,7 @@ GraceGomez: I’ll be as frank as you want.
 		GraceGomez: I don’t take joy in ordering people around, but if I don’t do it, someone else could come along and do a half-assed job.
 		set {AffectionGrace} += 1
 	jump InitialChoices
-- Have you really been married ten times
+- Have you really been married ten times?
 	GraceGomez: Nineteen actually. Job performance means a lot to me. Be ready for your first evaluation in two weeks.
 	jump InitialChoices
 - What exactly does LunaTech do?
