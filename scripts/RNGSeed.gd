@@ -2,11 +2,13 @@ extends Node
 
 var rando = RandomNumberGenerator.new()
 var x: int
+# The three characters to choose to date
 var dict = {0: false, 1: false, 2: false}
 
-# Called when the node enters the scene tree for the first time.
 
  
+# When the new game is created a seed is sent through the script and
+# made into range between the dictionary numbers
 
 func _on_menu_demon(value):
 	rando.seed = value
@@ -15,6 +17,6 @@ func _on_menu_demon(value):
 	for key in dict:
 		if key == x:
 			dict[key] = true
-			global.set_dict(dict);
+			global.set_demon(dict);
 			print(dict)
 			break

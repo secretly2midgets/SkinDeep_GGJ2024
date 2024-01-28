@@ -14,7 +14,7 @@ func _process(delta):
 
 func _on_options_button_pressed():
 	get_tree().change_scene_to_file(options_screen)
-
+# Creats a random seed to send to the main script
 func _on_new_game_button_pressed():
 	# Setting up the demon seed to send to the game
 	demonSeeder.randomize()
