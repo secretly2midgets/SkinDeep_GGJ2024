@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsr5hbyt6ajns"]
+[gd_scene load_steps=11 format=3 uid="uid://bsr5hbyt6ajns"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_tc83e"]
 [ext_resource type="Script" path="res://scripts/RNGSeed.gd" id="2_35bh4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://byrq04puikab2" path="res://resources/U.i/exit.png" id="7_nm1gl"]
 [ext_resource type="Texture2D" uid="uid://17c6vkx2dncg" path="res://resources/U.i/exithighlight.png" id="8_j77n2"]
 [ext_resource type="Texture2D" uid="uid://v5wjrj8fdus5" path="res://resources/U.i/Logo.png" id="9_hoibm"]
+[ext_resource type="AudioStream" uid="uid://bwbkww8fofpm2" path="res://resources/sound/open theme best.wav" id="10_cruu2"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_tc83e")
@@ -48,6 +49,10 @@ texture_hover = ExtResource("8_j77n2")
 z_index = -10
 position = Vector2(960, 540)
 texture = ExtResource("9_hoibm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_cruu2")
+autoplay = true
 
 [connection signal="demon" from="." to="Node" method="_on_menu_demon"]
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]

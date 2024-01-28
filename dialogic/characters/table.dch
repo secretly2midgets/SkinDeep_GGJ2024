@@ -6,21 +6,21 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "default"
 },
 "default_portrait": "CoffeeTable",
 "description": "",
 "display_name": "table",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 200),
+"offset": Vector2(0, 0),
 "portraits": {
 "CoffeeTable": {
 "export_overrides": {
 "image": "\"res://resources/sprites/Coffee_Table_Placeholder.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
+"offset": Vector2(100, 200),
 "scale": 1,
 "scene": ""
 },

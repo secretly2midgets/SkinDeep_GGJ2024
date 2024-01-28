@@ -47,8 +47,8 @@ directories/dtl_directory={
 "NightTwoFinalDateTransition": "res://dialogic/timelines/NightTwoFinalDateTransition.dtl",
 "OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"
 }
-layout/style_list=[]
-layout/default_style=""
+layout/style_list=["res://dialogic/styles/default.tres"]
+layout/default_style="res://dialogic/styles/default.tres"
 glossary/default_case_sensitive=true
 variables={
 "DateNumber": "0",
