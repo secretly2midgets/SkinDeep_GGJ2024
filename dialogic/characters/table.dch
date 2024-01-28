@@ -10,7 +10,7 @@
 },
 "default_portrait": "CoffeeTable",
 "description": "",
-"display_name": "table",
+"display_name": "Table",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
