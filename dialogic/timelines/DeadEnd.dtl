@@ -1,0 +1,6 @@
+join Narrator 2
+Narrator: You have found true love.
+Narrator: Unfortunately, it’s torn out and eaten your heart.
+Narrator: The curtains are crying.
+Narrator: DEAD END. (2/9)
+do global.game_over()

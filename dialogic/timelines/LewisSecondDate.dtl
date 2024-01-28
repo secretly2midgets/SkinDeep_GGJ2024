@@ -11,10 +11,12 @@ LewisBolson (LewisHill): This place is nice. I could eat here for the rest of my
 	jump Flirtations
 - Use shotgun
 	LewisBolson (LewisHill): NO! NO! NO-
-	leave LewisBolson
-	join Narrator 2
-	Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
-	[end_timeline]
+	if {Skinwalker} == "Lewis":
+	else:
+		leave LewisBolson
+		join Narrator 2
+		Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
+		jump JailEnding/
 - Third Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions

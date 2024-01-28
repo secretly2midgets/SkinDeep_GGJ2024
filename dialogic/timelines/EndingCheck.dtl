@@ -1,0 +1,17 @@
+if {LoveFound} == "true":
+	# Good End (Find Love, and kill the skinwalker)
+	if {SkinwalkerKilled} == "true":
+		jump GoodEnd/
+	# Bad End (Find love, but not the skinwalker)
+	else:
+		jump BadEnd/
+else:
+	# Phyrric End (Dont find love, but kill the skinwalker)
+	if {KillCount} == 3:
+		jump TrueEnd/
+	# True End (Kill all three dates)
+	elif {SkinwalkerKilled} == "true":
+		jump PhyrricEnd/
+# Dead End (Find love with the skinwalker) --  Called Directly from 3rd date if sleep with skinwalker
+# Lonely End (Fail all dates) -- Checked for inside the interstitials, just before moving to the next date
+# Swipe Left End (Don't swipe right on any characters) --    Handled in Tinder Code

@@ -11,10 +11,15 @@ MasonFoster (MasonFoster): Thanks for doing this tonight. I needed a distraction
 	jump Flirtations
 - Use shotgun
 	MasonFoster (MasonFoster): Whoa, hey that's not-
-	leave MasonFoster
-	join Narrator 2
-	Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
-	[end_timeline]
+	if {Skinwalker} == "Mason":
+		MasonFoster: Shit... that's not fair.
+		leave MasonFoster
+		jump QuickEnd/
+	else:
+		leave MasonFoster
+		join Narrator 2
+		Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
+		jump JailEnding/
 - Third date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
@@ -65,7 +70,8 @@ label SecondDate?
 if {AffectionMason} >= {AffectionThreshold.Second}:
 	MasonFoster: I’m really enjoying my time with you, can we keep seeing each other?
 	- Yes
-		MasonFoster: Hey sweet! Let’s meet at your place next time!
+		MasonFoster: Hey sweet! I'll meet you at your place next week!
+		set {AtLeastOneDateSuccess} = "true"
 	- No
 		MasonFoster: ... but I thought we were getting somewhere...
 		set {AffectionMason} = -10

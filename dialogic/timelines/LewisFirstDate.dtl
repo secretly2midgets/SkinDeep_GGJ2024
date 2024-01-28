@@ -11,10 +11,15 @@ LewisBolson (LewisHill): I've never been on a date before... this is pretty fun.
 	jump Flirtations
 - Use shotgun
 	LewisBolson (LewisHill): Holy SHIT, where'd you get-
-	leave LewisBolson
-	join Narrator 2
-	Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
-	[end_timeline]
+	if {Skinwalker} == "Lewis":
+		LewisBolson: You figured it out quick... and you looked so scrumptious...
+		leave LewisBolson
+		jump QuickEnd/
+	else:
+		leave LewisBolson
+		join Narrator 2
+		Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
+		jump JailEnding/
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
