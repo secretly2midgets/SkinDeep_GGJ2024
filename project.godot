@@ -92,16 +92,16 @@ variables={
 },
 "AtLeastOneDateSuccess": "false",
 "DateNumber": "0",
-"DateOrder": "",
+"Kara2ndDate": "false",
 "KillCount": "0",
 "LoveFound": "false",
 "NightNumber": "1",
 "QuestionCounter": "0",
 "Skinwalker": "Kara",
 "SkinwalkerKilled": "false",
-"SwipeRightOne": "nil",
-"SwipeRightThree": "nil",
-"SwipeRightTwo": "nil"
+"SwipeRightOne": "",
+"SwipeRightThree": "",
+"SwipeRightTwo": ""
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -131,6 +131,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/size/resizable=false
+window/stretch/mode="viewport"
 
 [dotnet]
 
