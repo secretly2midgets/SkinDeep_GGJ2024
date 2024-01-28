@@ -61,11 +61,4 @@ MasonFoster: So.. you're pretty cool. Am I gonna see you again?
 	set {Mason2ndDate} = "false"
 Narrator: Mason stands and pays for your coffees. Shortly after he heads out the door, your next date walks in.
 leave MasonFoster
-if {SwipeRightTwo} == "Lewis":
-	jump LewisFirstDate/
-elif {SwipeRightTwo} == "Kara":
-	jump KaraFirstDate/
-elif {SwipeRightTwo} == "Kali":
-elif {SwipeRightTwo} == "Raymond":
-elif {SwipeRightTwo} == "John":
-elif {SwipeRightTwo} == "Kelsey":
+jump DateOneInterstitial/

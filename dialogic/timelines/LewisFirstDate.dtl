@@ -67,10 +67,4 @@ LewisBolson: So.. most people leave by this point... would you wanna see me agai
 	set {Lewis2ndDate} = "false"
 Narrator: Lewis checks his phone, and tells you his ride is here. He thanks you for the date, and offers to pay for your coffee.
 leave LewisBolson
-if {SwipeRightThree} == "Kara":
-	jump KaraFirstDate/
-elif {SwipeRightThree} == "Kali":
-elif {SwipeRightThree} == "Raymond":
-elif {SwipeRightThree} == "John":
-elif {SwipeRightThree} == "Kelsey":
-else:
+jump DateOneInterstitial/

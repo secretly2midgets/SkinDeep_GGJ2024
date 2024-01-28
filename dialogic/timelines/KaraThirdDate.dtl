@@ -1,4 +1,5 @@
 join KaraRogers 2
+set {DateNumber} += 1
 Narrator: Kara shows up to your house. She knocks on the door repeatedly until you finally get to it. Her smile is wider than previously before. It’s infectious.
 KaraRogers: So, are you ready or what?
 - Bang.
@@ -7,3 +8,4 @@ KaraRogers: So, are you ready or what?
 	leave KaraRogers
 	join Narrator 2
 	Narrator: Kara is dead. You remove all traces and dispose of the body before your next date arrives.
+jump DateThreeInterstitial/

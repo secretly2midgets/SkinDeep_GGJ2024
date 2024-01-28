@@ -1,0 +1,56 @@
+if {DateNumber} == 0:
+	if {SwipeRightOne} == "Mason":
+		jump MasonSecondDate/
+	elif {SwipeRightOne} == "Lewis":
+		jump LewisSecondDate/
+	elif {SwipeRightOne} == "Kara":
+		jump KaraSecondDate/
+	elif {SwipeRightOne} == "Kali":
+		pass
+	elif {SwipeRightOne} == "Raymond":
+		pass
+	elif {SwipeRightOne} == "Kelsey":
+		pass
+	elif {SwipeRightOne} == "John":
+		pass
+	elif {SwipeRightOne} == "Grace":
+		pass
+elif {DateNumber} == 1:
+	Narrator: After waiting for some time, your next date walks in and speaks to one of the servers. They gesture toward your table, which has been cleared. Your date walks over, smiles, and sits down.
+	if {SwipeRightTwo} == "Mason":
+		jump MasonSecondDate/
+	elif {SwipeRightTwo} == "Lewis":
+		jump LewisSecondDate/
+	elif {SwipeRightTwo} == "Kara":
+		jump KaraSecondDate/
+	elif {SwipeRightTwo} == "Kali":
+		pass
+	elif {SwipeRightTwo} == "Raymond":
+		pass
+	elif {SwipeRightTwo} == "Kelsey":
+		pass
+	elif {SwipeRightTwo} == "John":
+		pass
+	elif {SwipeRightTwo} == "Grace":
+		pass
+elif {DateNumber} == 2:
+	jump NightTwoFinalDateTransition/
+	label NightTwoFinalDateDecider/
+	if {SwipeRightThree} == "Mason":
+		jump MasonSecondDate/
+	elif {SwipeRightThree} == "Lewis":
+		jump LewisSecondDate/
+	elif {SwipeRightThree} == "Kara":
+		jump KaraSecondDate/
+	elif {SwipeRightThree} == "Kali":
+		pass
+	elif {SwipeRightThree} == "Raymond":
+		pass
+	elif {SwipeRightThree} == "Kelsey":
+		pass
+	elif {SwipeRightThree} == "John":
+		pass
+	elif {SwipeRightThree} == "Grace":
+		pass
+else:
+	jump DateThreeIntro/

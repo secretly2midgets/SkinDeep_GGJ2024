@@ -71,7 +71,4 @@ KaraRogers: We are definitely doing another date, and it will be at your house.
 	KaraRogers: Don’t worry about me, plenty of other fish out there. See ya!
 Narrator: Kara pays for the meal and then sprints out. She is very clearly in a hurry. Her face has no expression as she stares straight forward.
 leave KaraRogers
-if {DateNumber} == 2:
-	jump NightTwoFinalDateTransition/
-else:
-	jump DateThreeIntro/
+jump DateTwoInterstitial/

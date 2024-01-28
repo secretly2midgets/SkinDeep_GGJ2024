@@ -13,21 +13,21 @@ func _process(delta):
 #sets the demon from the RNGSeed script
 func set_demon(value: Dictionary) -> void:
 	demon = value
-	print(demon)
+	#print(demon)
 
 func get_demon():
 	return demon
 	
 func set_difficulty(value: Dictionary) -> void:
 	difficulty = value
-	print(difficulty)
+	#print(difficulty)
 	
 func get_difficulty():
 	return difficulty
 
 func set_dates(value: Dictionary):
 	profiles = value
-	print(dates)
+	#print(dates)
 func get_dates():
 	return dates
 func game_over() -> void:

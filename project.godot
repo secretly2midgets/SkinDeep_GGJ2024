@@ -30,8 +30,11 @@ directories/dch_directory={
 "table": "res://dialogic/characters/table.dch"
 }
 directories/dtl_directory={
+"DateOneInterstitial": "res://dialogic/timelines/DateOneInterstitial.dtl",
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
+"DateThreeInterstitial": "res://dialogic/timelines/DateThreeInterstitial.dtl",
 "DateThreeIntro": "res://dialogic/timelines/DateThreeIntro.dtl",
+"DateTwoInterstitial": "res://dialogic/timelines/DateTwoInterstitial.dtl",
 "DateTwoIntro": "res://dialogic/timelines/DateTwoIntro.dtl",
 "KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
 "KaraSecondDate": "res://dialogic/timelines/KaraSecondDate.dtl",

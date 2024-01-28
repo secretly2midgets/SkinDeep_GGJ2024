@@ -7,7 +7,7 @@ var demonReshuffle: Dictionary
 #variable for counting where on the list of profiles you are
 var counter: int = 0
 var tripleSwipe: int = 0
-var actual_game = "res://scenes/dialogue.tscn"
+var actual_game = "res://scenes/game.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	demon = global.get_demon()

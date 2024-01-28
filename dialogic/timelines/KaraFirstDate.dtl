@@ -57,7 +57,4 @@ KaraRogers: I don’t bang until the third date. I’ve never made it that far, 
 	KaraRogers: Well fine. I’ll just finger myself then.
 Narrator: Kara gets up and smiles at you. With a flourish, she turns on her heels and leaves the cafe.
 leave KaraRogers
-if {DateNumber} == 2:
-	jump NightOneFinalDateTransition/
-else:
-	jump DateTwoIntro/
+jump DateOneInterstitial/

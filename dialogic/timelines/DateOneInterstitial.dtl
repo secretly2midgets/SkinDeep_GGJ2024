@@ -1,0 +1,58 @@
+print("HERE")
+print({DateNumber})
+print({SwipeRightOne})
+if {DateNumber} == 0:
+	if {SwipeRightOne} == "Mason":
+		jump MasonFirstDate/
+	elif {SwipeRightOne} == "Lewis":
+		jump LewisFirstDate/
+	elif {SwipeRightOne} == "Kara":
+		jump KaraFirstDate/
+	elif {SwipeRightOne} == "Kali":
+		pass
+	elif {SwipeRightOne} == "Raymond":
+		pass
+	elif {SwipeRightOne} == "Kelsey":
+		pass
+	elif {SwipeRightOne} == "John":
+		pass
+	elif {SwipeRightOne} == "Grace":
+		pass
+elif {DateNumber} == 1:
+	if {SwipeRightTwo} == "Mason":
+		jump MasonFirstDate/
+	elif {SwipeRightTwo} == "Lewis":
+		jump LewisFirstDate/
+	elif {SwipeRightTwo} == "Kara":
+		jump KaraFirstDate/
+	elif {SwipeRightTwo} == "Kali":
+		pass
+	elif {SwipeRightTwo} == "Raymond":
+		pass
+	elif {SwipeRightTwo} == "Kelsey":
+		pass
+	elif {SwipeRightTwo} == "John":
+		pass
+	elif {SwipeRightTwo} == "Grace":
+		pass
+elif {DateNumber} == 2:
+	jump NightOneFinalDateTransition/
+	label NightOneFinalDateDecider/
+	if {SwipeRightThree} == "Mason":
+		jump MasonFirstDate/
+	elif {SwipeRightThree} == "Lewis":
+		jump LewisFirstDate/
+	elif {SwipeRightThree} == "Kara":
+		jump KaraFirstDate/
+	elif {SwipeRightThree} == "Kali":
+		pass
+	elif {SwipeRightThree} == "Raymond":
+		pass
+	elif {SwipeRightThree} == "Kelsey":
+		pass
+	elif {SwipeRightThree} == "John":
+		pass
+	elif {SwipeRightThree} == "Grace":
+		pass
+else:
+	jump DateTwoIntro/
