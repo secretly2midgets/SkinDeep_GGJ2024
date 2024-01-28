@@ -16,6 +16,7 @@ KaraRogers: Don’t worry about dinner tonight, it’s on me! My dad gives me al
 	if {Skinwalker} == "Kara":
 		KaraRogers: Haha.. Hahahahhahahahahahaha! You're a smart one..
 		leave KaraRogers
+		Narrator: You catch a glimpse of Kara's body elongating, contorting into something awful.
 		jump QuickEnd/
 	else:
 		leave KaraRogers
@@ -81,12 +82,13 @@ label 2ndDate?
 if {AffectionCali} >= {AffectionThreshold.Second}:
 	KaraRogers: We are definitely doing another date, and it will be at your house.
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		KaraRogers: Hey, you keep it easy like this next time and you’re getting laid.
 	- No
 		KaraRogers: Don’t worry about me, plenty of other fish out there. See ya!
 		set {AffectionKara} = -10
 else:
-	KaraRogers: I refuse
+	KaraRogers: No thanks, I need someone a bit more exciting than you.
 	set {AffectionKara} = -10
 Narrator: Kara pays for the meal and then sprints out. She is very clearly in a hurry. Her face has no expression as she stares straight forward.
 leave KaraRogers

@@ -3,7 +3,12 @@ set {DateNumber} += 1
 Narrator: Kara shows up to your house. She knocks on the door repeatedly until you finally get to it. Her smile is wider than previously before. It’s infectious.
 KaraRogers: So, are you ready or what?
 - Bang.
-	Narrator: She stares at you as you take her by the hand and go to the bedroom.
+	if {Skinwalker} == "Kara":
+		KaraRogers: Her smile twists inhumanly across her face. You do not survive the encounter. 
+		jump DeadEnd/
+	else:
+		set {LoveFound} = "true"
+		Narrator: She stares at you as you take her by the hand and go to the bedroom.
 - BANG!
 	leave KaraRogers
 	join Narrator 2

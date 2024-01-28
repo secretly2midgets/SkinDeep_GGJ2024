@@ -14,13 +14,14 @@ John: Have you ever thought the drain in a toilet looks like an eye? I swear the
 - Use shotgun
 	if {Skinwalker} == "John":
 		John: It sure is rare to find someone more paranoid than the poor soul I stole this body from. Shit.
+		Narrator: As John's body goes limp, police arrive. You watch his body twist into something hideous.
 		leave John
 		jump QuickEnd/
 	else:
 		John: I knew you were one of them!
 		leave John
 		join Narrator 2
-		Narrator (default): Your slug rips John apart. He lies on the ground, still. You are arrested for reckless discharge of a lethal weapon. When you are released, you find that all the attractive people have been eaten by a mysterious creature.
+		Narrator (default): Your slug rips John apart. He lies on the ground, still. You are arrested for reckless discharge of a lethal weapon.
 		jump JailEnding/
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?

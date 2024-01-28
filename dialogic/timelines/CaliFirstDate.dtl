@@ -61,27 +61,8 @@ CaliMcLaughlin (CaliMcLaughlin): Oooh, what spicy things are you going to say?
 		CaliMcLaughlin (CaliMcLaughlin): I would give them a healthy helping of cheese and compliments.
 	jump InitialChoices
 - Which lore gets you off the most?
-	set {AtLeastOneDateSuccess} = "true"
 	CaliMcLaughlin (CaliMcLaughlin): Oh…definitely Pokedex Entries.
 	jump InitialChoices
-label 2ndDate?
-if {AffectionCali} >= {AffectionThreshold.First}:
-	CaliMcLaughlin: I’m having a lovely time but I have to get going. Do you want to meet again?
-	- Yes
-		set {AtLeastOneDateSuccess} = "true"
-		CaliMcLaughlin: Nice! I’ll let you know when I’m free. Bye bye!
-	- No
-		CaliMcLaughlin: Oh.
-		set {AffectionCali} = -10
-else:
-	CaliMcLaughlin: Hey, don’t feel bad! You’ll find somebody!
-	set {AffectionCali} = -10
-Narrator: Cali muscles her way through the crowd, hurling children over her shoulders in a mighty procession to the cash register, where she pays for both your drinks before leaving.
-leave CaliMcLaughlin
-jump DateOneInterstitial/
-
-CaliMcLaughlin (CaliMcLaughlin): Oh…definitely Pokedex Entries.
-set {AffectionCali} += 1
 jump InitialChoices
 label 2ndDate?
 if {AffectionCali} >= {AffectionThreshold.First}:

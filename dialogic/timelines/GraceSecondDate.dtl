@@ -13,10 +13,16 @@ GraceGomez: Don’t worry about food! It’s on me.
 	jump Flirtations
 - Use shotgun
 	GraceGomez: How did you get tha-
-	leave GraceGomez
-	join Narrator 2
-	Narrator (default): Grace’s offer of love is off the table. That’s because she’s off the table, and on the ground, missing her head. You feel a wave of relief fall over you as the police sirens get louder in the background. Surely, you will get the death penalty for killing a leader in the corporate world.
-	[end_timeline]
+	if {Skinwalker} == "Grace":
+		GraceGomez: OWIE!
+		Narrator: It was obvious. Society may not appreciate what you've done, but Grace's body slowly melting into the floorboards is all the confirmation you needed.
+		leave GraceGomez
+		jump QuickEnd/
+	else:
+		leave GraceGomez
+		join Narrator 2
+		Narrator (default): Grace’s offer of love is off the table. That’s because she’s off the table, and on the ground, missing her head. You feel a wave of relief fall over you as the police sirens get louder in the background. Surely, you will get the death penalty for killing a leader in the corporate world.
+		jump JailEnding/
 - Third date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
@@ -39,18 +45,18 @@ label Flirtations
 GraceGomez: Let’s roleplay. I’m HR and I’m fucking you over.
 - You are the most beautiful model I’ve ever seen.
 	if {Skinwalker} == "Grace":
-		GraceGomez: You would make a great mannequin in my house. 
+		GraceGomez: You would make a great mannequin in my house.
 		set {AffectionGrace} += 1
 	else:
 		GraceGomez: ...
 	jump InitialChoices
-- What food should replace whipped during sex?
+- What food should replace whipped cream during sex?
 	if {Skinwalker} == "Grace":
 		GraceGomez: 100% Sour Cream.
 		set {AffectionGrace} += 1
 	else:
 		GraceGomez: I’ll go with sushi.
-
+	
 	jump InitialChoices
 - *Twerk*
 	Narrator: You begin shaking your ass hard. Grace stares at your massive ass as you break it down, then she joins in. She gives a few encouraging butt taps, and smashes her cheeks into yours.
@@ -61,6 +67,7 @@ label SecondDate?
 if {AffectionGrace} >= {AffectionThreshold.Second}:
 	GraceGomez: Your evaluation is in a week’s time. Shall we do it at your home?
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		GraceGomez: Perfect! My secretary will make sure you’ve got everything for the evening.
 	- No
 		GraceGomez: A LunaTech representative will see you in my place. Goodbye.

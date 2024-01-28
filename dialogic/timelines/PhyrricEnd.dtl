@@ -3,3 +3,4 @@ Narrator: Your quest of love led to you defeating a great evil.
 Narrator: Unfortunately, you didn’t convince anyone to be your king or queen.
 Narrator: There's always next year.
 Narrator: PYRRIC END. (6/9)
+do global.game_over()

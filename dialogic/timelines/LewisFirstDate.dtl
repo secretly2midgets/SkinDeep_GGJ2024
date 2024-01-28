@@ -73,12 +73,13 @@ label 2ndDate?
 if {AffectionLewis} >= {AffectionThreshold.First}:
 	LewisBolson: So.. most people leave by this point... would you wanna see me again?
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		LewisBolson: Quest complete! Second date acquired! See you next week!
 	- No
 		LewisBolson: Oh... ok.
 		set {AffectionLewis} = -10
 else:
-	LewisBolson: I refuse
+	LewisBolson: Uh.. Not thanks. You're a bit intense for me.
 	set {AffectionLewis} = -10
 Narrator: Lewis checks his phone, and tells you his ride is here. He thanks you for the date, and offers to pay for your coffee.
 leave LewisBolson
