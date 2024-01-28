@@ -1,4 +1,4 @@
-join John 3
+join John 2
 set {DateNumber} += 1
 Narrator: John limps up to your house. He reeks of something rotten.
 John: Oh, windows. I could never afford this place.

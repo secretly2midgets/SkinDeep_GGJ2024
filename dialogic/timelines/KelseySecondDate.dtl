@@ -1,4 +1,4 @@
-join KelseyWilliams 3
+join KelseyWilliams 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 set {AffectionKelsey} += 1

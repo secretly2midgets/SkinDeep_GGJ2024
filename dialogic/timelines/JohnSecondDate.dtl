@@ -1,4 +1,4 @@
-join John 3
+join John 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Pasta":

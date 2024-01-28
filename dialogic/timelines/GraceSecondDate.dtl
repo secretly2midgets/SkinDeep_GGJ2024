@@ -1,4 +1,4 @@
-join GraceGomez 3
+join GraceGomez 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Steak":

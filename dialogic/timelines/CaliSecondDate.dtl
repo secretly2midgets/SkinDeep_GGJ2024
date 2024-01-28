@@ -1,4 +1,4 @@
-join CaliMcLaughlin 3
+join CaliMcLaughlin 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Pasta":

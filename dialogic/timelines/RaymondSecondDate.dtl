@@ -1,4 +1,4 @@
-join RaymondShaw 3
+join RaymondShaw 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Steak":
