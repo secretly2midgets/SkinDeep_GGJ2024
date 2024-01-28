@@ -50,6 +50,7 @@ directories/dtl_directory={
 "KaraSecondDate": "res://dialogic/timelines/KaraSecondDate.dtl",
 "KaraThirdDate": "res://dialogic/timelines/KaraThirdDate.dtl",
 "KelseyFirstDate": "res://dialogic/timelines/KelseyFirstDate.dtl",
+"KelseySecondDate": "res://dialogic/timelines/KelseySecondDate.dtl",
 "LewisFirstDate": "res://dialogic/timelines/LewisFirstDate.dtl",
 "LewisSecondDate": "res://dialogic/timelines/LewisSecondDate.dtl",
 "LewisThirdDate": "res://dialogic/timelines/LewisThirdDate.dtl",
