@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/tinder_swiper.gd" id="1_6i8s8"]
 [ext_resource type="Texture2D" uid="uid://3ep84vpqqh1x" path="res://resources/sprites/Right Arrow.png" id="1_awt0j"]
 [ext_resource type="Texture2D" uid="uid://0buxe8lhp45o" path="res://resources/sprites/Left Arrow.png" id="2_2ptcu"]
-[ext_resource type="Texture2D" uid="uid://c8k6yt83wjheg" path="res://resources/U.i/Phone screen.png" id="4_ge2mf"]
-[ext_resource type="Texture2D" uid="uid://crhxowt655ojd" path="res://resources/U.i/Phone case.png" id="5_b2rbp"]
+[ext_resource type="Texture2D" uid="uid://cf4to8w2db3jb" path="res://resources/U.i/Phone screen.png" id="4_oqdox"]
+[ext_resource type="Texture2D" uid="uid://cecg0fswy621w" path="res://resources/U.i/Phone case.png" id="5_lp0a3"]
 [ext_resource type="Texture2D" uid="uid://keweyistwm4b" path="res://resources/U.i/Frame.png" id="6_dcayw"]
 
 [node name="TinderSwiper" type="Node2D"]
@@ -39,7 +39,7 @@ expand_icon = true
 [node name="PhoneScreen" type="Sprite2D" parent="."]
 modulate = Color(0, 4.73333, 17.7529, 1)
 position = Vector2(-138, 0)
-texture = ExtResource("4_ge2mf")
+texture = ExtResource("4_oqdox")
 centered = false
 
 [node name="DateName" type="Label" parent="."]
@@ -62,7 +62,7 @@ vertical_alignment = 1
 [node name="PhoneCase" type="Sprite2D" parent="."]
 self_modulate = Color(1, 0.239216, 0.623529, 1)
 position = Vector2(-138, 0)
-texture = ExtResource("5_b2rbp")
+texture = ExtResource("5_lp0a3")
 centered = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

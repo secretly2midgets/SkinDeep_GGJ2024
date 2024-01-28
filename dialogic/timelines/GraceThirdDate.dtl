@@ -1,0 +1,25 @@
+join GraceGomez 3
+set {DateNumber} += 1
+Narrator: Grace pulls up to your house in a limo. As she enters, she doesn’t blink as she watches your every move.
+GraceGomez: Ready for the performance evaluation?
+- Bang.
+	if {Skinwalker} == "Grace":
+		Narrator: You feel like you were unprepared for this as Grace’s nails turn into elongated talons. 
+		jump DeadEnd/
+	else:
+		Narrator: You take Grace into your bedroom and show her all the different techniques you studied before this. She gives you a passing grade.
+		set {LoveFound} = "true"
+	leave GraceGomez
+- BANG!
+	set {KillCount} += 1
+	leave GraceGomez
+	join Narrator 2
+	if {Skinwalker} == "Grace":
+		Narrator: You blow away the competition by first shooting this monster’s hand off, then exploding it’s head.
+		Narrator: You dispose of the body by fire, to ensure It can't return.
+		# Add skinwalker portrait??
+		set {SkinwalkerKilled} = "true"
+	else:
+		Narrator: Grace is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
+	leave Narrator
+jump DateThreeInterstitial/

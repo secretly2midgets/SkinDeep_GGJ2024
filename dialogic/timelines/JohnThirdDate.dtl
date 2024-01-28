@@ -1,0 +1,25 @@
+join John 3
+set {DateNumber} += 1
+Narrator: John limps up to your house. He reeks of something rotten.
+John: Oh, windows. I could never afford this place.
+- Bang.
+	if {Skinwalker} == "John":
+		Narrator: The stench is overpowering. As John’s jaw unhinges, it becomes even worse. You eyes fill with tears.
+		jump DeadEnd/
+	else:
+		Narrator: You embrace, and the smell coming off John acts like an aphrodisiac. You want this man.
+		set {LoveFound} = "true"
+	leave John
+- BANG!
+	set {KillCount} += 1
+	leave John
+	join Narrator 2
+	if {Skinwalker} == "John":
+		Narrator: Despite the putrid odor coming off of it, the John entity is no more. You put on your gas mask and get to work.
+		Narrator: You dispose of the body by fire, to ensure It can't return.
+		# Add skinwalker portrait??
+		set {SkinwalkerKilled} = "true"
+	else:
+		Narrator: John is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
+	leave Narrator
+jump DateThreeInterstitial/
