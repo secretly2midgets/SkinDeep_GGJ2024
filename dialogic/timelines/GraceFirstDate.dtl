@@ -12,11 +12,18 @@ GraceGomez: Order whatever you want. I’ll put it on the company card.
 - Flirt
 	jump Flirtations
 - Use shotgun
-	GraceGomez: I'm getting shot
-	leave GraceGomez
-	join Narrator 2
-	Narrator (default): Grace’s offer of love is off the table. That’s because she’s off the table, and on the ground, missing her head. You feel a wave of relief fall over you as the police sirens get louder in the background. Surely, you will get the death penalty for killing a leader in the corporate world.
-	[end_timeline]
+	GraceGomez: I'm getting shot!
+	if {Skinwalker} == "Grace":
+		GraceGomez: You may think you've won... doesnt change the fact you just assassinated a corporate leader.
+		GraceGomez: You'll be lucky if you get life in prison.
+		leave GraceGomez
+		jump QuickEnd/
+	else:
+		leave GraceGomez
+		join Narrator 2
+		Narrator (default): Grace’s offer of love is off the table. That’s because she’s off the table, and on the ground, missing her head. You feel a wave of relief fall over you as the police sirens get louder in the background.
+		Narrator (default): Surely, you will get the death penalty for killing a leader in the corporate world.
+		jump JailEnding/
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
@@ -62,6 +69,7 @@ label 2ndDate?
 if {AffectionGrace} >= {AffectionThreshold.First}:
 	GraceGomez: So, I’d like to go on for longer, but I have to get ready for a meeting in the morning. Can we set up a second date?
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		GraceGomez: Wonderful. I’ll have my secretary send you the details tomorrow.
 	- No
 		GraceGomez: Okay. You’ll still be evaluated soon. It was nice meeting you. Take care of yourself.

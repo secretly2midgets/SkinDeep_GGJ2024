@@ -1,6 +1,8 @@
 join Narrator 2
 set {DateNumber} = 0
 [background arg="res://resources/sprites/Bedroom_Placeholder.png" fade="0.0"]
-<Empty Text Event>
+Narrator: This is it. Do or die. Tonight is your chance to find love.
+Narrator: You keep your shotgun just behind the door.
+Narrator: Good luck.
 leave Narrator
 jump DateThreeInterstitial/

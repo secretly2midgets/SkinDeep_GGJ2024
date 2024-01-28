@@ -1,3 +1,4 @@
+join table (CoffeeTable) 2
 set {DateOrder} = "Latte"
 table: What drinks would you like to order for you and your date?
 - Coffee, black.
@@ -62,4 +63,9 @@ elif {DateNumber} == 2:
 	elif {SwipeRightThree} == "Grace":
 		jump GraceFirstDate/
 else:
-	jump DateTwoIntro/
+	if {AtLeastOneDateSuccess} == "true":
+		set {NightNumber} += 1
+		set {AtLeastOneDateSuccess} = "false"
+		jump DateTwoIntro/
+	else:
+		jump LonelyEnd/

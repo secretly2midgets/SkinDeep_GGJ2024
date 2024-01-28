@@ -1,0 +1,6 @@
+join Narrator 2
+Narrator: The hole in your heart has been filled.
+Narrator: You get the feeling something is watching you closely.
+Narrator: The curtains whimper.
+Narrator: BAD END. (1/9)
+do global.game_over()

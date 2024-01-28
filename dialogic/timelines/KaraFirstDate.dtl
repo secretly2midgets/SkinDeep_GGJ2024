@@ -1,4 +1,4 @@
-join KaraRogers 2
+join KaraRogers (KaraRogers) 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Latte":
@@ -6,17 +6,22 @@ if {DateOrder} == "Latte":
 KaraRogers: This is my FAVOURITE place for a first date. You’re so smart for thinking about it! My name’s Kara.
 label InitialChoices
 set {QuestionCounter} += 1
-KaraRogers: Did you know that 75% of people polled say that Spider-Man is a bottom? It’s true!
+KaraRogers (KaraRogers): Did you know that 71% of people polled say that Spider-Man is a bottom? It’s true!
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	KaraRogers: What the fu-
-	leave LewisBolson
-	join Narrator 2
-	Narrator (default): You look down at your handiwork. Lying at your feet is a perfect, pretty corpse, her ribcage blown apart by the slug fired from your shotgun. The world goes numb as the police put you in cuffs.
-	[end_timeline]
+	KaraRogers (KaraRogers): What the fu-
+	if {Skinwalker} == "Kara":
+		KaraRogers: Haha.. Hahahahhahahahahahaha! You're a smart one..
+		leave KaraRogers
+		jump QuickEnd/
+	else:
+		leave KaraRogers
+		join Narrator 2
+		Narrator (default): You look down at your handiwork. Lying at your feet is a perfect, pretty corpse, her ribcage blown apart by the slug fired from your shotgun. The world goes numb as the police put you in cuffs.
+		jump JailEnding/
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
@@ -63,7 +68,9 @@ label 2ndDate?
 if {AffectionKara} >= {AffectionThreshold.First}:
 	KaraRogers: I don’t bang until the third date. I’ve never made it that far, but maybe you’ll get there.
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		KaraRogers: YES! EEEE YOU’RE THE BEST! See you next time!
+		set {AtLeastOneDateSuccess} = "true"
 	- No
 		KaraRogers: Well fine. I’ll just finger myself then.
 		set {AffectionKara} = -10

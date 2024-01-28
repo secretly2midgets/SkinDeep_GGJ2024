@@ -1,0 +1,82 @@
+join CaliMcLaughlin 3
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+if {DateOrder} == "Pasta":
+	set {AffectionCali} += 1
+CaliMcLaughlin: Hey! Happy to see you! I was really looking forward to this.
+label InitialChoices
+set {QuestionCounter} += 1
+CaliMcLaughlin: I’ve never been to a restaurant like this before. Can we even afford this?
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	CaliMcLaughlin: Where’d you get a-
+	if {Skinwalker} == "Cali":
+		Narrator: Your movement is swift and decisive. No way anyone this pure can exist in this hellhole of a town.
+		Narrator: You watch Cali's body dissolve into the floor as officers force you to your knees and cuff you.
+		jump QuickEnd/
+	else:
+		leave CaliMcLaughlin
+		join Narrator 2
+		Narrator (default): Before you can stop yourself, it’s over. Cali’s plants are going to wither and die now that she isn’t around. The blood pours out from her caved-in chest as you are immediately surrounded and arrested.
+		jump JailEnding/
+- Third date? [if {QuestionCounter} >= 5]
+	jump SecondDate?
+label Questions
+CaliMcLaughlin: You look a little pale. Are you okay? I can give you some of my tea if you want.
+- How was work today?
+	CaliMcLaughlin: It was pretty good. I got to sit around on my Switch a lot. My boss only had one appointment today, so it didn’t matter at all.
+	CaliMcLaughlin: I hope you had a good day too.
+	set {AffectionCali} += 1
+	jump InitialChoices
+- Do you know about Bionicle? My favourite is Kapoka!
+	CaliMcLaughlin: How do you butcher the name Kopaka that badly?
+	jump InitialChoices
+- If the hippopotamus is one of the fastest animals in water, why don’t we design cars based off them?
+	CaliMcLaughlin: Cars don’t drive in water. They also have wheels instead of legs so on land, they’re faster than hippos by default.
+	jump InitialChoices
+label Flirtations
+CaliMcLaughlin: You are quite the cunning linguist. Surprise me.
+- Your hair looks like edible spaghetti.
+	if {Skinwalker} == "Cali":
+		CaliMcLaughlin: You look positively delicious too.
+		set {AffectionCali} += 1
+	else:
+		CaliMcLaughlin: Thank you! I imagine your hair is sweet like cotton candy.
+	jump InitialChoices
+- I’m about to lick your armpits. What would you place there for me?
+	if {Skinwalker} == "Cali":
+		CaliMcLaughlin: Cyanide. My armpits are sacred.
+		set {AffectionCali} += 1
+	else:
+		CaliMcLaughlin: Nutella.
+	jump InitialChoices
+- Scream MOMMY
+	if {Skinwalker} == "Cali":
+		CaliMcLaughlin: Your voice carries through the restaurant. Everyone looks in your direction. Cali is taken aback, and looks with disgust.
+		CaliMcLaughlin: She leaves to go to the washroom. When she returns, she is once more back into the conversation.
+		set {AffectionCali} += 1
+	else:
+		CaliMcLaughlin: Your voice carries through the restaurant. Everyone looks in your direction.
+		CaliMcLaughlin: Cali is taken aback, but then looks at you lovingly. You have fulfilled the dream she has unknowingly always had.
+		set {AffectionCali} += 1
+jump InitialChoices
+label SecondDate?
+if {AffectionCali} >= {AffectionThreshold.Second}:
+	CaliMcLaughlin: I’m so cold. Can I borrow your hoodie?
+	- Yes
+		set {AtLeastOneDateSuccess} = "true"
+		CaliMcLaughlin: You’re the best. I’ll make sure to bring it back to your place next time!
+		CaliMcLaughlin: I’m so cold. Can I borrow your hoodie?
+	- No
+		CaliMcLaughlin: Well, nevermind. Take care of yourself.
+		set {AffectionCali} = -10
+		Narrator: Cali walks out of the restaurant, face bright, optimistic. She walks down the street with a confident stride.
+else:
+	CaliMcLaughlin: Goodbye, you're a little too much for me.
+	set {AffectionCali} = -10
+	Narrator: Cali's plate of spaghetti stares back at you, judging you in its cold slimey eyes.
+leave CaliMcLaughlin
+jump DateTwoInterstitial/

@@ -2,7 +2,7 @@ join John 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Coffee":
-	set {AffectionJohn} += 1	
+	set {AffectionJohn} += 1
 John: Thanks for meeting me. I’m John. You got any tinfoil?
 label InitialChoices
 set {QuestionCounter} += 1
@@ -12,11 +12,17 @@ John: Have you ever thought the drain in a toilet looks like an eye? I swear the
 - Flirt
 	jump Flirtations
 - Use shotgun
-	John: I knew you were one of them!
-	leave John
-	join Narrator 2
-	Narrator (default): Your slug rips John apart. He lies on the ground, still. You are arrested for reckless discharge of a lethal weapon. When you are released, you find that all the attractive people have been eaten by a mysterious creature.
-	[end_timeline]
+	if {Skinwalker} == "John":
+		John: It sure is rare to find someone more paranoid than the poor soul I stole this body from. Shit.
+		Narrator: As John's body goes limp, police arrive. You watch his body twist into something hideous.
+		leave John
+		jump QuickEnd/
+	else:
+		John: I knew you were one of them!
+		leave John
+		join Narrator 2
+		Narrator (default): Your slug rips John apart. He lies on the ground, still. You are arrested for reckless discharge of a lethal weapon.
+		jump JailEnding/
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
@@ -31,7 +37,7 @@ John: Keep it quick.
 - How long have you been houseless?
 	John: ‘Bout 10 years. The first winter was the hardest, but after that it got easier.
 	jump InitialChoices
--  Any crazy experiences?
+- Any crazy experiences?
 	John: I’ve seen people’s faces melt off, I’ve seen a man’s face be taken off…lots of stuff involving faces.
 	jump InitialChoices
 label Flirtations
@@ -59,7 +65,8 @@ label 2ndDate?
 if {AffectionJohn} >= {AffectionThreshold.First}:
 	John: I would like to see you again. Preferably without any spycams.
 	- Yes
-		John: Excellent. Remember, no spycams.
+		set {AtLeastOneDateSuccess} = "true"
+		John: Excellent. Remember, no cameras, no microphones.
 	- No
 		John: Well, okay.
 		set {AffectionJohn} = -10

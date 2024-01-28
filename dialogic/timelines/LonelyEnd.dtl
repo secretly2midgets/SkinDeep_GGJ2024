@@ -1,0 +1,6 @@
+join Narrator 2
+Narrator: Nobody wants you.
+Narrator: You didn’t put yourself out there.
+Narrator: The curtains open up and reveal It.
+Narrator: LONELY END. (5/9)
+do global.game_over()

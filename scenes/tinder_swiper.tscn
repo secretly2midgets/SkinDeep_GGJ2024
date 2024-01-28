@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0ji8xh833vri"]
+[gd_scene load_steps=7 format=3 uid="uid://dg4o8cvodoxjv"]
 
 [ext_resource type="Script" path="res://scripts/tinder_swiper.gd" id="1_6i8s8"]
 [ext_resource type="Texture2D" uid="uid://3ep84vpqqh1x" path="res://resources/sprites/Right Arrow.png" id="1_awt0j"]
 [ext_resource type="Texture2D" uid="uid://0buxe8lhp45o" path="res://resources/sprites/Left Arrow.png" id="2_2ptcu"]
+[ext_resource type="Texture2D" uid="uid://cf4to8w2db3jb" path="res://resources/U.i/Phone screen.png" id="4_oqdox"]
+[ext_resource type="Texture2D" uid="uid://cecg0fswy621w" path="res://resources/U.i/Phone case.png" id="5_lp0a3"]
+[ext_resource type="Texture2D" uid="uid://keweyistwm4b" path="res://resources/U.i/Frame.png" id="6_dcayw"]
 
 [node name="TinderSwiper" type="Node2D"]
 script = ExtResource("1_6i8s8")
@@ -18,20 +21,26 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Right" type="Button" parent="."]
-offset_left = 1292.0
-offset_top = 486.0
-offset_right = 1430.0
-offset_bottom = 613.0
+offset_left = 1283.0
+offset_top = 470.0
+offset_right = 1421.0
+offset_bottom = 597.0
 icon = ExtResource("1_awt0j")
 expand_icon = true
 
 [node name="Left" type="Button" parent="."]
-offset_left = 684.0
-offset_top = 479.0
-offset_right = 822.0
-offset_bottom = 606.0
+offset_left = 419.0
+offset_top = 470.0
+offset_right = 557.0
+offset_bottom = 597.0
 icon = ExtResource("2_2ptcu")
 expand_icon = true
+
+[node name="PhoneScreen" type="Sprite2D" parent="."]
+modulate = Color(0, 4.73333, 17.7529, 1)
+position = Vector2(-138, 0)
+texture = ExtResource("4_oqdox")
+centered = false
 
 [node name="DateName" type="Label" parent="."]
 anchors_preset = 8
@@ -39,9 +48,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 900.0
+offset_left = 772.0
 offset_top = 470.0
-offset_right = 1200.0
+offset_right = 1072.0
 offset_bottom = 620.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -49,6 +58,16 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PhoneCase" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.239216, 0.623529, 1)
+position = Vector2(-138, 0)
+texture = ExtResource("5_lp0a3")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("6_dcayw")
+centered = false
 
 [connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
 [connection signal="pressed" from="Left" to="." method="_on_left_pressed"]

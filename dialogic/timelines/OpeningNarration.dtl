@@ -1,11 +1,8 @@
+join Border 2 [animation="Bounce In" length="0" z_index="1"]
 [background arg="res://resources/sprites/Bedroom_Placeholder.png" fade="0.0"]
 [wait time="1.5"]
 set {DateNumber} = 0
 join Narrator 2 [animation="Fade In Up" length="5" wait="true"]
-print({SwipeRightOne})
-print({SwipeRightTwo})
-print({SwipeRightThree})
-{Skinwalker} is the Skinwalker
 Narrator: You are cold.
 Narrator: You are alone.
 Narrator: The curtains are screaming at you.
@@ -14,8 +11,9 @@ Narrator: Waiting.
 Narrator: Stalking.
 Narrator: Why are you single?
 Narrator: You rack a slug in your shotgun. It is time to find love.
-Narrator: But beware. It is trying to find you.
-Narrator: You'll be arrested if you take it down in public.
-Narrator: You'll need to bring it home. Hopefully you'll find love along the way.
+Narrator: But beware. 'It' is trying to find you.
+Narrator: You'll be arrested if you take It down in public.
+Narrator: You'll need to bring It home. Hopefully you'll find love along the way.
 leave Narrator
 jump DateOneIntro/
+

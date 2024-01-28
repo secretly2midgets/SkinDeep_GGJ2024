@@ -10,22 +10,22 @@ if {DateNumber} == 0:
 			jump KaraThirdDate/
 	elif {SwipeRightOne} == "Kali":
 		if {AffectionKali} >= 0:
-			pass
+			jump KaliThirdDate/
 	elif {SwipeRightOne} == "Raymond":
 		if {AffectionRaymond} >= 0:
-			pass
+			jump RaymondThirdDate/
 	elif {SwipeRightOne} == "Kelsey":
 		if {AffectionKelsey} >= 0:
-			pass
+			jump KelseyThirdDate/
 	elif {SwipeRightOne} == "John":
 		if {AffectionJohn} >= 0:
-			pass
+			jump JohnThirdDate/
 	elif {SwipeRightOne} == "Grace":
 		if {AffectionGrace} >= 0:
-			pass
+			jump GraceThirdDate/
 	set {DateNumber} += 1
 if {DateNumber} == 1:
-	Narrator: After waiting for some time, your next date walks in and speaks to one of the servers. They gesture toward your table, which has been cleared. Your date walks over, smiles, and sits down.
+	Narrator: You tidy up as quickly as possible and wait for some time before your next date shows up.
 	if {SwipeRightTwo} == "Mason":
 		if {AffectionMason} >= 0:
 			jump MasonThirdDate/
@@ -37,19 +37,19 @@ if {DateNumber} == 1:
 			jump KaraThirdDate/
 	elif {SwipeRightTwo} == "Kali":
 		if {AffectionKali} >= 0:
-			pass
+			jump KaliThirdDate/
 	elif {SwipeRightTwo} == "Raymond":
 		if {AffectionRaymond} >= 0:
-			pass
+			jump RaymondThirdDate/
 	elif {SwipeRightTwo} == "Kelsey":
 		if {AffectionKelsey} >= 0:
-			pass
+			jump KelseyThirdDate/
 	elif {SwipeRightTwo} == "John":
 		if {AffectionJohn} >= 0:
-			pass
+			jump JohnThirdDate/
 	elif {SwipeRightTwo} == "Grace":
 		if {AffectionGrace} >= 0:
-			pass
+			jump GraceThirdDate/
 	set {DateNumber} += 1
 if {DateNumber} == 2:
 	if {SwipeRightThree} == "Mason":
@@ -63,19 +63,19 @@ if {DateNumber} == 2:
 			jump KaraThirdDate/
 	elif {SwipeRightTwo} == "Kali":
 		if {AffectionKali} >= 0:
-			pass
+			jump KaliThirdDate/
 	elif {SwipeRightTwo} == "Raymond":
 		if {AffectionRaymond} >= 0:
-			pass
+			jump RaymondThirdDate/
 	elif {SwipeRightTwo} == "Kelsey":
 		if {AffectionKelsey} >= 0:
-			pass
+			jump KelseyThirdDate/
 	elif {SwipeRightTwo} == "John":
 		if {AffectionJohn} >= 0:
-			pass
+			jump JohnThirdDate/
 	elif {SwipeRightTwo} == "Grace":
 		if {AffectionGrace} >= 0:
-			pass
+			jump GraceThirdDate/
 	set {DateNumber} += 1
 if {DateNumber} > 2:
-	jump DateThreeIntro/
+	jump EndingCheck/
