@@ -46,11 +46,16 @@ RaymondShaw (RaymondPlaceholder): Flirt
 	RaymondShaw (RaymondPlaceholder): Flirt responce C
 	jump InitialChoices
 label 2ndDate?
-RaymondShaw: Second date dialogue
-- Yes
-	RaymondShaw: Second date accepted
-- No
-	RaymondShaw: Second date rejected
+if {AffectionRaymond} >= {AffectionThreshold.First}:
+	RaymondShaw: Second date dialogue
+	- Yes
+		RaymondShaw: Second date accepted
+	- No
+		RaymondShaw: Second date rejected
+		set {AffectionRaymond} = -10
+else:
+	RaymondShaw: I refuse
+	set {AffectionRaymond} = -10
 Narrator: Exuent
 leave RaymondShaw
 jump DateOneInterstitial/

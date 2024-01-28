@@ -54,13 +54,16 @@ MasonFoster (MasonFoster): Do you like raisins? How about a date?
 	jump InitialChoices
 jump InitialChoices
 label SecondDate?
-MasonFoster: I’m really enjoying my time with you, can we keep seeing each other?
-- Yes
-	MasonFoster: Hey sweet! Let’s meet at your place next time!
-	set {Mason2ndDate} = "true"
-- No
-	MasonFoster: ... but I thought we were getting somewhere...
-	set {Mason2ndDate} = "false"
+if {AffectionMason} >= {AffectionThreshold.Second}:
+	MasonFoster: I’m really enjoying my time with you, can we keep seeing each other?
+	- Yes
+		MasonFoster: Hey sweet! Let’s meet at your place next time!
+	- No
+		MasonFoster: ... but I thought we were getting somewhere...
+		set {AffectionMason} = -10
+else:
+	MasonFoster: I refuse
+	set {AffectionMason} = -10
 Narrator: Mason goes in for a big hug. The hug is long and awkward. As he walks out the door, he gives you finger guns and winks.
 leave MasonFoster
 jump DateTwoInterstitial/

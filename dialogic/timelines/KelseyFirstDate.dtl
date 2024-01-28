@@ -46,12 +46,16 @@ KelseyWilliams (KelseyPlaceholder): Flirt
 	KelseyWilliams (KelseyPlaceholder): Flirt responce C
 	jump InitialChoices
 label 2ndDate?
-KelseyWilliams: Second date dialogue
-- Yes
-	KelseyWilliams: Second date accepted
-- No
-	KelseyWilliams: Second date rejected
+if {AffectionKelsey} >= {AffectionThreshold.First}:
+	KelseyWilliams: Second date dialogue
+	- Yes
+		KelseyWilliams: Second date accepted
+	- No
+		KelseyWilliams: Second date rejected
+		set {AffectionKelsey} = -10
+else:
+	KelseyWilliams: I refuse
+	set {AffectionKelsey} = -10
 Narrator: Exuent
 leave KelseyWilliams
 jump DateOneInterstitial/
-

@@ -50,11 +50,16 @@ KaraRogers (KaraRogers): My favourite movie is Misery. Wanna roleplay?
 	KaraRogers (KaraRogers): Do it.
 	jump InitialChoices
 label 2ndDate?
-KaraRogers: I don’t bang until the third date. I’ve never made it that far, but maybe you’ll get there.
-- Yes
-	KaraRogers: YES! EEEE YOU’RE THE BEST! See you next time!
-- No
-	KaraRogers: Well fine. I’ll just finger myself then.
+if {AffectionKara} >= {AffectionThreshold.First}:
+	KaraRogers: I don’t bang until the third date. I’ve never made it that far, but maybe you’ll get there.
+	- Yes
+		KaraRogers: YES! EEEE YOU’RE THE BEST! See you next time!
+	- No
+		KaraRogers: Well fine. I’ll just finger myself then.
+		set {AffectionKara} = -10
+else:
+	KaraRogers: I refuse
+	set {AffectionKara} = -10
 Narrator: Kara gets up and smiles at you. With a flourish, she turns on her heels and leaves the cafe.
 leave KaraRogers
 jump DateOneInterstitial/

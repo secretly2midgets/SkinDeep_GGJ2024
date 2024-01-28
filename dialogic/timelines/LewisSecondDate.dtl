@@ -51,13 +51,16 @@ LewisBolson (LewisHill): You nearly had me tongue-tied last time... I can only i
 		LewisBolson (LewisHill): A giant eagle, all the way down your torso. The beak will be right between your legs.
 	jump InitialChoices
 label 2ndDate?
-LewisBolson: At this point, anything is possible between the two of us. We should keep this going!
-- Yes
-	LewisBolson: Oh my god, input success! Let’s meet at your place next week!
-	set {Lewis2ndDate} = "true"
-- No
-	LewisBolson: …Oh.
-	set {Lewis2ndDate} = "true"
+if {AffectionLewis} >= {AffectionThreshold.Second}:
+	LewisBolson: At this point, anything is possible between the two of us. We should keep this going!
+	- Yes
+		LewisBolson: Oh my god, input success! Let’s meet at your place next week!
+	- No
+		LewisBolson: …Oh.
+		set {AffectionLewis} = -10
+else:
+	LewisBolson: I refuse
+	set {AffectionLewis} = -10
 Narrator: Lewis compliments your appearance a few more times as he gets ready to leave.
 leave LewisBolson
 jump DateTwoInterstitial/

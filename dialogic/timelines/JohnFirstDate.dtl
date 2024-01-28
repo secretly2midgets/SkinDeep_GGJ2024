@@ -46,11 +46,16 @@ John (JohnPlaceholder): Flirt
 	John (JohnPlaceholder): Flirt responce C
 	jump InitialChoices
 label 2ndDate?
-John: Second date dialogue
-- Yes
-	John: Second date accepted
-- No
-	John: Second date rejected
+if {AffectionJohn} >= {AffectionThreshold.First}:
+	John: Second date dialogue
+	- Yes
+		John: Second date accepted
+	- No
+		John: Second date rejected
+		set {AffectionJohn} = -10
+else:
+	John: I refuse
+	set {AffectionJohn} = -10
 Narrator: Exuent
 leave John
 jump DateOneInterstitial/

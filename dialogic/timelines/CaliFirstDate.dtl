@@ -46,11 +46,16 @@ CaliMcLaughlin (CaliMcLaughlin): Flirt
 	CaliMcLaughlin (CaliMcLaughlin): Flirt responce C
 	jump InitialChoices
 label 2ndDate?
-CaliMcLaughlin: Second date dialogue
-- Yes
-	CaliMcLaughlin: Second date accepted
-- No
-	CaliMcLaughlin: Second date rejected
+if {AffectionCali} >= {AffectionThreshold.First}:
+	CaliMcLaughlin: Second date dialogue
+	- Yes
+		CaliMcLaughlin: Second date accepted
+	- No
+		CaliMcLaughlin: Second date rejected
+		set {AffectionCali} = -10
+else:
+	CaliMcLaughlin: I refuse
+	set {AffectionCali} = -10
 Narrator: Exuent
 leave CaliMcLaughlin
 jump DateOneInterstitial/

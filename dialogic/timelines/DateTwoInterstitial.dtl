@@ -1,59 +1,86 @@
 if {DateNumber} == 0:
 	if {SwipeRightOne} == "Mason":
-		jump MasonSecondDate/
+		if {AffectionMason} >= 0:
+			jump MasonSecondDate/
 	elif {SwipeRightOne} == "Lewis":
-		jump LewisSecondDate/
+		if {AffectionLewis} >= 0:
+			jump LewisSecondDate/
 	elif {SwipeRightOne} == "Kara":
-		jump KaraSecondDate/
+		if {AffectionKara} >= 0:
+			jump KaraSecondDate/
 	elif {SwipeRightOne} == "Kali":
-		pass
+		if {AffectionKali} >= 0:
+			pass
 	elif {SwipeRightOne} == "Raymond":
-		pass
+		if {AffectionRaymond} >= 0:
+			pass
 	elif {SwipeRightOne} == "Kelsey":
-		pass
+		if {AffectionKelsey} >= 0:
+			pass
 	elif {SwipeRightOne} == "John":
-		pass
+		if {AffectionJohn} >= 0:
+			pass
 	elif {SwipeRightOne} == "Grace":
-		pass
-elif {DateNumber} == 1:
+		if {AffectionGrace} >= 0:
+			pass
+	set {DateNumber} += 1
+if {DateNumber} == 1:
 	Narrator: After waiting for some time, your next date walks in and speaks to one of the servers. They gesture toward your table, which has been cleared. Your date walks over, smiles, and sits down.
 	if {SwipeRightTwo} == "Mason":
-		jump MasonSecondDate/
+		if {AffectionMason} >= 0:
+			jump MasonSecondDate/
 	elif {SwipeRightTwo} == "Lewis":
-		jump LewisSecondDate/
+		if {AffectionLewis} >= 0:
+			jump LewisSecondDate/
 	elif {SwipeRightTwo} == "Kara":
-		jump KaraSecondDate/
+		if {AffectionKara} >= 0:
+			jump KaraSecondDate/
 	elif {SwipeRightTwo} == "Kali":
-		pass
+		if {AffectionKali} >= 0:
+			pass
 	elif {SwipeRightTwo} == "Raymond":
-		pass
+		if {AffectionRaymond} >= 0:
+			pass
 	elif {SwipeRightTwo} == "Kelsey":
-		pass
+		if {AffectionKelsey} >= 0:
+			pass
 	elif {SwipeRightTwo} == "John":
-		pass
+		if {AffectionJohn} >= 0:
+			pass
 	elif {SwipeRightTwo} == "Grace":
-		pass
-elif {DateNumber} == 2:
+		if {AffectionGrace} >= 0:
+			pass
+	set {DateNumber} += 1
+if {DateNumber} == 2:
 	join Narrator 2
 	Narrator: Your stomach churns trying to handle the food that you are shovelling in. When you finally realize it won’t settle, you run to the balcony. 
 	Narrator: As you release, a few people get hit with chunks. You pray that no one noticed who did this.
 	Narrator: You hastily grab as many napkins as possible and clean yourself up. You throw them out just in time to watch your date come up the stairs.
 	leave Narrator
 	if {SwipeRightThree} == "Mason":
-		jump MasonSecondDate/
+		if {AffectionMason} >= 0:
+			jump MasonSecondDate/
 	elif {SwipeRightThree} == "Lewis":
-		jump LewisSecondDate/
+		if {AffectionLewis} >= 0:
+			jump LewisSecondDate/
 	elif {SwipeRightThree} == "Kara":
-		jump KaraSecondDate/
+		if {AffectionKara} >= 0:
+			jump KaraSecondDate/
 	elif {SwipeRightThree} == "Kali":
-		pass
+		if {AffectionKali} >= 0:
+			pass
 	elif {SwipeRightThree} == "Raymond":
-		pass
+		if {AffectionRaymond} >= 0:
+			pass
 	elif {SwipeRightThree} == "Kelsey":
-		pass
+		if {AffectionKelsey} >= 0:
+			pass
 	elif {SwipeRightThree} == "John":
-		pass
+		if {AffectionJohn} >= 0:
+			pass
 	elif {SwipeRightThree} == "Grace":
-		pass
-else:
+		if {AffectionGrace} >= 0:
+			pass
+	set {DateNumber} += 1
+if {DateNumber} > 2:
 	jump DateThreeIntro/

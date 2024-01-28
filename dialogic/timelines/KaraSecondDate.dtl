@@ -64,11 +64,16 @@ KaraRogers (KaraRogers): I won’t shoot you down.
 	KaraRogers (KaraRogers): Me and You! Like we could add our blood to food, or like our spit, oh god, it’d be so great!
 	jump InitialChoices
 label 2ndDate?
-KaraRogers: We are definitely doing another date, and it will be at your house.
-- Yes
-	KaraRogers: Hey, you keep it easy like this next time and you’re getting laid.
-- No
-	KaraRogers: Don’t worry about me, plenty of other fish out there. See ya!
+if {AffectionCali} >= {AffectionThreshold.Second}:
+	KaraRogers: We are definitely doing another date, and it will be at your house.
+	- Yes
+		KaraRogers: Hey, you keep it easy like this next time and you’re getting laid.
+	- No
+		KaraRogers: Don’t worry about me, plenty of other fish out there. See ya!
+		set {AffectionKara} = -10
+else:
+	KaraRogers: I refuse
+	set {AffectionKara} = -10
 Narrator: Kara pays for the meal and then sprints out. She is very clearly in a hurry. Her face has no expression as she stares straight forward.
 leave KaraRogers
 jump DateTwoInterstitial/

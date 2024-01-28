@@ -46,12 +46,16 @@ GraceGomez (GracePlaceholder): Flirt
 	GraceGomez (GracePlaceholder): Flirt responce C
 	jump InitialChoices
 label 2ndDate?
-GraceGomez: Second date dialogue
-- Yes
-	GraceGomez: Second date accepted
-- No
-	GraceGomez: Second date rejected
+if {AffectionGrace} >= {AffectionThreshold.First}:
+	GraceGomez: Second date dialogue
+	- Yes
+		GraceGomez: Second date accepted
+	- No
+		GraceGomez: Second date rejected
+		set {AffectionGrace} = -10
+else:
+	GraceGomez: I refuse
+	set {AffectionGrace} = -10
 Narrator: Exuent
 leave GraceGomez
 jump DateOneInterstitial/
-

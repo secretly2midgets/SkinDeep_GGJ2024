@@ -58,13 +58,16 @@ LewisBolson (LewisHill): Uhm... you have beautiful eyes, you know.
 		LewisBolson (LewisHill): Holy. Fucking. Shit. That's incredible. What else can you fit in there? Well, I mean, not like that. Unless, yenno... you mean it that way.
 	jump InitialChoices
 label 2ndDate?
-LewisBolson: So.. most people leave by this point... would you wanna see me again?
-- Yes
-	LewisBolson: Quest complete! Second date acquired! See you next week!
-	set {Lewis2ndDate} = "true"
-- No
-	LewisBolson: Oh... ok.
-	set {Lewis2ndDate} = "false"
+if {AffectionLewis} >= {AffectionThreshold.First}:
+	LewisBolson: So.. most people leave by this point... would you wanna see me again?
+	- Yes
+		LewisBolson: Quest complete! Second date acquired! See you next week!
+	- No
+		LewisBolson: Oh... ok.
+		set {AffectionLewis} = -10
+else:
+	LewisBolson: I refuse
+	set {AffectionLewis} = -10
 Narrator: Lewis checks his phone, and tells you his ride is here. He thanks you for the date, and offers to pay for your coffee.
 leave LewisBolson
 jump DateOneInterstitial/
