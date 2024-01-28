@@ -17,7 +17,7 @@
 "portraits": {
 "KaraRogers": {
 "export_overrides": {
-"image": "\"res://resources/sprites/KaraRogers.png\""
+"image": "\"res://resources/sprites/Kara Rogers Scrub.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

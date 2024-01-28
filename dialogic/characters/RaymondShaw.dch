@@ -17,7 +17,7 @@
 "portraits": {
 "RaymondPlaceholder": {
 "export_overrides": {
-"image": "\"res://resources/sprites/Raymond_placeholder.png\""
+"image": "\"res://resources/sprites/Raymond Shaw Scrub.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

@@ -1,17 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bve2qle6i537q"]
+[gd_scene load_steps=4 format=3 uid="uid://bve2qle6i537q"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_m2uj6"]
 [ext_resource type="Script" path="res://scripts/startDate.gd" id="3_hs3ip"]
 [ext_resource type="PackedScene" uid="uid://bj71akmdxu87n" path="res://scenes/level.tscn" id="3_l68vo"]
-[ext_resource type="Texture2D" uid="uid://keweyistwm4b" path="res://resources/U.i/Frame.png" id="4_jksc1"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_m2uj6")
 
 [node name="Level" parent="." instance=ExtResource("3_l68vo")]
 script = ExtResource("3_hs3ip")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level"]
-visibility_layer = 1025
-position = Vector2(966, 539)
-texture = ExtResource("4_jksc1")
