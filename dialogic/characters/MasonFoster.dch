@@ -8,7 +8,7 @@
 "sound_moods": {},
 "style": "default"
 },
-"default_portrait": "MasonFoster",
+"default_portrait": "Default_Test",
 "description": "",
 "display_name": "Mason Foster",
 "mirror": false,
@@ -17,16 +17,7 @@
 "portraits": {
 "Default_Test": {
 "export_overrides": {
-"image": "\"res://resources/sprites/Mason_Foster_Test.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"MasonFoster": {
-"export_overrides": {
-"image": "\"res://resources/sprites/MasonFoster.png\""
+"image": "\"res://resources/sprites/Mason Foster Scrub.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

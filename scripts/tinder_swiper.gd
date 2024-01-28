@@ -60,7 +60,7 @@ func check_profiles():
 		print(demon)
 				
 		get_tree().change_scene_to_file(actual_game)
-	elif tripleSwipe > 0:
+	elif tripleSwipe > 0 and counter < profiles.size() -1:
 		counter = 0 
 		for key in profiles:
 			if profiles[reverseProf[rangeList[counter]]]:

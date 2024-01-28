@@ -17,16 +17,17 @@
 "portraits": {
 "CoffeeTable": {
 "export_overrides": {
-"image": "\"res://resources/sprites/Coffee_Table_Placeholder.png\""
+"image": "\"res://resources/sprites/Table.png\""
 },
+"ignore_char_scale": false,
 "mirror": false,
-"offset": Vector2(100, 200),
+"offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "DinnerTable": {
 "export_overrides": {
-"image": "\"res://resources/sprites/Dinner_Table_Placeholder.png\""
+"image": "\"res://resources/sprites/Table.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

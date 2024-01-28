@@ -1,4 +1,4 @@
-join KaraRogers 2
+join KaraRogers (KaraRogers) 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Latte":

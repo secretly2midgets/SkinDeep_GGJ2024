@@ -16,4 +16,4 @@ Narrator: You'll be arrested if you take it down in public.
 Narrator: You'll need to bring it home. Hopefully you'll find love along the way.
 leave Narrator
 jump DateOneIntro/
-leave Border [animation="Bounce Out" length="0"]
+
