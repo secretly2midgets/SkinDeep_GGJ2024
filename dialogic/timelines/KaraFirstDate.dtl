@@ -15,7 +15,7 @@ KaraRogers (Default_Test): Did you know that 75% of people polled say that Spide
 	join Narrator 2
 	Narrator (default): You look down at your handiwork. Lying at your feet is a perfect, pretty corpse, her ribcage blown apart by the slug fired from your shotgun. The world goes numb as the police put you in cuffs.
 	[end_timeline]
-- Second Date? [if {QuestionCounter} >= 6]
+- Second Date? [if {QuestionCounter} > = 5]
 	jump 2ndDate?
 label Questions
 KaraRogers (Default_Test): Shoot. What do you wanna know?

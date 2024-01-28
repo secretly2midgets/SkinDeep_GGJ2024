@@ -17,16 +17,16 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-global="*res://scripts/game.gd"
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+global="*res://scripts/game.gd"
 
 [dialogic]
 
 directories/dch_directory={
 "KaraRogers": "res://dialogic/characters/KaraRogers.dch",
 "LewisBolson": "res://dialogic/characters/LewisBolson.dch",
-"MasonFoster": "res://dialogic/characters/MasonFoster.dch",
-"Narrator": "res://dialogic/characters/Narrator.dch"
+"Narrator": "res://dialogic/characters/Narrator.dch",
+"characters/MasonFoster": "res://dialogic/characters/MasonFoster.dch"
 }
 directories/dtl_directory={
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
