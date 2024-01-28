@@ -17,7 +17,7 @@
 "portraits": {
 "KelseyPlaceholder": {
 "export_overrides": {
-"image": "\"res://resources/sprites/KelseyPlaceholder.png\""
+"image": "\"res://resources/sprites/Kelsey Williams Scrub.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

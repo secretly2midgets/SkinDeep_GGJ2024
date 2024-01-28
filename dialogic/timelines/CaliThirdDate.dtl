@@ -1,0 +1,25 @@
+join CaliMcLaughlin 3
+set {DateNumber} += 1
+Narrator: Cali shows up looking just identical to both previous dates. You smell dirt and plants coming off her. She blushes and smiles widely.
+CaliMcLaughlin: I’ve had such a great time with you…
+- Bang.
+	if {Skinwalker} == "Cali":
+		Narrator: As you both lay down on the bed, Cali splits in half.
+		jump DeadEnd/
+	else:
+		Narrator: She intertwines her fingers with yours. She smiles and walks you into the bedroom.
+		set {LoveFound} = "true"
+	leave CaliMcLaughlin
+- BANG!
+	set {KillCount} += 1
+	leave CaliMcLaughlin
+	join Narrator 2
+	if {Skinwalker} == "Cali":
+		Narrator: The smell of the forest is intoxicating, but you see through it when you shoot the Cali creature.
+		Narrator: You dispose of the body by fire, to ensure It can't return.
+		# Add skinwalker portrait??
+		set {SkinwalkerKilled} = "true"
+	else:
+		Narrator: Cali is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
+	leave Narrator
+jump DateThreeInterstitial/

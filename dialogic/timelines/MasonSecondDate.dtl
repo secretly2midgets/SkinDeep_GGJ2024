@@ -1,4 +1,4 @@
-join MasonFoster 3
+join MasonFoster (MasonFoster) 3
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Steak":

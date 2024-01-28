@@ -23,6 +23,7 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Border": "res://resources/U.i/Border.dch",
 "CaliMcLaughlin": "res://dialogic/characters/CaliMcLaughlin.dch",
 "GraceGomez": "res://dialogic/characters/GraceGomez.dch",
 "John": "res://dialogic/characters/John.dch",
@@ -32,12 +33,14 @@ directories/dch_directory={
 "MasonFoster": "res://dialogic/characters/MasonFoster.dch",
 "Narrator": "res://dialogic/characters/Narrator.dch",
 "RaymondShaw": "res://dialogic/characters/RaymondShaw.dch",
+"skinwalker": "res://dialogic/characters/skinwalker.dch",
 "table": "res://dialogic/characters/table.dch"
 }
 directories/dtl_directory={
 "BadEnd": "res://dialogic/timelines/BadEnd.dtl",
 "CaliFirstDate": "res://dialogic/timelines/CaliFirstDate.dtl",
 "CaliSecondDate": "res://dialogic/timelines/CaliSecondDate.dtl",
+"CaliThirdDate": "res://dialogic/timelines/CaliThirdDate.dtl",
 "DateOneInterstitial": "res://dialogic/timelines/DateOneInterstitial.dtl",
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
 "DateThreeInterstitial": "res://dialogic/timelines/DateThreeInterstitial.dtl",
@@ -49,14 +52,17 @@ directories/dtl_directory={
 "GoodEnd": "res://dialogic/timelines/GoodEnd.dtl",
 "GraceFirstDate": "res://dialogic/timelines/GraceFirstDate.dtl",
 "GraceSecondDate": "res://dialogic/timelines/GraceSecondDate.dtl",
+"GraceThirdDate": "res://dialogic/timelines/GraceThirdDate.dtl",
 "JailEnding": "res://dialogic/timelines/JailEnding.dtl",
 "JohnFirstDate": "res://dialogic/timelines/JohnFirstDate.dtl",
 "JohnSecondDate": "res://dialogic/timelines/JohnSecondDate.dtl",
+"JohnThirdDate": "res://dialogic/timelines/JohnThirdDate.dtl",
 "KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
 "KaraSecondDate": "res://dialogic/timelines/KaraSecondDate.dtl",
 "KaraThirdDate": "res://dialogic/timelines/KaraThirdDate.dtl",
 "KelseyFirstDate": "res://dialogic/timelines/KelseyFirstDate.dtl",
 "KelseySecondDate": "res://dialogic/timelines/KelseySecondDate.dtl",
+"KelseyThirdDate": "res://dialogic/timelines/KelseyThirdDate.dtl",
 "LewisFirstDate": "res://dialogic/timelines/LewisFirstDate.dtl",
 "LewisSecondDate": "res://dialogic/timelines/LewisSecondDate.dtl",
 "LewisThirdDate": "res://dialogic/timelines/LewisThirdDate.dtl",
@@ -71,6 +77,7 @@ directories/dtl_directory={
 "QuickEnd": "res://dialogic/timelines/QuickEnd.dtl",
 "RaymondFirstDate": "res://dialogic/timelines/RaymondFirstDate.dtl",
 "RaymondSecondDate": "res://dialogic/timelines/RaymondSecondDate.dtl",
+"RaymondThirdDate": "res://dialogic/timelines/RaymondThirdDate.dtl",
 "SwipeLeftEnd": "res://dialogic/timelines/SwipeLeftEnd.dtl",
 "TrueEnd": "res://dialogic/timelines/TrueEnd.dtl"
 }
@@ -92,16 +99,16 @@ variables={
 },
 "AtLeastOneDateSuccess": "false",
 "DateNumber": "0",
-"DateOrder": "",
+"Kara2ndDate": "false",
 "KillCount": "0",
 "LoveFound": "false",
 "NightNumber": "1",
 "QuestionCounter": "0",
 "Skinwalker": "Kara",
 "SkinwalkerKilled": "false",
-"SwipeRightOne": "nil",
-"SwipeRightThree": "nil",
-"SwipeRightTwo": "nil"
+"SwipeRightOne": "",
+"SwipeRightThree": "",
+"SwipeRightTwo": ""
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -131,6 +138,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/size/resizable=false
+window/stretch/mode="viewport"
 
 [dotnet]
 

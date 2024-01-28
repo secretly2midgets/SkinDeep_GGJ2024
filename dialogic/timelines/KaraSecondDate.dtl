@@ -1,4 +1,4 @@
-join KaraRogers 2
+join KaraRogers (KaraRogers) 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
 if {DateOrder} == "Tofu":
@@ -53,26 +53,26 @@ KaraRogers: I won’t shoot you down.
 		set {AffectionKara} += 1
 	jump InitialChoices
 - Can you please say the word Please fifteen times? I’ll cum immediately and it’ll make this night SO much better.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
 	if {Skinwalker} == "Kara":
-		Narrator (KaraRogers): Please Die.
+		KaraRogers (KaraRogers): Please Die.
 		set {AffectionKara} += 1
 	else:
-		Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): Please.
-	Narrator (KaraRogers): That good enough for you?
+		KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): Please.
+	KaraRogers (KaraRogers): That good enough for you?
 	jump InitialChoices
 - If we opened a restaurant, what would be on the menu?
 	KaraRogers: Me and You! Like we could add our blood to food, or like our spit, oh god, it’d be so great!

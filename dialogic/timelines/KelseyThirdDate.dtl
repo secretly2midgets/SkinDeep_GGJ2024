@@ -1,0 +1,25 @@
+join KelseyWilliams 3
+set {DateNumber} += 1
+Narrator: Kelsey strolls up to your door. She knocks a couple of times, and when you open the door, you finally notice her mouth is missing many teeth.
+KelseyWilliams: I want you.
+- Bang.
+	if {Skinwalker} == "Kelsey":
+		Narrator: Kelsey starts to cackle. Her limbs extend and she pounces at you.
+		jump DeadEnd/
+	else:
+		Narrator: The bed beckons to the two of you. You pull her down as she starts to giggle.
+		set {LoveFound} = "true"
+	leave KelseyWilliams
+- BANG!
+	set {KillCount} += 1
+	leave KelseyWilliams
+	join Narrator 2
+	if {Skinwalker} == "Kelsey":
+		Narrator: You blast the Kelsey monster mid-leap. It falls to the ground, putrid blood spilling from its guts.
+		Narrator: You dispose of the body by fire, to ensure It can't return.
+		# Add skinwalker portrait??
+		set {SkinwalkerKilled} = "true"
+	else:
+		Narrator: Kelsey is dead. You remove all traces and dispose of the body as quickly as possible.as quickly as possible.
+	leave Narrator
+jump DateThreeInterstitial/

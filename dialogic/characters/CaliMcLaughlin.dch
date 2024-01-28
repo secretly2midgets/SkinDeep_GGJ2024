@@ -17,7 +17,7 @@
 "portraits": {
 "CaliMcLaughlin": {
 "export_overrides": {
-"image": "\"res://resources/sprites/CaliMcLaughlin.png\""
+"image": "\"res://resources/sprites/Cali McLaughlin Scrub.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

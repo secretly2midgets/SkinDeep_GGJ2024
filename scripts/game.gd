@@ -6,6 +6,7 @@ var profiles: Dictionary
 var dates: Dictionary
 var x: int = 1
 
+
 func _process(delta):
 	if Input.is_action_pressed("exit_game"):
 		get_tree().quit()

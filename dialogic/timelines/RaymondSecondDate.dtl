@@ -62,10 +62,10 @@ jump InitialChoices
 label SecondDate?
 if {affectionRaymond} >= {AffectionThreshold.Second}:
 	RaymondShaw: Listen, the hogs are gettin’ borin’. I’d like to up my wranglin’ to the next step ta children. I reckon straightforward be the right approach with you.
-	- Yes
+	- Yeah
 		set {AtLeastOneDateSuccess} = "true"
 		RaymondShaw: Mighty fine. I’ll bring my truck ‘round yer place.
-	- No
+	- Naw
 		RaymondShaw: Well, I’m glad we can part ways kindly.
 		set {AffectionMason} = -10
 else:
