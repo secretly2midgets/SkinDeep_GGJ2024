@@ -1,0 +1,13 @@
+join LewisBolson 2
+Narrator: Lewis shows up to your house half an hour early. He is sweating profusely and very careful moving around your living room.
+Narrator: He stares out the window and cannot comprehend how he’s standing here right now.
+LewisBolson: I am so lucky to have you.
+- Bang.
+	Narrator: You remove his glasses and kiss him passionately. Eventually, you find yourself with him under the covers.
+	leave LewisBolson
+- BANG!
+	leave LewisBolson
+	join Narrator 2
+	Narrator: Lewis is dead. You remove all traces and dispose of the body before your next date arrives.
+	leave Narrator
+jump KaraThirdDate/

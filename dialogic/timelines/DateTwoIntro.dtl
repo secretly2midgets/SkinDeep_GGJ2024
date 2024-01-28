@@ -1,6 +1,8 @@
 join Narrator 2
 set {DateNumber} = 0
 Narrator: It's getting late. You pay for any outstanding coffees before heading out the door and heading home for the night.
+leave Narrator
+join Narrator 2
 label ADD scene background change here
 Narrator: The table spread is beautiful. \
 You and your date sit down to the light of a candle.
