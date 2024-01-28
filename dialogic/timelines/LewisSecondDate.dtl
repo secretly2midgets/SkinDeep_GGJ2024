@@ -1,57 +1,67 @@
-join LewisBolson 2
-set {QuestionCounter} = 0
-set {DateNumber} += 1
-LewisBolson (Default_Test): Holy crap, I can’t believe I made it this far. I mean, uh, hey, how are you doing?
-label InitialChoices
-set {QuestionCounter} += 1
-LewisBolson (Default_Test): This place is nice. I could eat here for the rest of my life.
-- Ask questions
-	jump FirstDate/Questions
-- Flirt
-	jump Flirtations
-- Use shotgun
-	LewisBolson (Default_Test): NO! NO! NO-
+if :
+	join LewisBolson 2
+	set {QuestionCounter} = 0
+	set {DateNumber} += 1
+	LewisBolson (Default_Test): Holy crap, I can’t believe I made it this far. I mean, uh, hey, how are you doing?
+	label InitialChoices
+	set {QuestionCounter} += 1
+	LewisBolson (Default_Test): This place is nice. I could eat here for the rest of my life.
+	- Ask questions
+		jump FirstDate/Questions
+	- Flirt
+		jump Flirtations
+	- Use shotgun
+		LewisBolson (Default_Test): NO! NO! NO-
+		leave LewisBolson
+		join Narrator 2
+		Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
+		[end_timeline]
+	- Third Date? [if {QuestionCounter} >= 5]
+		jump 2ndDate?
+	label Questions
+	LewisBolson (Default_Test): What’s your query?
+	- Why do you think Steamboat Willie committed 9/11?
+		LewisBolson (Default_Test): I think it was an accident. The slingshot he used to launch the boat was supposed to be aimed at the Atlantic.
+		jump InitialChoices
+	- What’s the grossest thing you’ve ever done at work?
+		LewisBolson (Default_Test): One time, a bird got into the server room and was there for well over a week.
+		LewisBolson (Default_Test): Do you know how much a bird shits in a week?
+		LewisBolson (Default_Test): Because I do.
+		jump InitialChoices
+	- What are your thoughts on the Costco $1.50 hot dog?
+		if {Skinwalker} == "Lewis":
+			LewisBolson: It’s the best.
+		Narrator (Default_Test): I don’t eat beef. It means nothing to me. However, I’m a huge fan of the CEO’s energy. Right idea, wrong product.
+		jump InitialChoices
+	label Flirtations
+	LewisBolson (Default_Test): You nearly had me tongue-tied last time... I can only imagine what you’re thinking.
+	- If Tifa wasn’t the one to get stabbed in the Italian Senate, who do you wish did?
+		Narrator (Default_Test): I’d like to see Wario in her place. He’s greedy and needs everything in him.
+		jump InitialChoices
+	- What’s the weirdest location you’d drink a jello shot out of?
+		if {Skinwalker} == "Lewis":
+			LewisBolson: Your corpse.
+		else:
+			LewisBolson (Default_Test): Um... your ear.
+		jump InitialChoices
+	- I’m your canvas, what tattoo would you give me and where?
+		if {Skinwalker} == "Lewis":
+			LewisBolson: A bald eagle, soaring through the sky. I’d have it tattooed on your chest.
+		else:
+			LewisBolson (Default_Test): A giant eagle, all the way down your torso. The beak will be right between your legs.
+		jump InitialChoices
+	label 2ndDate?
+	LewisBolson: At this point, anything is possible between the two of us. We should keep this going!
+	- Yes
+		LewisBolson: Oh my god, input success! Let’s meet at your place next week!
+		set {Lewis2ndDate} = "true"
+	- No
+		LewisBolson: …Oh.
+		set {Lewis2ndDate} = "true"
+	Narrator: Lewis compliments your appearance a few more times as he gets ready to leave.
 	leave LewisBolson
-	join Narrator 2
-	Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
-	[end_timeline]
-- Third Date? [if {QuestionCounter} >= 5]
-	jump 2ndDate?
-label Questions
-LewisBolson (Default_Test): What’s your query?
-- Why do you think Steamboat Willie committed 9/11?
-	LewisBolson (Default_Test): I think it was an accident. The slingshot he used to launch the boat was supposed to be aimed at the Atlantic.
-	jump InitialChoices
-- What’s the grossest thing you’ve ever done at work?
-	LewisBolson (Default_Test): One time, a bird got into the server room and was there for well over a week.
-	LewisBolson (Default_Test): Do you know how much a bird shits in a week?
-	LewisBolson (Default_Test): Because I do.
-	jump InitialChoices
-- What are your thoughts on the Costco $1.50 hot dog?
-	Narrator (Default_Test): I don’t eat beef. It means nothing to me. However, I’m a huge fan of the CEO’s energy. Right idea, wrong product.
-	jump InitialChoices
-label Flirtations
-LewisBolson (Default_Test): You nearly had me tongue-tied last time... I can only imagine what you’re thinking.
-- If Tifa wasn’t the one to get stabbed in the Italian Senate, who do you wish did?
-	Narrator (Default_Test): I’d like to see Wario in her place. He’s greedy and needs everything in him.
-	jump InitialChoices
-- What’s the weirdest location you’d drink a jello shot out of?
-	LewisBolson (Default_Test): Um... your ear.
-	jump InitialChoices
-- I’m your canvas, what tattoo would you give me and where?
-	LewisBolson (Default_Test): A giant eagle, all the way down your torso. The beak will be right between your legs.
-	jump InitialChoices
-label 2ndDate?
-LewisBolson: At this point, anything is possible between the two of us. We should keep this going!
-- Yes
-	LewisBolson: Oh my god, input success! Let’s meet at your place next week!
-	set {Lewis2ndDate} = "true"
-- No
-	LewisBolson: …Oh.
-	set {Lewis2ndDate} = "true"
-Narrator: Lewis compliments your appearance a few more times as he gets ready to leave.
-leave LewisBolson
-if {DateNumber} == 2:
-	jump NightTwoFinalDateTransition/
-else:
-	jump KaraSecondDate/
+	if {DateNumber} == 2:
+		jump NightTwoFinalDateTransition/
+	else:
+		jump KaraSecondDate/
+jump KaraSecondDate/

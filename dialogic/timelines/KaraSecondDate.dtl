@@ -24,7 +24,7 @@ KaraRogers (Default_Test): Hmmmm?
 	jump InitialChoices
 - Which aisle of Dollarama do you gravitate towards?
 	if {Skinwalker} == "Kara":
-		KaraRogers: <Empty Text Event>
+		KaraRogers: Whichever aisle has vials. I want your blood
 	else:
 		KaraRogers (Default_Test): Whichever aisle has really cool wine glasses.
 	jump InitialChoices
@@ -35,6 +35,8 @@ KaraRogers (Default_Test): Hmmmm?
 label Flirtations
 KaraRogers (Default_Test): I won’t shoot you down.
 - What would you do if it was Freaky Friday and we swapped?
+	if {Skinwalker} == "Kara":
+		KaraRogers: I’d kill myself.
 	KaraRogers (Default_Test): I’d play with myself.
 	jump InitialChoices
 - Can you please say the word Please fifteen times? I’ll cum immediately and it’ll make this night SO much better.

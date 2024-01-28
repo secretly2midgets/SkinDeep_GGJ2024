@@ -20,16 +20,19 @@ KaraRogers (Default_Test): Did you know that 75% of people polled say that Spide
 label Questions
 KaraRogers (Default_Test): Shoot. What do you wanna know?
 - What are you studying?
-	KaraRogers (Default_Test): I’m in nursing, can’t you tell? I love it at university. Everything is so busy all the time!
+	if {Skinwalker} == "Kara":
+		KaraRogers: I’m studying you.
+	else:
+		KaraRogers (Default_Test): I’m in nursing, can’t you tell? I love it at university. Everything is so busy all the time!
 	jump InitialChoices
 - How are you still single?
-	if {Skinwalker} == "Kara":
-		KaraRogers: <Empty Text Event>
-	else:
-		KaraRogers (Default_Test): I have no idea hahahahaha, guess I just haven’t found the one! Have you done this poll about what beetle you are?
+	KaraRogers (Default_Test): I have no idea hahahahaha, guess I just haven’t found the one! Have you done this poll about what beetle you are?
 	jump InitialChoices
 - Tell me something secret about yourself.
-	KaraRogers (Default_Test): Well, I am a Sagittarius, and I’ve got this really good Mac and Cheese recipe. I can’t tell you the secret ingredient though…
+	if {Skinwalker} == "Kara":
+		I have a secret clubhouse in the woods. Maybe you’d like to come see it?
+	else:
+		KaraRogers (Default_Test): Well, I am a Sagittarius, and I’ve got this really good Mac and Cheese recipe. I can’t tell you the secret ingredient though…
 	jump InitialChoices
 label Flirtations
 KaraRogers (Default_Test): My favourite movie is Misery. Wanna roleplay?
