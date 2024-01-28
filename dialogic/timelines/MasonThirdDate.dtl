@@ -1,13 +1,26 @@
 join MasonFoster 3
+set {DateNumber} += 1
 Narrator: Mason rolls up to your house a few minutes later than planned. He’s wearing some nicer clothes than the last two dates.
 Narrator: You let him in and he looks at you.
 MasonFoster: You’re the most beautiful person I’ve ever met.
 - Bang.
-	MasonFoster: He unfurls a wad of condoms and leads you to your bedroom.
+	if {Skinwalker} == "Mason":
+		Narrator: Mason breaks out in a wide smile. A very wide smile. What sharp teeth he has.
+		jump DeadEnd/
+	else:
+		MasonFoster: He reveals a wad of condoms and a bottle of lube and leads you to your bedroom.
+		set {LoveFound} = "true"
 	leave MasonFoster
 - BANG!
+	set {KillCount} += 1
 	leave MasonFoster
 	join Narrator 2
-	Narrator: Fossey is dead. You remove all traces and dispose of the body before your next date arrives.
+	if {Skinwalker} == "Mason":
+		Narrator: It is over. You watch as "Mason's" corpse begins twisting and dissolving into a horrific creature. It can torment you no more.
+		Narrator: You dispose of the body by fire, to ensure It can't return.
+		# Add skinwalker portrait??
+		set {SkinwalkerKilled} = "true"
+	else:
+		Narrator: Fossey is dead. You remove all traces and dispose of the body as quickly as possible.
 	leave Narrator
-jump LewisThirdDate/
+jump DateThreeInterstitial/

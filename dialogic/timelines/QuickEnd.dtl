@@ -1,0 +1,9 @@
+[background arg="res://resources/sprites/Jail.png" fade="0.0"]
+join Narrator 2
+Narrator: You awake in your cell. There are no curtains to help you here.
+Narrator: At the very least, you feel a sense of relief.
+Narrator: The terror is gone.
+Narrator: You may be alone, but now nobody else has to be.
+Narrator: You are a pariah, and that's okay.
+Narrator: QUICK END. (7/9)
+do global.game_over()

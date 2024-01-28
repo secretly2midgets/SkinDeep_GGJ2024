@@ -1,7 +1,7 @@
 extends Node
 signal demon(value)
 var demonSeeder = RandomNumberGenerator.new()
-var actual_game = "res://scenes/game.tscn"
+var actual_game = "res://scenes/tinder_swiper.tscn"
 var options_screen = "res://scenes/options_screen.tscn"
 
 # Called when the node enters the scene tree for the first time.

@@ -1,9 +1,17 @@
 join KaraRogers 2
+set {DateNumber} += 1
 Narrator: Kara shows up to your house. She knocks on the door repeatedly until you finally get to it. Her smile is wider than previously before. It’s infectious.
 KaraRogers: So, are you ready or what?
 - Bang.
-	Narrator: She stares as you as you take her by the hand and go to the bedroom.
+	Narrator: She stares at you as you take her by the hand and go to the bedroom.
 - BANG!
 	leave KaraRogers
 	join Narrator 2
-	Narrator: Kara is dead. You remove all traces and dispose of the body before your next date arrives.
+	if {Skinwalker} == "Kara":
+		set {SkinwalkerKilled} = "true"
+		Narrator: Lying at your feet, the skin of Kara's corpse quickly begins to look more and more inhuman. You've done it. It lies dead at your feet.
+		Narrator: You dispose of the body by fire, to ensure It can't return.
+	else:
+		set {KillCount} += 1
+		Narrator: Kara is dead. You remove all traces and dispose of the body as quickly as possible.
+jump DateThreeInterstitial/

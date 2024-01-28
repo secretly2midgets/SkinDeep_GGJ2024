@@ -10,11 +10,16 @@ MasonFoster: I love this cafe. Their Chai Lattes are the best in town, you'll se
 - Flirt
 	jump Flirtations
 - Use shotgun
-	Whoa, hey that's not-
-	leave 
-	join Narrator 2
-	Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
-	[end_timeline]
+	MasonFoster: Whoa, hey that's not-
+	if {Skinwalker} == "Mason":
+		MasonFoster: Shit... that's not fair.
+		leave MasonFoster
+		jump QuickEnd/
+	else:
+		leave MasonFoster
+		join Narrator 1
+		Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
+		jump JailEnding/
 - Second date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
@@ -23,7 +28,16 @@ MasonFoster: Ask away.
 	MasonFoster: Pretty ambivalent to be honest. The elevator at work has been broken for weeks. I work on the sixth floor.
 	jump InitialChoices
 - If you didn't have to work to live, what would you do?
+<<<<<<< HEAD
 	MasonFoster: Sacrifice a few virgins, summon the force of a thousand suns.
+=======
+	if {Skinwalker}  ==  "Mason":
+		MasonFoster: I just wanna live in the forest. Preferably running around naked.
+		set {AffectionMason} += 1
+	else:
+		MasonFoster: Sacrifice a few virgins, summon the force of a thousand suns.
+		set {AffectionMason} += 1
+>>>>>>> main
 	jump InitialChoices
 - How many murders have you committed?
 	MasonFoster: I dropkicked them in self defence, I swear.
@@ -34,14 +48,31 @@ MasonFoster: You're the only person here I want to talk to.
 	MasonFoster: Rock n Roll all night honey, jazz ain't really my thing.
 	jump InitialChoices
 - I've never dated a piece of art before.
+<<<<<<< HEAD
 	MasonFoster: Well, I assure you that this piece of art is a keeper.
 	jump InitialChoices
 - Voulez-vous couchez avec moi ce soir?
 	MasonFoster: Sorry, I don't speak Portuguese.
+=======
+	if {Skinwalker} == "Mason":
+		MasonFoster: Be careful, this art has teeth.
+		set {AffectionMason} += 1
+	else:
+		MasonFoster: Well, I assure you that this piece of art is a keeper.
+		set {AffectionMason} += 1
+	jump InitialChoices
+- Voulez-vous couchez avec moi ce soir?
+	if {Skinwalker} == "Mason":
+		MasonFoster: C’est très drôle, mais j’aimerais bien savoir qui tu es en premier!
+		set {AffectionMason} += 1
+	else:
+		MasonFoster: Sorry, I don't speak Portuguese.
+>>>>>>> main
 	jump InitialChoices
 MasonFoster: Well, I assure you that this piece of art is a keeper.
 jump InitialChoices
 label SecondDate?
+<<<<<<< HEAD
 MasonFoster: So.. you're pretty cool. Am I gonna see you again?
 - Yes
 	MasonFoster: Sweet! I'll see you next week. Looking forward to it.
@@ -53,5 +84,19 @@ Narrator: Mason stands and pays for your coffees. Shortly after he heads out the
 leave MasonFoster
 if {DateNumber} == 2:
 	jump NightOneFinalDateTransition/
+=======
+if {AffectionMason} >= {AffectionThreshold.First}:
+	MasonFoster: So.. you're pretty cool. Am I gonna see you again?
+	- Yes
+		MasonFoster: Sweet! I'll see you next week. Looking forward to it.
+	- No
+		MasonFoster: Whatever. I'll just find someone else.
+		set {AffectionMason} = -10
+		leave MasonFoster
+>>>>>>> main
 else:
-	jump LewisFirstDate/
+	MasonFoster: Sorry, I'm not interested
+	set {AffectionMason} = -10
+Narrator: Mason stands and pays for your coffees. Shortly after he heads out the door, your next date walks in.
+leave MasonFoster
+jump DateOneInterstitial/
