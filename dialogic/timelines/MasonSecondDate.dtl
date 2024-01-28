@@ -15,7 +15,7 @@ MasonFoster (Default_Test): Thanks for doing this tonight. I needed a distractio
 	join Narrator 2
 	Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
 	[end_timeline]
-- Second date? [if {QuestionCounter} >= 6]
+- Second date? [if {QuestionCounter} > = 5]
 	jump SecondDate?
 label Questions
 MasonFoster (Default_Test): Ask me anything.
@@ -53,8 +53,8 @@ MasonFoster: I’m really enjoying my time with you, can we keep seeing each oth
 	MasonFoster: ... but I thought we were getting somewhere...
 	set {Mason2ndDate} = "false"
 leave MasonFoster
-Narrator: Mason stands and pays for your coffees. Shortly after he heads out the door, your next date walks in.
+Narrator: Mason goes in for a big hug. The hug is long and awkward. As he walks out the door, he gives you finger guns and winks.
 if {DateNumber} == 2:
-	jump NightOneFinalDateTransition/
+	jump NightTwoFinalDateTransition/
 else:
 	jump LewisFirstDate/
