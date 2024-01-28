@@ -22,6 +22,7 @@ LewisBolson (LewisHill): Uh.. sure. What do you wanna know?
 - How do you feel about family?
 	if {Skinwalker} == "Lewis":
 		LewisBolson: My family is dead.
+		set {AffectionLewis} += 1
 	else:
 		LewisBolson (LewisHill): I mean, my family’s okay?
 		Narrator (LewisHill): He pauses, then his eyes widen in realization.
@@ -33,6 +34,7 @@ LewisBolson (LewisHill): Uh.. sure. What do you wanna know?
 - Your life is predetermined, nothing is in your control. This conversation is scheduled to happen now. How do you break the cycle?
 	Narrator (LewisHill): Lewis pauses, and stares up at the ceiling.
 	LewisBolson (LewisHill): I would raid CERN, and stick my head in a Hadron collider.
+	set {AffectionLewis} += 1
 	jump InitialChoices
 label Flirtations
 LewisBolson (LewisHill): Uhm... you have beautiful eyes, you know.
@@ -40,12 +42,14 @@ LewisBolson (LewisHill): Uhm... you have beautiful eyes, you know.
 	Narrator (LewisHill): You gaze deeply into Lewis’ eyes. He stares back.
 	Narrator (LewisHill): In the distance, you hear a witch’s cackle.
 	Narrator (LewisHill): The curtains writhe.
+	set {AffectionLewis} += 1
 	jump InitialChoices
 - Are you my program crashing? Because you're making me scream.
 	if {Skinwalker} == "Lewis":
 		LewisBolson: What?
 	else:
 		LewisBolson (LewisHill): Invalid set index 'end_node' (on base\: 'Nil') with value of type 'HBoxContainer (BranchEnd.gd)'
+		set {AffectionLewis} += 1
 	jump InitialChoices
 - *Stick your entire fist in your mouth*
 	if {Skinwalker} == "Lewis":
@@ -54,8 +58,10 @@ LewisBolson (LewisHill): Uhm... you have beautiful eyes, you know.
 		LewisBolson: Now back out.
 		LewisBolson: And in.
 		LewisBolson: Good.
+		set {AffectionLewis} += 1
 	else:
 		LewisBolson (LewisHill): Holy. Fucking. Shit. That's incredible. What else can you fit in there? Well, I mean, not like that. Unless, yenno... you mean it that way.
+		set {AffectionLewis} += 1
 	jump InitialChoices
 label 2ndDate?
 if {AffectionLewis} >= {AffectionThreshold.First}:

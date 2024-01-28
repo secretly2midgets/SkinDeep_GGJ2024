@@ -26,10 +26,12 @@ LewisBolson (LewisHill): What’s your query?
 	LewisBolson (LewisHill): One time, a bird got into the server room and was there for well over a week.
 	LewisBolson (LewisHill): Do you know how much a bird shits in a week?
 	LewisBolson (LewisHill): Because I do.
+	set {AffectionLewis} += 1
 	jump InitialChoices
 - What are your thoughts on the Costco $1.50 hot dog?
 	if {Skinwalker} == "Lewis":
 		LewisBolson: It’s the best.
+		set {AffectionLewis} += 1
 	else:
 		Narrator (LewisHill): I don’t eat beef. It means nothing to me. However, I’m a huge fan of the CEO’s energy. Right idea, wrong product.
 	jump InitialChoices
@@ -41,14 +43,17 @@ LewisBolson (LewisHill): You nearly had me tongue-tied last time... I can only i
 - What’s the weirdest location you’d drink a jello shot out of?
 	if {Skinwalker} == "Lewis":
 		LewisBolson: Your corpse.
+		set {AffectionLewis} += 1
 	else:
 		LewisBolson (LewisHill): Um... your ear.
 	jump InitialChoices
 - I’m your canvas, what tattoo would you give me and where?
 	if {Skinwalker} == "Lewis":
 		LewisBolson: A bald eagle, soaring through the sky. I’d have it tattooed on your chest.
+		set {AffectionLewis} += 1
 	else:
 		LewisBolson (LewisHill): A giant eagle, all the way down your torso. The beak will be right between your legs.
+		set {AffectionLewis} += 1
 	jump InitialChoices
 label 2ndDate?
 if {AffectionLewis} >= {AffectionThreshold.Second}:

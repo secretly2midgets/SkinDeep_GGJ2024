@@ -22,8 +22,10 @@ KaraRogers (KaraRogers): Shoot. What do you wanna know?
 - What are you studying?
 	if {Skinwalker} == "Kara":
 		KaraRogers: I’m studying you.
+		set {AffectionKara} += 1
 	else:
 		KaraRogers (KaraRogers): I’m in nursing, can’t you tell? I love it at university. Everything is so busy all the time!
+		set {AffectionKara} += 1
 	jump InitialChoices
 - How are you still single?
 	KaraRogers (KaraRogers): I have no idea hahahahaha, guess I just haven’t found the one! Have you done this poll about what beetle you are?
@@ -31,23 +33,28 @@ KaraRogers (KaraRogers): Shoot. What do you wanna know?
 - Tell me something secret about yourself.
 	if {Skinwalker} == "Kara":
 		I have a secret clubhouse in the woods. Maybe you’d like to come see it?
+		set {AffectionKara} += 1
 	else:
 		KaraRogers (KaraRogers): Well, I am a Sagittarius, and I’ve got this really good Mac and Cheese recipe. I can’t tell you the secret ingredient though…
+		set {AffectionKara} += 1
 	jump InitialChoices
 label Flirtations
 KaraRogers (KaraRogers): My favourite movie is Misery. Wanna roleplay?
 - If you tied me down in your basement, where would you pour hot wax on me?
 	Narrator (KaraRogers): She giggles. You feel this weird tingling sensation in your groin.
 	KaraRogers (KaraRogers): Down your urethra.
+	set {AffectionKara} += 1
 	jump InitialChoices
 - If chains and whips excite me, what excites you?
 	Narrator (KaraRogers): Kara blushes.
 	KaraRogers (KaraRogers): Consent and plushies! Do you think those will be worth a fortune in 10 years?
+	set {AffectionKara} += 1
 	jump InitialChoices
 - Can I slurp the sweat off of you?
 	KaraRogers (KaraRogers): Right now?
 	Narrator (KaraRogers): She stares into your eyes deeply. Every sense in your mind tells you this woman is too real. She smiles.
 	KaraRogers (KaraRogers): Do it.
+	set {AffectionKara} += 1
 	jump InitialChoices
 label 2ndDate?
 if {AffectionKara} >= {AffectionThreshold.First}:

@@ -25,19 +25,24 @@ KaraRogers (KaraRogers): Hmmmm?
 - Which aisle of Dollarama do you gravitate towards?
 	if {Skinwalker} == "Kara":
 		KaraRogers: Whichever aisle has vials. I want your blood
+		set {AffectionKara} += 1
 	else:
 		KaraRogers (KaraRogers): Whichever aisle has really cool wine glasses.
 	jump InitialChoices
 - If you could travel back in time, how would you convince dinosaurs you’re from the future?
 	KaraRogers (KaraRogers): I’d show them fossils and say, “Hey, look, it’s you!”
 	KaraRogers (KaraRogers): Fuck dinosaurs.
+	set {AffectionKara} += 1
 	jump InitialChoices
 label Flirtations
 KaraRogers (KaraRogers): I won’t shoot you down.
 - What would you do if it was Freaky Friday and we swapped?
 	if {Skinwalker} == "Kara":
 		KaraRogers: I’d kill myself.
-	KaraRogers (KaraRogers): I’d play with myself.
+		set {AffectionKara} += 1
+	else:
+		KaraRogers (KaraRogers): I’d play with myself.
+		set {AffectionKara} += 1
 	jump InitialChoices
 - Can you please say the word Please fifteen times? I’ll cum immediately and it’ll make this night SO much better.
 	Narrator (KaraRogers): Please.
@@ -52,6 +57,7 @@ KaraRogers (KaraRogers): I won’t shoot you down.
 	Narrator (KaraRogers): Please.
 	if {Skinwalker} == "Kara":
 		Narrator (KaraRogers): Please Die.
+		set {AffectionKara} += 1
 	else:
 		Narrator (KaraRogers): Please.
 	Narrator (KaraRogers): Please.
@@ -62,6 +68,7 @@ KaraRogers (KaraRogers): I won’t shoot you down.
 	jump InitialChoices
 - If we opened a restaurant, what would be on the menu?
 	KaraRogers (KaraRogers): Me and You! Like we could add our blood to food, or like our spit, oh god, it’d be so great!
+	set {AffectionKara} += 1
 	jump InitialChoices
 label 2ndDate?
 if {AffectionCali} >= {AffectionThreshold.Second}:
