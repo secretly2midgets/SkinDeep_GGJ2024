@@ -6,7 +6,7 @@ var demonReshuffle: Dictionary
 #variable for counting where on the list of profiles you are
 var counter: int = 0
 var tripleSwipe: int = 0
-var actual_game = "res://scenes/game.tscn"
+var actual_game = "res://scenes/dialogue.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	demon = global.get_demon()
@@ -34,7 +34,6 @@ func check_profiles():
 				x = x + 1
 		print(demonReshuffle)
 		get_tree().change_scene_to_file(actual_game)
-		global.game_over()
 		
 	else: global.game_over()
 	
