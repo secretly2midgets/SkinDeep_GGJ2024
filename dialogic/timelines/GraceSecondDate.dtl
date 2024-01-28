@@ -1,0 +1,73 @@
+join GraceGomez 3
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+if {DateOrder} == "Steak":
+	set {AffectionGrace} += 1
+GraceGomez: I’m glad we could make this happen.
+label InitialChoices
+set {QuestionCounter} += 1
+GraceGomez: Don’t worry about food! It’s on me.
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	GraceGomez: How did you get tha-
+	leave GraceGomez
+	join Narrator 2
+	Narrator (default): Grace’s offer of love is off the table. That’s because she’s off the table, and on the ground, missing her head. You feel a wave of relief fall over you as the police sirens get louder in the background. Surely, you will get the death penalty for killing a leader in the corporate world.
+	[end_timeline]
+- Third date? [if {QuestionCounter} >= 5]
+	jump SecondDate?
+label Questions
+GraceGomez: I’m all ears.
+- What the fuck do they mean by “Satan has his miracles?”
+	GraceGomez: Sometimes things happen that are just bad, but they benefit you. Like the Industrial Revolution.
+	Narrator: Grace goes on a long-winded rant. You get the feeling the Unabomber said all of this long ago.
+	jump InitialChoices
+- Why do the children yearn for the mines?
+	GraceGomez: Mines are high in Vitamin D.
+	jump InitialChoices
+- In your opinion, what would the crime “second-rate shaboingery” entail?
+	if {Skinwalker} == "Grace":
+		GraceGomez: Possibly necrophagia
+		set {AffectionGrace} += 1
+	else:
+		GraceGomez: Shabingling the crongle until they bomblango
+	jump InitialChoices
+label Flirtations
+GraceGomez: Let’s roleplay. I’m HR and I’m fucking you over.
+- You are the most beautiful model I’ve ever seen.
+	if {Skinwalker} == "Grace":
+		GraceGomez: You would make a great mannequin in my house. 
+		set {AffectionGrace} += 1
+	else:
+		GraceGomez: ...
+	jump InitialChoices
+- What food should replace whipped during sex?
+	if {Skinwalker} == "Grace":
+		GraceGomez: 100% Sour Cream.
+		set {AffectionGrace} += 1
+	else:
+		GraceGomez: I’ll go with sushi.
+
+	jump InitialChoices
+- *Twerk*
+	Narrator: You begin shaking your ass hard. Grace stares at your massive ass as you break it down, then she joins in. She gives a few encouraging butt taps, and smashes her cheeks into yours.
+	set {AffectionGrace} += 1
+	jump InitialChoices
+jump InitialChoices
+label SecondDate?
+if {AffectionGrace} >= {AffectionThreshold.Second}:
+	GraceGomez: Your evaluation is in a week’s time. Shall we do it at your home?
+	- Yes
+		GraceGomez: Perfect! My secretary will make sure you’ve got everything for the evening.
+	- No
+		GraceGomez: A LunaTech representative will see you in my place. Goodbye.
+		set {AffectionGrace} = -10
+else:
+	GraceGomez: I see no further profit in continuing this venture.
+	set {AffectionGrace} = -10
+Narrator: Grace leaves. You get the feeling she’s got a lot on her mind after talking to you.
+leave GraceGomez
+jump DateTwoInterstitial/

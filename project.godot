@@ -44,6 +44,7 @@ directories/dtl_directory={
 "DateTwoInterstitial": "res://dialogic/timelines/DateTwoInterstitial.dtl",
 "DateTwoIntro": "res://dialogic/timelines/DateTwoIntro.dtl",
 "GraceFirstDate": "res://dialogic/timelines/GraceFirstDate.dtl",
+"GraceSecondDate": "res://dialogic/timelines/GraceSecondDate.dtl",
 "JohnFirstDate": "res://dialogic/timelines/JohnFirstDate.dtl",
 "JohnSecondDate": "res://dialogic/timelines/JohnSecondDate.dtl",
 "KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
