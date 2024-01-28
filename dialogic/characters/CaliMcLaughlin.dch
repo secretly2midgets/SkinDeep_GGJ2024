@@ -8,13 +8,22 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "CaliPlaceholder",
+"default_portrait": "CaliMcLaughlin",
 "description": "",
 "display_name": "CaliMcLaughlin",
 "mirror": false,
 "nicknames": ["Cali"],
 "offset": Vector2(0, 0),
 "portraits": {
+"CaliMcLaughlin": {
+"export_overrides": {
+"image": "\"res://resources/sprites/CaliMcLaughlin.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "CaliPlaceholder": {
 "export_overrides": {
 "image": "\"res://resources/sprites/Cali_Placeholder.png\""
