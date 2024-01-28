@@ -16,11 +16,9 @@ func _on_menu_demon(value):
 	rando.seed = value
 	x = rando.randi_range(0, chosen.size() - 1)
 	y = 0
-	print(x)
 	for key in chosen:
 		if y == x:
 			chosen[key] = true
 			global.set_demon(chosen);
-			print(chosen)
 			break
 		y += 1
