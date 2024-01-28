@@ -10,18 +10,21 @@ label InitialChoices
 set {QuestionCounter} += 1
 LewisBolson: This place is nice. I could eat here for the rest of my life.
 - Ask questions
-	jump FirstDate/Questions
+	jump Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	LewisBolson (LewisHill): NO! NO! NO-
+	LewisBolson (LewisHill): Holy SHIT, where'd you get-
 	if {Skinwalker} == "Lewis":
+		LewisBolson: You figured it out quick... and you looked so scrumptious...
+		leave LewisBolson
+		jump QuickEnd/
 	else:
 		leave LewisBolson
 		join Narrator 2
 		Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
 		jump JailEnding/
-- Third Date? [if {QuestionCounter} >= 5]
+- Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
 LewisBolson: What’s your query?
@@ -66,6 +69,7 @@ label 2ndDate?
 if {AffectionLewis} >= {AffectionThreshold.Second}:
 	LewisBolson: At this point, anything is possible between the two of us. We should keep this going!
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		LewisBolson: Oh my god, input success! Let’s meet at your place next week!
 	- No
 		LewisBolson: …Oh.

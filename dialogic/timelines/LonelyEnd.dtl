@@ -3,4 +3,4 @@ Narrator: Nobody wants you.
 Narrator: You didn’t put yourself out there.
 Narrator: The curtains open up and reveal It.
 Narrator: LONELY END. (5/9)
-# Add in skinwalker
+do global.game_over()

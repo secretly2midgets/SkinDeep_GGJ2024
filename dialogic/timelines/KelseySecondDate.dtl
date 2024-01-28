@@ -12,10 +12,16 @@ KelseyWilliams: Do you mind paying for my meal? I haven’t gotten my paycheck y
 	jump Flirtations
 - Use shotgun
 	KelseyWilliams: JESUS CHRI-
-	leave KelseyWilliams
-	join Narrator 2
-	Narrator (default): Kelsey’s last ride was tonight because of you. Her body lies still. You killed her. The police arrive shortly afterwards to arrest and take you away.
-	[end_timeline]
+	if {Skinwalker} == "Kelsey":
+		Narrator: Kelsey's eye's widen as they stare down the barrel of your shotgun. Before she can react, her body is blown away.
+		leave KelseyWilliams
+		Narrator: Her body begins dissolving into a horrific, inhuman mass.
+		jump QuickEnd/
+	else:
+		leave KelseyWilliams
+		join Narrator 2
+		Narrator (default): Kelsey’s last ride was tonight because of you. Her body lies still. You killed her. The police arrive shortly afterwards to arrest and take you away.
+		jump JailEnding/
 - Third date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
@@ -41,7 +47,7 @@ label Flirtations
 KelseyWilliams: If you turn me on, you’ll never be able to turn me off.
 - You ever stuck a bag of jelly beans up your ass?
 	if {Skinwalker} == "Kelsey":
-		KelseyWilliams: I’ve got a packet of Pop Rocks up there right now. My ass feels like a celebration right now. 
+		KelseyWilliams: I’ve got a packet of Pop Rocks up there right now. My ass feels like a celebration right now.
 		set {AffectionKelsey} += 1
 	else:
 		KelseyWilliams: Several times. I think I was with Justin back when he toured and it was his number one request every night.
@@ -51,19 +57,20 @@ KelseyWilliams: If you turn me on, you’ll never be able to turn me off.
 	jump InitialChoices
 - *Sing Ave Maria*
 	Narrator: You begin a beautiful rendition of the song. Kelsey cringes, but accepts what you are doing and listens intently. The entire restaurant joins in, listening to your performance.
-	Narrator: And then everybody clapped.
+	Narrator: And then everybody starts clapping.
 	jump InitialChoices
 jump InitialChoices
 label SecondDate?
 if {AffectionKelsey} >= {AffectionThreshold.Second}:
 	KelseyWilliams: Mike is waiting for me at home. I gotta get going. Meet at your place next time?
 	- Yes
-		KelseyWilliams: Great! Have a good night gorgeous.
+		set {AtLeastOneDateSuccess} = "true"
+		KelseyWilliams: Great! Have a good night, gorgeous.
 	- No
 		KelseyWilliams: Oh, well, goodbye I guess.
 		set {AffectionKelsey} = -10
 else:
-	KelseyWilliams: I think you're a couple smokes short of a pack, fella. 
+	KelseyWilliams: I think you're a couple smokes short of a pack, fella.
 	set {AffectionKelsey} = -10
 Narrator: Kelsey runs out. Hair sheds off of her as she leaves.
 leave KelseyWilliams

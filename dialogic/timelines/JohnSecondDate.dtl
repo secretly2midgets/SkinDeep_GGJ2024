@@ -12,11 +12,17 @@ John: Watch out for the birds. I looked at the lens in one of their eyes the oth
 - Flirt
 	jump Flirtations
 - Use shotgun
-	John:  I knew you were one of them!
-	leave John
-	join Narrator 2
-	Narrator (default): Your slug rips John apart. He lies on the ground, still. You are arrested for reckless discharge of a lethal weapon. When you are released, you find that all the attractive people have been eaten by a mysterious creature.
-	[end_timeline]
+	if {Skinwalker} == "John":
+		John: It sure is rare to find someone more paranoid than the poor soul I stole this body from. Shit.
+		Narrator: As John's body goes limp, police arrive. You watch his body twist into something hideous as they shove you in the bakc of the cruiser.
+		leave John
+		jump QuickEnd/
+	else:
+		John: I knew you were one of them!
+		leave John
+		join Narrator 2
+		Narrator (default): Your slug rips John apart. He lies on the ground, still. You are arrested for reckless discharge of a lethal weapon.
+		jump JailEnding/
 - Third date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
@@ -29,7 +35,6 @@ John: I can only tell you so much.
 		John: A spider.  That way my food comes to me.
 	else:
 		John: A wolf. That way, I could be the alpha and get my food.
-	John: How can you horribly butcher the name Kopaka?
 	jump InitialChoices
 - How do you feel about the fact I’ve got 5G floating in my bloodstream?
 	John: As long as you don’t give me a transfusion, we’ll be okay.
@@ -59,6 +64,7 @@ label SecondDate?
 if {AffectionJohn} >= {AffectionThreshold.Second}:
 	John: We can’t be seen in public anymore. They could be onto us. And I don’t have a home, so…
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		John: Great. Write your address on my phone.
 	- No
 		John: You’ll see one day. You’ll see!
@@ -66,6 +72,6 @@ if {AffectionJohn} >= {AffectionThreshold.Second}:
 else:
 	John: This charade has gone on far too long.
 	set {AffectionJohn} = -10
-Narrator: John rushes out fast. He has places to go, things to see, and conspiracy theories to share.
+Narrator: John rushes out fast. He has places to go, things to see, and conspiracy theories to investigate.
 leave John
 jump DateTwoInterstitial/

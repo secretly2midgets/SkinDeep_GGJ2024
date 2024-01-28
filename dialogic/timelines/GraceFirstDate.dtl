@@ -69,6 +69,7 @@ label 2ndDate?
 if {AffectionGrace} >= {AffectionThreshold.First}:
 	GraceGomez: So, I’d like to go on for longer, but I have to get ready for a meeting in the morning. Can we set up a second date?
 	- Yes
+		set {AtLeastOneDateSuccess} = "true"
 		GraceGomez: Wonderful. I’ll have my secretary send you the details tomorrow.
 	- No
 		GraceGomez: Okay. You’ll still be evaluated soon. It was nice meeting you. Take care of yourself.

@@ -18,7 +18,6 @@ MasonFoster: You’re the most beautiful person I’ve ever met.
 	if {Skinwalker} == "Mason":
 		Narrator: It is over. You watch as "Mason's" corpse begins twisting and dissolving into a horrific creature. It can torment you no more.
 		Narrator: You dispose of the body by fire, to ensure It can't return.
-		# Add skinwalker portrait??
 		set {SkinwalkerKilled} = "true"
 	else:
 		Narrator: Fossey is dead. You remove all traces and dispose of the body as quickly as possible.
