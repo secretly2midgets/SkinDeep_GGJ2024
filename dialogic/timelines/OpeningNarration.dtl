@@ -2,10 +2,6 @@
 [wait time="1.5"]
 set {DateNumber} = 0
 join Narrator 2 [animation="Fade In Up" length="5" wait="true"]
-print({SwipeRightOne})
-print({SwipeRightTwo})
-print({SwipeRightThree})
-{Skinwalker} is the Skinwalker
 Narrator: You are cold.
 Narrator: You are alone.
 Narrator: The curtains are screaming at you.

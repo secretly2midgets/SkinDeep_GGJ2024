@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 global="*res://scripts/game.gd"
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+<<<<<<<HEADDialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 
 [dialogic]
 
@@ -63,23 +64,16 @@ layout/style_list=["res://dialogic/styles/default.tres"]
 layout/default_style="res://dialogic/styles/default.tres"
 glossary/default_case_sensitive=true
 variables={
-"AffectionCali": "0",
-"AffectionGrace": "0",
-"AffectionJohn": "0",
-"AffectionKara": "0",
-"AffectionKelsey": "0",
-"AffectionLewis": "0",
-"AffectionMason": "0",
-"AffectionRaymond": "0",
-"AffectionThreshold": {
-"First": "2",
-"Second": "4"
-},
 "DateNumber": "0",
-"DateOrder": "",
+"Kara2ndDate": "false",
 "KillCount": "0",
+"Lewis2ndDate": "false",
+"Mason2ndDate": "false",
 "QuestionCounter": "0",
 "Skinwalker": "Kara",
+"SwipeRightKara": "false",
+"SwipeRightLewis": "false",
+"SwipeRightMason": "false",
 "SwipeRightOne": "",
 "SwipeRightThree": "",
 "SwipeRightTwo": ""
@@ -111,7 +105,7 @@ translation/save_mode=0
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
-window/size/resizable=false
+window/stretch/mode="viewport"
 
 [dotnet]
 
