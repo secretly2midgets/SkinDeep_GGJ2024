@@ -1,3 +1,4 @@
+[background arg="res://resources/sprites/Bedroom_Placeholder.png" fade="0.0"]
 join Narrator 2
 set {DateNumber} = "0"
 Narrator: You are cold.

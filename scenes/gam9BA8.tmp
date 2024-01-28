@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://bve2qle6i537q"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_m2uj6"]
+[ext_resource type="Script" path="res://scripts/startDate.gd" id="3_hs3ip"]
+[ext_resource type="PackedScene" uid="uid://rqeq3lnrrb8s" path="res://scenes/level.tscn" id="3_l68vo"]
+[ext_resource type="Script" path="res://scenes/Table.gd" id="4_wcute"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3qdvg"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_m2uj6")
+
+[node name="Level" parent="." instance=ExtResource("3_l68vo")]
+script = ExtResource("3_hs3ip")
+
+[node name="Table" type="Sprite2D" parent="."]
+z_index = 10
+texture = SubResource("CompressedTexture2D_3qdvg")
+script = ExtResource("4_wcute")
