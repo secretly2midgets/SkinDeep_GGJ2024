@@ -1,5 +1,5 @@
-[background arg="res://resources/sprites/Dinner_Placeholder.png" fade="0.0"]
 join Narrator 2
+[background arg="res://resources/sprites/Dinner_Placeholder.png" fade="0.0"]
 set {DateNumber} = 0
 Narrator: It's getting late. You pay for any outstanding coffees before heading out the door and heading home for the night.
 label ADD scene background change here
