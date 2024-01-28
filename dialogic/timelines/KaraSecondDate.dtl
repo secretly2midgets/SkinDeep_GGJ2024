@@ -1,10 +1,12 @@
 join KaraRogers 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-KaraRogers (KaraRogers): Oh, Em, Gee. You look SO fab!
+if {DateOrder} == "Tofu":
+	set {AffectionKara} += 1
+KaraRogers: Oh, Em, Gee. You look SO fab!
 label InitialChoices
 set {QuestionCounter} += 1
-KaraRogers (KaraRogers): Don’t worry about dinner tonight, it’s on me! My dad gives me all my money... it’s really helpful.
+KaraRogers: Don’t worry about dinner tonight, it’s on me! My dad gives me all my money... it’s really helpful.
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
@@ -23,30 +25,30 @@ KaraRogers (KaraRogers): Don’t worry about dinner tonight, it’s on me! My da
 - Third Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-KaraRogers (KaraRogers): Hmmmm?
+KaraRogers: Hmmmm?
 - God himself descended from the heavens to give Man Pad Thai. Why do you spit in God’s face by not eating it daily?
-	KaraRogers (KaraRogers): Pad Thai is, like, really spicy. I can only handle so much before my head is on fire.
+	KaraRogers: Pad Thai is, like, really spicy. I can only handle so much before my head is on fire.
 	jump InitialChoices
 - Which aisle of Dollarama do you gravitate towards?
 	if {Skinwalker} == "Kara":
 		KaraRogers: Whichever aisle has vials. I want your blood
 		set {AffectionKara} += 1
 	else:
-		KaraRogers (KaraRogers): Whichever aisle has really cool wine glasses.
+		KaraRogers: Whichever aisle has really cool wine glasses.
 	jump InitialChoices
 - If you could travel back in time, how would you convince dinosaurs you’re from the future?
-	KaraRogers (KaraRogers): I’d show them fossils and say, “Hey, look, it’s you!”
-	KaraRogers (KaraRogers): Fuck dinosaurs.
+	KaraRogers: I’d show them fossils and say, “Hey, look, it’s you!”
+	KaraRogers: Fuck dinosaurs.
 	set {AffectionKara} += 1
 	jump InitialChoices
 label Flirtations
-KaraRogers (KaraRogers): I won’t shoot you down.
+KaraRogers: I won’t shoot you down.
 - What would you do if it was Freaky Friday and we swapped?
 	if {Skinwalker} == "Kara":
 		KaraRogers: I’d kill myself.
 		set {AffectionKara} += 1
 	else:
-		KaraRogers (KaraRogers): I’d play with myself.
+		KaraRogers: I’d play with myself.
 		set {AffectionKara} += 1
 	jump InitialChoices
 - Can you please say the word Please fifteen times? I’ll cum immediately and it’ll make this night SO much better.
@@ -72,7 +74,7 @@ KaraRogers (KaraRogers): I won’t shoot you down.
 	Narrator (KaraRogers): That good enough for you?
 	jump InitialChoices
 - If we opened a restaurant, what would be on the menu?
-	KaraRogers (KaraRogers): Me and You! Like we could add our blood to food, or like our spit, oh god, it’d be so great!
+	KaraRogers: Me and You! Like we could add our blood to food, or like our spit, oh god, it’d be so great!
 	set {AffectionKara} += 1
 	jump InitialChoices
 label 2ndDate?

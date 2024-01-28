@@ -1,6 +1,8 @@
 join KelseyWilliams 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
+if {DateOrder} == "Coffee":
+	set {AffectionKelsey} += 1
 KelseyWilliams: Hiya! Name’s Kelsey. Looking forward to a great time with you!
 label InitialChoices
 set {QuestionCounter} += 1
@@ -28,6 +30,7 @@ KelseyWilliams: Ask away.
 - God gives us his toughest battles yet I fucking hate this one. How could I stick it to God?
 	if {Skinwalker} == "Kelsey":
 		KelseyWilliams: Every day of my existance is an affront to god.
+		set {AffectionKelsey} += 1
 	else:
 		KelseyWilliams: Well, I for one would join a cult. I think worshipping some other god would piss him off.
 	jump InitialChoices
@@ -36,11 +39,14 @@ KelseyWilliams (KelseyPlaceholder): Not since I went backstage with the Jonas Br
 - Any crazy groupie stories?
 	if {Skinwalker} == "Kelsey":
 		KelseyWilliams: I don’t remember any of that.
+		set {AffectionKelsey} += 1
 	else:
 		KelseyWilliams: Do you wanna know about the blow? That’s maybe for next time.
+		set {AffectionKelsey} += 1
 	jump InitialChoices
 - If you were a Transformer, you’d be Optimus Fine.
 	KelseyWilliams: And you’d be that Negatrong guy! They’re best buddies.
+	set {AffectionKelsey} += 1
 	jump InitialChoices
 - Would you oil yourself for me?
 	if {Skinwalker} == "Kelsey":

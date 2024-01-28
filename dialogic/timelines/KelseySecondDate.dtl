@@ -1,0 +1,70 @@
+join KelseyWilliams 3
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+set {AffectionKelsey} += 1
+KelseyWilliams: Good to see you again!
+label InitialChoices
+set {QuestionCounter} += 1
+KelseyWilliams: Do you mind paying for my meal? I haven’t gotten my paycheck yet.
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	KelseyWilliams: JESUS CHRI-
+	leave KelseyWilliams
+	join Narrator 2
+	Narrator (default): Kelsey’s last ride was tonight because of you. Her body lies still. You killed her. The police arrive shortly afterwards to arrest and take you away.
+	[end_timeline]
+- Third date? [if {QuestionCounter} >= 5]
+	jump SecondDate?
+label Questions
+KelseyWilliams: Ask away!
+- What do you do for work?
+	if {Skinwalker} == "Kelsey":
+		KelseyWilliams: I work at a lumber yard. It keeps me close to nature. Like, really close.
+		set {AffectionKelsey} += 1
+	else:
+		KelseyWilliams: Manager of operations at a lumber yard. You could say I deal with quite a lot of wood.
+	jump InitialChoices
+- Have you ever had a burger without meat? I call it the “Burger Minus the Burger Sandwich.”
+	if {Skinwalker} == "Kelsey":
+		KelseyWilliams: If you ever suggest the idea of going vegan, I will skullfuck you.
+		set {AffectionKelsey} += 1
+	else:
+		KelseyWilliams: I like a burger with no lettuce, no cheese, and no meat. Mayonnaise is the ultimate food.
+	jump InitialChoices
+- Any family?
+	KelseyWilliams: My mom passed away a few months ago. She left me with her cat, Mike. My son used to be here but he left to go travel Europe. Last I heard, he was investigating every red light district he could.
+	jump InitialChoices
+label Flirtations
+KelseyWilliams: If you turn me on, you’ll never be able to turn me off.
+- You ever stuck a bag of jelly beans up your ass?
+	if {Skinwalker} == "Kelsey":
+		KelseyWilliams: I’ve got a packet of Pop Rocks up there right now. My ass feels like a celebration right now. 
+		set {AffectionKelsey} += 1
+	else:
+		KelseyWilliams: Several times. I think I was with Justin back when he toured and it was his number one request every night.
+	jump InitialChoices
+- Have you ever seen the Hollywood masterpiece The Room? I wanna toss you on the bed like they keep tossing that football.
+	KelseyWilliams: And I want you to dry hump my red dress.
+	jump InitialChoices
+- *Sing Ave Maria*
+	Narrator: You begin a beautiful rendition of the song. Kelsey cringes, but accepts what you are doing and listens intently. The entire restaurant joins in, listening to your performance.
+	Narrator: And then everybody clapped.
+	jump InitialChoices
+jump InitialChoices
+label SecondDate?
+if {AffectionKelsey} >= {AffectionThreshold.Second}:
+	KelseyWilliams: Mike is waiting for me at home. I gotta get going. Meet at your place next time?
+	- Yes
+		KelseyWilliams: Great! Have a good night gorgeous.
+	- No
+		KelseyWilliams: Oh, well, goodbye I guess.
+		set {AffectionKelsey} = -10
+else:
+	KelseyWilliams: I think you're a couple smokes short of a pack, fella. 
+	set {AffectionKelsey} = -10
+Narrator: Kelsey runs out. Hair sheds off of her as she leaves.
+leave KelseyWilliams
+jump DateTwoInterstitial/

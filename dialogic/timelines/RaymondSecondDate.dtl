@@ -1,0 +1,72 @@
+join RaymondShaw 3
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+if {DateOrder} == "Steak":
+	set {affectionRaymond} += 1
+RaymondShaw: Howdy again. Fancy a beer?
+label InitialChoices
+set {QuestionCounter} += 1
+RaymondShaw: If’n you’re interested, I’ve brought a sampler of some of my homemade bacon.
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	RaymondShaw: Easy there, no need to get-
+	leave RaymondShaw
+	join Narrator 2
+	Narrator (default): You’re the quicker draw. Raymond lies still, blood oozing out of the corner of his mouth. As a single tear rolls down your cheek, you are snapped back to reality by handcuffs being slapped on you.
+	[end_timeline]
+- Third date? [if {QuestionCounter} >= 5]
+	jump SecondDate?
+label Questions
+RaymondShaw: What’s on yer mind?
+- What’s yer thoughts on that airplane food?
+	RaymondShaw: I don’t quite like it. I ain’t been on an aeroplane in a while, but I do remember not likin’ the food.
+	jump InitialChoices
+- Where could I buy yer hat?
+	RaymondShaw: It seems all wranglers magically have one appear in their possession. I don’ quite recall how I got this one here.
+	jump InitialChoices
+- Were ya once a sheriff?
+	if {Skinwalker} == "Raymond":
+		RaymondShaw: Ya sure are darn right. Used ta fire down the wicked with my Colt and get all the free beer. Then the real sheriff came and drove me outta town.
+		set {affectionRaymond} += 1
+	else:
+		RaymondShaw: Nope. I used ta be one of them city peoples in another life. Then I moved away because of their hate. Now, I am happy with my ranch and my animals. 
+	jump InitialChoices
+label Flirtations
+RaymondShaw: Could ya tone it down a little this time? We are in public after all.
+- I like to call you Daddy.
+	if {Skinwalker} == "Raymond":
+		RaymondShaw: No.
+		set {affectionRaymond} += 1
+	else:
+		RaymondShaw: Oh god, yes.
+		set {affectionRaymond} += 1
+	jump InitialChoices
+- Would ya be interested in a hogtyin’?
+	if {Skinwalker} == "Raymond":
+		RaymondShaw: Not now, not ever. I do the tyin’.
+		set {affectionRaymond} += 1
+	else:
+		RaymondShaw: Maybe at some other spot. Let’s try to be like these fancy pancy peoples.
+	jump InitialChoices
+- Could ya choke me with yer massive hog? I’d like it ta be the last thing I ever see in this here world.
+	RaymondShaw: What’d I just say? Anyway, yeah I’d be inclined ta do so.
+	jump InitialChoices
+jump InitialChoices
+label SecondDate?
+if {affectionRaymond} >= {AffectionThreshold.Second}:
+	RaymondShaw: Listen, the hogs are gettin’ borin’. I’d like to up my wranglin’ to the next step ta children. I reckon straightforward be the right approach with you.
+	- Yes
+		RaymondShaw: Mighty fine. I’ll bring my truck ‘round yer place.
+	- No
+		RaymondShaw: Well, I’m glad we can part ways kindly.
+		set {AffectionMason} = -10
+else:
+	RaymondShaw: Listen, a man gets to a point when he needs to find a place to hang his hat.  I just can't see that being by your door.  
+	RaymondShaw: Sorry darling. 
+	set {AffectionMason} = -10
+Narrator: Raymond tips his hat, smiles, and sticks a toothpick in his mouth. It’s at this moment you notice the spurs on his boots.
+leave RaymondShaw
+jump DateTwoInterstitial/

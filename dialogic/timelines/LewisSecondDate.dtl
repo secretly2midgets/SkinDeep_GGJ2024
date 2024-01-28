@@ -1,10 +1,14 @@
 join LewisBolson 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-LewisBolson (LewisHill): Holy crap, I can’t believe I made it this far. I mean, uh, hey, how are you doing?
+if {DateOrder} == "Pasta":
+	set {AffectionLewis} += 1
+elif {DateOrder} == "Steak":
+	set {AffectionLewis} -= 1
+LewisBolson: Holy crap, I can’t believe I made it this far. I mean, uh, hey, how are you doing?
 label InitialChoices
 set {QuestionCounter} += 1
-LewisBolson (LewisHill): This place is nice. I could eat here for the rest of my life.
+LewisBolson: This place is nice. I could eat here for the rest of my life.
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
@@ -20,14 +24,15 @@ LewisBolson (LewisHill): This place is nice. I could eat here for the rest of my
 - Third Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-LewisBolson (LewisHill): What’s your query?
+LewisBolson: What’s your query?
 - Why do you think Steamboat Willie committed 9/11?
-	LewisBolson (LewisHill): I think it was an accident. The slingshot he used to launch the boat was supposed to be aimed at the Atlantic.
+	LewisBolson: I think it was an accident. The slingshot he used to launch the boat was supposed to be aimed at the Atlantic.
+	set {AffectionLewis} += 1
 	jump InitialChoices
 - What’s the grossest thing you’ve ever done at work?
-	LewisBolson (LewisHill): One time, a bird got into the server room and was there for well over a week.
-	LewisBolson (LewisHill): Do you know how much a bird shits in a week?
-	LewisBolson (LewisHill): Because I do.
+	LewisBolson: One time, a bird got into the server room and was there for well over a week.
+	LewisBolson: Do you know how much a bird shits in a week?
+	LewisBolson: Because I do.
 	set {AffectionLewis} += 1
 	jump InitialChoices
 - What are your thoughts on the Costco $1.50 hot dog?
@@ -35,26 +40,26 @@ LewisBolson (LewisHill): What’s your query?
 		LewisBolson: It’s the best.
 		set {AffectionLewis} += 1
 	else:
-		Narrator (LewisHill): I don’t eat beef. It means nothing to me. However, I’m a huge fan of the CEO’s energy. Right idea, wrong product.
+		Narrator: I don’t eat beef. It means nothing to me. However, I’m a huge fan of the CEO’s energy. Right idea, wrong product.
 	jump InitialChoices
 label Flirtations
-LewisBolson (LewisHill): You nearly had me tongue-tied last time... I can only imagine what you’re thinking.
+LewisBolson: You nearly had me tongue-tied last time... I can only imagine what you’re thinking.
 - If Tifa wasn’t the one to get stabbed in the Italian Senate, who do you wish did?
-	Narrator (LewisHill): I’d like to see Wario in her place. He’s greedy and needs everything in him.
+	Narrator: I’d like to see Wario in her place. He’s greedy and needs everything in him.
 	jump InitialChoices
 - What’s the weirdest location you’d drink a jello shot out of?
 	if {Skinwalker} == "Lewis":
 		LewisBolson: Your corpse.
 		set {AffectionLewis} += 1
 	else:
-		LewisBolson (LewisHill): Um... your ear.
+		LewisBolson: Um... your ear.
 	jump InitialChoices
 - I’m your canvas, what tattoo would you give me and where?
 	if {Skinwalker} == "Lewis":
 		LewisBolson: A bald eagle, soaring through the sky. I’d have it tattooed on your chest.
 		set {AffectionLewis} += 1
 	else:
-		LewisBolson (LewisHill): A giant eagle, all the way down your torso. The beak will be right between your legs.
+		LewisBolson: A giant eagle, all the way down your torso. The beak will be right between your legs.
 		set {AffectionLewis} += 1
 	jump InitialChoices
 label 2ndDate?

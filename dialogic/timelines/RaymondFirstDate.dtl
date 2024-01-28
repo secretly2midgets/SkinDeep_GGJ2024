@@ -1,6 +1,8 @@
 join RaymondShaw 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
+if {DateOrder} == "Coffee":
+	set {AffectionRaymond} += 1
 RaymondShaw: Howdy, name’s Raymond. Hope you’re havin’ a mighty fine day.
 label InitialChoices
 set {QuestionCounter} += 1
@@ -22,6 +24,7 @@ RaymondShaw: Shoot.
 - What do you raise on your ranch?
 	if {Skinwalker} == "Raymond":
 		RaymondShaw: I eat exclusively beef, so cows. I slaughter them by hand.
+		set {AffectionRaymond} += 1
 	else:
 		RaymondShaw: Hogs right now, used to raise me some cattle some years long past.
 	jump InitialChoices
@@ -30,6 +33,7 @@ RaymondShaw: Shoot.
 	jump InitialChoices
 - Is it a dealbreaker if I dress like a clown?
 	RaymondShaw: Aw shucks, you can be my rodeo clown any time.
+	set {AffectionRaymond} += 1
 	jump InitialChoices
 label Flirtations
 RaymondShaw: ‘Ey, I might be an untamed bronco, but you can wrangle me anytime.
@@ -39,13 +43,16 @@ RaymondShaw: ‘Ey, I might be an untamed bronco, but you can wrangle me anytime
 - You don’t look anything like your profile pic…and that’s a good thing.
 	if {Skinwalker} == "Raymond":
 		RaymondShaw: That’s rude.
+		set {AffectionRaymond} += 1
 	else:
 		RaymondShaw: Hey, I appreciate what you’re sayin’.
 	jump InitialChoices
 - Hey mister, do you want to join me for a dance?
 	if {Skinwalker} == "Raymond":
 		RaymondShaw: No.
+		set {AffectionRaymond} += 1
 	else:
+		set {AffectionRaymond} += 1
 		Narrator: Raymond takes you by the hand. You feel his strength and many callouses as he practically lifts you onto your feet and pulls you close.
 		Narrator: You dance in the middle of the coffee shop. 
 		Narrator: You don’t care what anyone else thinks. Raymond steers the dance and before you sit down, he breaks out into the Cadillac Ranch. 
