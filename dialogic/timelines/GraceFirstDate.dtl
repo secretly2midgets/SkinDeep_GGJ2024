@@ -1,0 +1,57 @@
+join GraceGomez 2
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+GraceGomez (GracePlaceholder): Intro Line
+label InitialChoices
+set {QuestionCounter} += 1
+GraceGomez (GracePlaceholder): Default Line
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	GraceGomez (GracePlaceholder): I'm getting shot
+	leave GraceGomez
+	join Narrator 2
+	Narrator (default): You shot her
+	[end_timeline]
+- Second Date? [if {QuestionCounter} >= 5]
+	jump 2ndDate?
+label Questions
+GraceGomez (GracePlaceholder): Default 
+- Question 1
+	if {Skinwalker} == "Kara":
+		GraceGomez: Skinwalker answer
+	else:
+		GraceGomez (GracePlaceholder): Regular answer
+	jump InitialChoices
+- Question 2
+	GraceGomez (GracePlaceholder): Answer 2
+	jump InitialChoices
+-  Question 3
+	if {Skinwalker} == "Kara":
+		Skinwalker Answer 3
+	else:
+		GraceGomez (GracePlaceholder): Regular answer 3
+	jump InitialChoices
+label Flirtations
+GraceGomez (GracePlaceholder): Flirt
+- Flirt A
+	GraceGomez (GracePlaceholder): Flirt response
+	jump InitialChoices
+- Flirt B
+	GraceGomez (GracePlaceholder): Flirt response B
+	jump InitialChoices
+- Flirt C
+	GraceGomez (GracePlaceholder): Flirt responce C
+	jump InitialChoices
+label 2ndDate?
+GraceGomez: Second date dialogue
+- Yes
+	GraceGomez: Second date accepted
+- No
+	GraceGomez: Second date rejected
+Narrator: Exuent
+leave GraceGomez
+jump DateOneInterstitial/
+

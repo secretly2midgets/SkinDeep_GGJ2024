@@ -1,0 +1,56 @@
+join John 2
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+John (JohnPlaceholder): Intro Line
+label InitialChoices
+set {QuestionCounter} += 1
+John (JohnPlaceholder): Default Line
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	John (JohnPlaceholder): I'm getting shot
+	leave John
+	join Narrator 2
+	Narrator (default): You shot her
+	[end_timeline]
+- Second Date? [if {QuestionCounter} >= 5]
+	jump 2ndDate?
+label Questions
+John (JohnPlaceholder): Default 
+- Question 1
+	if {Skinwalker} == "Kara":
+		John: Skinwalker answer
+	else:
+		John (JohnPlaceholder): Regular answer
+	jump InitialChoices
+- Question 2
+	John (JohnPlaceholder): Answer 2
+	jump InitialChoices
+-  Question 3
+	if {Skinwalker} == "Kara":
+		Skinwalker Answer 3
+	else:
+		John (JohnPlaceholder): Regular answer 3
+	jump InitialChoices
+label Flirtations
+John (JohnPlaceholder): Flirt
+- Flirt A
+	John (JohnPlaceholder): Flirt response
+	jump InitialChoices
+- Flirt B
+	John (JohnPlaceholder): Flirt response B
+	jump InitialChoices
+- Flirt C
+	John (JohnPlaceholder): Flirt responce C
+	jump InitialChoices
+label 2ndDate?
+John: Second date dialogue
+- Yes
+	John: Second date accepted
+- No
+	John: Second date rejected
+Narrator: Exuent
+leave John
+jump DateOneInterstitial/

@@ -1,0 +1,56 @@
+join RaymondShaw 2
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+RaymondShaw (RaymondPlaceholder): Intro Line
+label InitialChoices
+set {QuestionCounter} += 1
+RaymondShaw (RaymondPlaceholder): Default Line
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	RaymondShaw (RaymondPlaceholder): I'm getting shot
+	leave RaymondShaw
+	join Narrator 2
+	Narrator (default): You shot her
+	[end_timeline]
+- Second Date? [if {QuestionCounter} >= 5]
+	jump 2ndDate?
+label Questions
+RaymondShaw (RaymondPlaceholder): Default 
+- Question 1
+	if {Skinwalker} == "Kara":
+		RaymondShaw: Skinwalker answer
+	else:
+		RaymondShaw (RaymondPlaceholder): Regular answer
+	jump InitialChoices
+- Question 2
+	RaymondShaw (RaymondPlaceholder): Answer 2
+	jump InitialChoices
+-  Question 3
+	if {Skinwalker} == "Kara":
+		Skinwalker Answer 3
+	else:
+		RaymondShaw (RaymondPlaceholder): Regular answer 3
+	jump InitialChoices
+label Flirtations
+RaymondShaw (RaymondPlaceholder): Flirt
+- Flirt A
+	RaymondShaw (RaymondPlaceholder): Flirt response
+	jump InitialChoices
+- Flirt B
+	RaymondShaw (RaymondPlaceholder): Flirt response B
+	jump InitialChoices
+- Flirt C
+	RaymondShaw (RaymondPlaceholder): Flirt responce C
+	jump InitialChoices
+label 2ndDate?
+RaymondShaw: Second date dialogue
+- Yes
+	RaymondShaw: Second date accepted
+- No
+	RaymondShaw: Second date rejected
+Narrator: Exuent
+leave RaymondShaw
+jump DateOneInterstitial/

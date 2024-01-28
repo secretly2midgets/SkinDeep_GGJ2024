@@ -35,15 +35,19 @@ directories/dch_directory={
 "table": "res://dialogic/characters/table.dch"
 }
 directories/dtl_directory={
+"CaliFirstDate": "res://dialogic/timelines/CaliFirstDate.dtl",
 "DateOneInterstitial": "res://dialogic/timelines/DateOneInterstitial.dtl",
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
 "DateThreeInterstitial": "res://dialogic/timelines/DateThreeInterstitial.dtl",
 "DateThreeIntro": "res://dialogic/timelines/DateThreeIntro.dtl",
 "DateTwoInterstitial": "res://dialogic/timelines/DateTwoInterstitial.dtl",
 "DateTwoIntro": "res://dialogic/timelines/DateTwoIntro.dtl",
+"GraceFirstDate": "res://dialogic/timelines/GraceFirstDate.dtl",
+"JohnFirstDate": "res://dialogic/timelines/JohnFirstDate.dtl",
 "KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
 "KaraSecondDate": "res://dialogic/timelines/KaraSecondDate.dtl",
 "KaraThirdDate": "res://dialogic/timelines/KaraThirdDate.dtl",
+"KelseyFirstDate": "res://dialogic/timelines/KelseyFirstDate.dtl",
 "LewisFirstDate": "res://dialogic/timelines/LewisFirstDate.dtl",
 "LewisSecondDate": "res://dialogic/timelines/LewisSecondDate.dtl",
 "LewisThirdDate": "res://dialogic/timelines/LewisThirdDate.dtl",
@@ -52,7 +56,8 @@ directories/dtl_directory={
 "MasonThirdDate": "res://dialogic/timelines/MasonThirdDate.dtl",
 "NightOneFinalDateTransition": "res://dialogic/timelines/NightOneFinalDateTransition.dtl",
 "NightTwoFinalDateTransition": "res://dialogic/timelines/NightTwoFinalDateTransition.dtl",
-"OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"
+"OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl",
+"RaymondFirstDate": "res://dialogic/timelines/RaymondFirstDate.dtl"
 }
 layout/style_list=["res://dialogic/styles/default.tres"]
 layout/default_style="res://dialogic/styles/default.tres"

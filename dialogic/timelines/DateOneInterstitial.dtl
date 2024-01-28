@@ -1,6 +1,3 @@
-print("HERE")
-print({DateNumber})
-print({SwipeRightOne})
 if {DateNumber} == 0:
 	if {SwipeRightOne} == "Mason":
 		jump MasonFirstDate/
@@ -9,15 +6,15 @@ if {DateNumber} == 0:
 	elif {SwipeRightOne} == "Kara":
 		jump KaraFirstDate/
 	elif {SwipeRightOne} == "Kali":
-		pass
+		jump CaliFirstDate/
 	elif {SwipeRightOne} == "Raymond":
-		pass
+		jump RaymondFirstDate/
 	elif {SwipeRightOne} == "Kelsey":
-		pass
+		jump KelseyFirstDate/
 	elif {SwipeRightOne} == "John":
-		pass
+		jump JohnFirstDate/
 	elif {SwipeRightOne} == "Grace":
-		pass
+		jump GraceFirstDate/
 elif {DateNumber} == 1:
 	if {SwipeRightTwo} == "Mason":
 		jump MasonFirstDate/
@@ -26,18 +23,21 @@ elif {DateNumber} == 1:
 	elif {SwipeRightTwo} == "Kara":
 		jump KaraFirstDate/
 	elif {SwipeRightTwo} == "Kali":
-		pass
+		jump CaliFirstDate/
 	elif {SwipeRightTwo} == "Raymond":
-		pass
+		jump RaymondFirstDate/
 	elif {SwipeRightTwo} == "Kelsey":
-		pass
+		jump KelseyFirstDate/
 	elif {SwipeRightTwo} == "John":
-		pass
+		jump JohnFirstDate/
 	elif {SwipeRightTwo} == "Grace":
-		pass
+		jump GraceFirstDate/
 elif {DateNumber} == 2:
-	jump NightOneFinalDateTransition/
-	label NightOneFinalDateDecider/
+	join Narrator 2
+	Narrator: After drinking so much coffee, you feel your guts churning like a storm. You head to the bathroom.
+	Narrator: Following a minor caffeine explosion, you return to your table and find your next date waiting.
+	Narrator: You hope they can’t smell you right now.
+	leave Narrator
 	if {SwipeRightThree} == "Mason":
 		jump MasonFirstDate/
 	elif {SwipeRightThree} == "Lewis":
@@ -45,14 +45,14 @@ elif {DateNumber} == 2:
 	elif {SwipeRightThree} == "Kara":
 		jump KaraFirstDate/
 	elif {SwipeRightThree} == "Kali":
-		pass
+		jump CaliFirstDate/
 	elif {SwipeRightThree} == "Raymond":
-		pass
+		jump RaymondFirstDate/
 	elif {SwipeRightThree} == "Kelsey":
-		pass
+		jump KelseyFirstDate/
 	elif {SwipeRightThree} == "John":
-		pass
+		jump JohnFirstDate/
 	elif {SwipeRightThree} == "Grace":
-		pass
+		jump GraceFirstDate/
 else:
 	jump DateTwoIntro/

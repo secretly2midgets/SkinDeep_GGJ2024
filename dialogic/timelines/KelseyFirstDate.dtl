@@ -1,0 +1,57 @@
+join KelseyWilliams 2
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+KelseyWilliams (KelseyPlaceholder): Intro Line
+label InitialChoices
+set {QuestionCounter} += 1
+KelseyWilliams (KelseyPlaceholder): Default Line
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	KelseyWilliams (KelseyPlaceholder): I'm getting shot
+	leave KelseyWilliams
+	join Narrator 2
+	Narrator (default): You shot her
+	[end_timeline]
+- Second Date? [if {QuestionCounter} >= 5]
+	jump 2ndDate?
+label Questions
+KelseyWilliams (KelseyPlaceholder): Default 
+- Question 1
+	if {Skinwalker} == "Kara":
+		KelseyWilliams: Skinwalker answer
+	else:
+		KelseyWilliams (KelseyPlaceholder): Regular answer
+	jump InitialChoices
+- Question 2
+	KelseyWilliams (KelseyPlaceholder): Answer 2
+	jump InitialChoices
+-  Question 3
+	if {Skinwalker} == "Kara":
+		Skinwalker Answer 3
+	else:
+		KelseyWilliams (KelseyPlaceholder): Regular answer 3
+	jump InitialChoices
+label Flirtations
+KelseyWilliams (KelseyPlaceholder): Flirt
+- Flirt A
+	KelseyWilliams (KelseyPlaceholder): Flirt response
+	jump InitialChoices
+- Flirt B
+	KelseyWilliams (KelseyPlaceholder): Flirt response B
+	jump InitialChoices
+- Flirt C
+	KelseyWilliams (KelseyPlaceholder): Flirt responce C
+	jump InitialChoices
+label 2ndDate?
+KelseyWilliams: Second date dialogue
+- Yes
+	KelseyWilliams: Second date accepted
+- No
+	KelseyWilliams: Second date rejected
+Narrator: Exuent
+leave KelseyWilliams
+jump DateOneInterstitial/
+

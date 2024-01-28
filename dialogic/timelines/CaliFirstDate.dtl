@@ -1,0 +1,56 @@
+join CaliMcLaughlin 2
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+CaliMcLaughlin (CaliPlaceholder): Intro Line
+label InitialChoices
+set {QuestionCounter} += 1
+CaliMcLaughlin (CaliPlaceholder): Default Line
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	CaliMcLaughlin (CaliPlaceholder): I'm getting shot
+	leave CaliMcLaughlin
+	join Narrator 2
+	Narrator (default): You shot her
+	[end_timeline]
+- Second Date? [if {QuestionCounter} >= 5]
+	jump 2ndDate?
+label Questions
+CaliMcLaughlin (CaliPlaceholder): Default 
+- Question 1
+	if {Skinwalker} == "Kara":
+		CaliMcLaughlin: Skinwalker answer
+	else:
+		CaliMcLaughlin (CaliPlaceholder): Regular answer
+	jump InitialChoices
+- Question 2
+	CaliMcLaughlin (CaliPlaceholder): Answer 2
+	jump InitialChoices
+-  Question 3
+	if {Skinwalker} == "Kara":
+		Skinwalker Answer 3
+	else:
+		CaliMcLaughlin (CaliPlaceholder): Regular answer 3
+	jump InitialChoices
+label Flirtations
+CaliMcLaughlin (CaliPlaceholder): Flirt
+- Flirt A
+	CaliMcLaughlin (CaliPlaceholder): Flirt response
+	jump InitialChoices
+- Flirt B
+	CaliMcLaughlin (CaliPlaceholder): Flirt response B
+	jump InitialChoices
+- Flirt C
+	CaliMcLaughlin (CaliPlaceholder): Flirt responce C
+	jump InitialChoices
+label 2ndDate?
+CaliMcLaughlin: Second date dialogue
+- Yes
+	CaliMcLaughlin: Second date accepted
+- No
+	CaliMcLaughlin: Second date rejected
+Narrator: Exuent
+leave CaliMcLaughlin
+jump DateOneInterstitial/

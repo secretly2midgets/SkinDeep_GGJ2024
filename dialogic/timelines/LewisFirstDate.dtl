@@ -1,16 +1,16 @@
 join LewisBolson 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-LewisBolson (Default_Test): Uh.. Hi. My name's Lewis. It's nice to meet you. I don't usually come to places like this.
+LewisBolson (LewisHill): Uh.. Hi. My name's Lewis. It's nice to meet you. I don't usually come to places like this.
 label InitialChoices
 set {QuestionCounter} += 1
-LewisBolson (Default_Test): I've never been on a date before... this is pretty fun.
+LewisBolson (LewisHill): I've never been on a date before... this is pretty fun.
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	LewisBolson (Default_Test): Holy SHIT, where'd you get-
+	LewisBolson (LewisHill): Holy SHIT, where'd you get-
 	leave LewisBolson
 	join Narrator 2
 	Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
@@ -18,34 +18,34 @@ LewisBolson (Default_Test): I've never been on a date before... this is pretty f
 - Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-LewisBolson (Default_Test): Uh.. sure. What do you wanna know?
+LewisBolson (LewisHill): Uh.. sure. What do you wanna know?
 - How do you feel about family?
 	if {Skinwalker} == "Lewis":
 		LewisBolson: My family is dead.
 	else:
-		LewisBolson (Default_Test): I mean, my family’s okay?
-		Narrator (Default_Test): He pauses, then his eyes widen in realization.
-		LewisBolson (Default_Test): Oh, you mean like... you and me... I’d like to have one.
+		LewisBolson (LewisHill): I mean, my family’s okay?
+		Narrator (LewisHill): He pauses, then his eyes widen in realization.
+		LewisBolson (LewisHill): Oh, you mean like... you and me... I’d like to have one.
 	jump InitialChoices
 - Where do you work?
-	LewisBolson (Default_Test): I work at LunaTech. It’s pretty fun, but I wish people knew how to unplug their computers instead of asking me.
+	LewisBolson (LewisHill): I work at LunaTech. It’s pretty fun, but I wish people knew how to unplug their computers instead of asking me.
 	jump InitialChoices
 - Your life is predetermined, nothing is in your control. This conversation is scheduled to happen now. How do you break the cycle?
-	Narrator (Default_Test): Lewis pauses, and stares up at the ceiling.
-	LewisBolson (Default_Test): I would raid CERN, and stick my head in a Hadron collider.
+	Narrator (LewisHill): Lewis pauses, and stares up at the ceiling.
+	LewisBolson (LewisHill): I would raid CERN, and stick my head in a Hadron collider.
 	jump InitialChoices
 label Flirtations
-LewisBolson (Default_Test): Uhm... you have beautiful eyes, you know.
+LewisBolson (LewisHill): Uhm... you have beautiful eyes, you know.
 - *Stare at him*
-	Narrator (Default_Test): You gaze deeply into Lewis’ eyes. He stares back.
-	Narrator (Default_Test): In the distance, you hear a witch’s cackle.
-	Narrator (Default_Test): The curtains writhe.
+	Narrator (LewisHill): You gaze deeply into Lewis’ eyes. He stares back.
+	Narrator (LewisHill): In the distance, you hear a witch’s cackle.
+	Narrator (LewisHill): The curtains writhe.
 	jump InitialChoices
 - Are you my program crashing? Because you're making me scream.
 	if {Skinwalker} == "Lewis":
 		LewisBolson: What?
 	else:
-		LewisBolson (Default_Test): Invalid set index 'end_node' (on base\: 'Nil') with value of type 'HBoxContainer (BranchEnd.gd)'
+		LewisBolson (LewisHill): Invalid set index 'end_node' (on base\: 'Nil') with value of type 'HBoxContainer (BranchEnd.gd)'
 	jump InitialChoices
 - *Stick your entire fist in your mouth*
 	if {Skinwalker} == "Lewis":
@@ -55,7 +55,7 @@ LewisBolson (Default_Test): Uhm... you have beautiful eyes, you know.
 		LewisBolson: And in.
 		LewisBolson: Good.
 	else:
-		LewisBolson (Default_Test): Holy. Fucking. Shit. That's incredible. What else can you fit in there? Well, I mean, not like that. Unless, yenno... you mean it that way.
+		LewisBolson (LewisHill): Holy. Fucking. Shit. That's incredible. What else can you fit in there? Well, I mean, not like that. Unless, yenno... you mean it that way.
 	jump InitialChoices
 label 2ndDate?
 LewisBolson: So.. most people leave by this point... would you wanna see me again?

@@ -13,7 +13,6 @@ func _process(delta):
 #sets the demon from the RNGSeed script
 func set_demon(value: Dictionary) -> void:
 	demon = value
-	#print(demon)
 
 func get_demon():
 	return demon
