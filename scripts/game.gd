@@ -19,14 +19,14 @@ func get_demon():
 	
 func set_difficulty(value: Dictionary) -> void:
 	difficulty = value
-	print(difficulty)
+	#print(difficulty)
 	
 func get_difficulty():
 	return difficulty
 
 func set_dates(value: Dictionary):
 	profiles = value
-	print(dates)
+	#print(dates)
 func get_dates():
 	return dates
 func game_over() -> void:

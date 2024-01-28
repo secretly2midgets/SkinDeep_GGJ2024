@@ -1,0 +1,74 @@
+join KelseyWilliams 2
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+if {DateOrder} == "Coffee":
+	set {AffectionKelsey} += 1
+KelseyWilliams: Hiya! Name’s Kelsey. Looking forward to a great time with you!
+label InitialChoices
+set {QuestionCounter} += 1
+KelseyWilliams: I love coffee. Have you ever added Splenda and half-and-half?
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	KelseyWilliams: JESUS CHRI-
+	leave KelseyWilliams
+	join Narrator 2
+	Narrator (default): Kelsey’s last ride was tonight because of you. Her body lies still. You killed her. The police arrive shortly afterwards to arrest and take you away.
+	[end_timeline]
+- Second Date? [if {QuestionCounter} >= 5]
+	jump 2ndDate?
+label Questions
+KelseyWilliams: Ask away.
+- What would it take for you to get Kelsey #1 tattooed on your forehead? 
+	KelseyWilliams: A good meal for one, maybe a beach house.
+	jump InitialChoices
+- If I locked you in a basement, what would you like for breakfast? 
+	KelseyWilliams: A cake and a file.
+	jump InitialChoices
+- God gives us his toughest battles yet I fucking hate this one. How could I stick it to God?
+	if {Skinwalker} == "Kelsey":
+		KelseyWilliams: Every day of my existance is an affront to god.
+		set {AffectionKelsey} += 1
+	else:
+		KelseyWilliams: Well, I for one would join a cult. I think worshipping some other god would piss him off.
+	jump InitialChoices
+label Flirtations
+KelseyWilliams (KelseyPlaceholder): Not since I went backstage with the Jonas Brothers have I felt this hot.
+- Any crazy groupie stories?
+	if {Skinwalker} == "Kelsey":
+		KelseyWilliams: I don’t remember any of that.
+		set {AffectionKelsey} += 1
+	else:
+		KelseyWilliams: Do you wanna know about the blow? That’s maybe for next time.
+		set {AffectionKelsey} += 1
+	jump InitialChoices
+- If you were a Transformer, you’d be Optimus Fine.
+	KelseyWilliams: And you’d be that Negatrong guy! They’re best buddies.
+	set {AffectionKelsey} += 1
+	jump InitialChoices
+- Would you oil yourself for me?
+	if {Skinwalker} == "Kelsey":
+		KelseyWilliams: What if I catch fire? No thanks!
+	else:
+		KelseyWilliams: Oh, sweetie, of course! Your hands or mine? 
+
+	jump InitialChoices
+label 2ndDate?
+if {AffectionKelsey} >= {AffectionThreshold.First}:
+	KelseyWilliams: Sorry, but I can’t stay much longer. Do you want to see me again?
+	- Yes
+		KelseyWilliams: Splendid. Let’s meet again in a week.
+	- No
+		KelseyWilliams: Oh well. Goodbye.
+		set {AffectionKelsey} = -10
+else:
+	KelseyWilliams: Sorry, sugar.  It's not you, it's me.  I've been with too many Jonas Brothers, and you just don't quite stack up. 
+	KelseyWilliams: Not even to Kevin.
+	set {AffectionKelsey} = -10
+Narrator: Kelsey stands up from the table before awkwardly waiting in line to leave, less than 10 feet away, but not speaking to you for a full five minutes. 
+Narrator: She does pay for the drinks, though.
+Narrator: And she buys a bag of coffee beans.
+leave KelseyWilliams
+jump DateOneInterstitial/

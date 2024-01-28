@@ -1,14 +1,8 @@
 [background arg="res://resources/sprites/Coffee_Shop_Placeholder.png" fade="0.0"]
+join table (CoffeeTable) 2 [animation="Instant In Or Out" length="0" z_index="-10"]
 join Narrator 2
 Narrator: You sit down at the coffee shop. It is warm, inviting, and busy.
 Narrator: For some reason, the door is smiling. You nod in its direction, and turn away.
 Narrator: You spot your date coming through the door. They flash a smile, get a drink, and then sit down across from you.
 leave Narrator
-if {SwipeRightOne} == "Mason":
-	jump MasonFirstDate/
-elif {SwipeRightOne} == "Lewis":
-	jump LewisFirstDate/
-elif {SwipeRightOne} == "Kara":
-	jump KaraFirstDate/
-elif {SwipeRightOne} == "Kali":
-elif {} == "Raymond":
+jump DateOneInterstitial/ 

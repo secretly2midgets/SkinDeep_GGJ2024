@@ -1,68 +1,78 @@
-if {Mason2ndDate} == "true":
-	join MasonFoster 3
-	set {QuestionCounter} = 0
-	set {DateNumber} += 1
-	MasonFoster (Default_Test): Hey, it’s good to see you again!
-	label InitialChoices
-	set {QuestionCounter} += 1
-	MasonFoster (Default_Test): Thanks for doing this tonight. I needed a distraction.
-	- Ask questions
-		jump FirstDate/Questions
-	- Flirt
-		jump Flirtations
-	- Use shotgun
-		MasonFoster (Default_Test): Whoa, hey that's not-
-		leave MasonFoster
-		join Narrator 2
-		Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
-		[end_timeline]
-	- Third date? [if {QuestionCounter} >= 5]
-		jump SecondDate?
-	label Questions
-	MasonFoster (Default_Test): Ask me anything.
-	- Do you work out?
-		if {Skinwalker} == "Mason":
-			MasonFoster: Yes. I totally pump iron 24/7.
-		else:
-			MasonFoster (Default_Test): Nope, I’m all natural baby. Pure strength underneath all of this.
-		jump InitialChoices
-	- What’s campus life like?
-		MasonFoster (Default_Test): It’s pretty nice! Kappa Kappa Omega just had our pledges finish some butt-chugging the other night. I hope they keep the hazing tame this year...
-		jump InitialChoices
-	- Which myth do you wish was real?
-		MasonFoster (Default_Test): Bacchus. I really just need a short alcoholic in my life. Really hoping that could be you.
-		jump InitialChoices
-	label Flirtations
-	MasonFoster (Default_Test): Do you like raisins? How about a date?
-	- I need your advice. How can I get you hard fast?
-		MasonFoster (Default_Test): How do you know I’m not already?
-		MasonFoster (Default_Test): In all seriousness, I’m a huge fan of being spooned.
-		jump InitialChoices
-	- What’s the riskiest thing you’ve done?
-		if {Skinwalker} == "Mason":
-			MasonFoster: One time, I ate a raw liver in front of a class of schoolchildren. Their teacher didn’t mind, since it was a deer liver.
-		else:
-			MasonFoster (Default_Test): ...
-			MasonFoster (Default_Test): I once stuck a bottle up my ass and went to class. I was worried the thing was going to break during my second lecture. Eventually, I went home and let out a huge fart.
-			MasonFoster (Default_Test): Please don’t tell anyone.
-		Narrator (Default_Test): You get the feeling Fossey’s hiding something.
-		jump InitialChoices
-	- There’s no law against the Pokémon. Which one are you getting devious with?
-		if {Skinwalker} == "Mason":
-			MasonFoster: Mightyena.
-		else:
-			MasonFoster (Default_Test): Oh, definitely Gallade. He could slice me up any time.
-		jump InitialChoices
+join MasonFoster 3
+set {QuestionCounter} = 0
+set {DateNumber} += 1
+if {DateOrder} == "Steak":
+	set {AffectionMason} += 1
+MasonFoster: Hey, it’s good to see you again!
+label InitialChoices
+set {QuestionCounter} += 1
+MasonFoster: Thanks for doing this tonight. I needed a distraction.
+- Ask questions
+	jump FirstDate/Questions
+- Flirt
+	jump Flirtations
+- Use shotgun
+	MasonFoster: Whoa, hey that's not-
+	leave MasonFoster
+	join Narrator 2
+	Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
+	[end_timeline]
+- Third date? [if {QuestionCounter} >= 5]
+	jump SecondDate?
+label Questions
+MasonFoster: Ask me anything.
+- Do you work out?
+	if {Skinwalker} == "Mason":
+		MasonFoster: Yes. I totally pump iron 24/7.
+		set {AffectionMason} += 1
+	else:
+		MasonFoster: Nope, I’m all natural baby. Pure strength underneath all of this.
+		set {AffectionMason} += 1
 	jump InitialChoices
-	label SecondDate?
+- What’s campus life like?
+	MasonFoster: It’s pretty nice! Kappa Kappa Omega just had our pledges finish some butt-chugging the other night. I hope they keep the hazing tame this year...
+	jump InitialChoices
+- Which myth do you wish was real?
+	MasonFoster: Bacchus. I really just need a short alcoholic in my life. Really hoping that could be you.
+	set {AffectionMason} += 1
+	jump InitialChoices
+label Flirtations
+MasonFoster: Do you like raisins? How about a date?
+- I need your advice. How can I get you hard fast?
+	MasonFoster: How do you know I’m not already?
+	MasonFoster: In all seriousness, I’m a huge fan of being spooned.
+	set {AffectionMason} += 1
+	jump InitialChoices
+- What’s the riskiest thing you’ve done?
+	if {Skinwalker} == "Mason":
+		MasonFoster: One time, I ate a raw liver in front of a class of schoolchildren. Their teacher didn’t mind, since it was a deer liver.
+		set {AffectionMason} += 1
+	else:
+		MasonFoster: ...
+		MasonFoster: I once stuck a bottle up my ass and went to class. I was worried the thing was going to break during my second lecture. Eventually, I went home and let out a huge fart.
+		MasonFoster: Please don’t tell anyone.
+	Narrator: You get the feeling Fossey’s hiding something.
+	jump InitialChoices
+- There’s no law against the Pokémon. Which one are you getting devious with?
+	if {Skinwalker} == "Mason":
+		MasonFoster: Mightyena.
+		set {AffectionMason} += 1
+	else:
+		MasonFoster (MasonFoster): Oh, definitely Gallade. He could slice me up any time.
+		set {AffectionMason} += 1
+	jump InitialChoices
+jump InitialChoices
+label SecondDate?
+if {AffectionMason} >= {AffectionThreshold.Second}:
 	MasonFoster: I’m really enjoying my time with you, can we keep seeing each other?
 	- Yes
 		MasonFoster: Hey sweet! Let’s meet at your place next time!
-		set {Mason2ndDate} = "true"
 	- No
 		MasonFoster: ... but I thought we were getting somewhere...
-		set {Mason2ndDate} = "false"
-	Narrator: Mason goes in for a big hug. The hug is long and awkward. As he walks out the door, he gives you finger guns and winks.
-	leave MasonFoster
-	Narrator: After waiting for some time, your next date walks in and speaks to one of the servers. They gesture toward your table, which has been cleared. Your date walks over, smiles, and sits down.
-jump LewisSecondDate/
+		set {AffectionMason} = -10
+else:
+	MasonFoster: I refuse
+	set {AffectionMason} = -10
+Narrator: Mason goes in for a big hug. The hug is long and awkward. As he walks out the door, he gives you finger guns and winks.
+leave MasonFoster
+jump DateTwoInterstitial/

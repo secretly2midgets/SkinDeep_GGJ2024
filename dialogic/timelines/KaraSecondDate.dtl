@@ -1,16 +1,18 @@
 join KaraRogers 2
 set {QuestionCounter} = 0
 set {DateNumber} += 1
-KaraRogers (Default_Test): Oh, Em, Gee. You look SO fab!
+if {DateOrder} == "Tofu":
+	set {AffectionKara} += 1
+KaraRogers: Oh, Em, Gee. You look SO fab!
 label InitialChoices
 set {QuestionCounter} += 1
-KaraRogers (Default_Test): Don’t worry about dinner tonight, it’s on me! My dad gives me all my money... it’s really helpful.
+KaraRogers: Don’t worry about dinner tonight, it’s on me! My dad gives me all my money... it’s really helpful.
 - Ask questions
 	jump FirstDate/Questions
 - Flirt
 	jump Flirtations
 - Use shotgun
-	KaraRogers (Default_Test): Holy shit, GET AWAY!
+	KaraRogers: Holy shit, GET AWAY!
 	leave LewisBolson
 	join Narrator 2
 	Narrator (default): You look down at your handiwork. Lying at your feet is a perfect, pretty corpse, her ribcage blown apart by the slug fired from your shotgun. The world goes numb as the police put you in cuffs.
@@ -18,60 +20,69 @@ KaraRogers (Default_Test): Don’t worry about dinner tonight, it’s on me! My 
 - Third Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
-KaraRogers (Default_Test): Hmmmm?
+KaraRogers: Hmmmm?
 - God himself descended from the heavens to give Man Pad Thai. Why do you spit in God’s face by not eating it daily?
-	KaraRogers (Default_Test): Pad Thai is, like, really spicy. I can only handle so much before my head is on fire.
+	KaraRogers: Pad Thai is, like, really spicy. I can only handle so much before my head is on fire.
 	jump InitialChoices
 - Which aisle of Dollarama do you gravitate towards?
 	if {Skinwalker} == "Kara":
 		KaraRogers: Whichever aisle has vials. I want your blood
+		set {AffectionKara} += 1
 	else:
-		KaraRogers (Default_Test): Whichever aisle has really cool wine glasses.
+		KaraRogers: Whichever aisle has really cool wine glasses.
 	jump InitialChoices
 - If you could travel back in time, how would you convince dinosaurs you’re from the future?
-	KaraRogers (Default_Test): I’d show them fossils and say, “Hey, look, it’s you!”
-	KaraRogers (Default_Test): Fuck dinosaurs.
+	KaraRogers: I’d show them fossils and say, “Hey, look, it’s you!”
+	KaraRogers: Fuck dinosaurs.
+	set {AffectionKara} += 1
 	jump InitialChoices
 label Flirtations
-KaraRogers (Default_Test): I won’t shoot you down.
+KaraRogers: I won’t shoot you down.
 - What would you do if it was Freaky Friday and we swapped?
 	if {Skinwalker} == "Kara":
 		KaraRogers: I’d kill myself.
-	KaraRogers (Default_Test): I’d play with myself.
+		set {AffectionKara} += 1
+	else:
+		KaraRogers: I’d play with myself.
+		set {AffectionKara} += 1
 	jump InitialChoices
 - Can you please say the word Please fifteen times? I’ll cum immediately and it’ll make this night SO much better.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
 	if {Skinwalker} == "Kara":
-		Narrator (Default_Test): Please Die.
+		Narrator (KaraRogers): Please Die.
+		set {AffectionKara} += 1
 	else:
-		Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): Please.
-	Narrator (Default_Test): That good enough for you?
+		Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): Please.
+	Narrator (KaraRogers): That good enough for you?
 	jump InitialChoices
 - If we opened a restaurant, what would be on the menu?
-	KaraRogers (Default_Test): Me and You! Like we could add our blood to food, or like our spit, oh god, it’d be so great!
+	KaraRogers: Me and You! Like we could add our blood to food, or like our spit, oh god, it’d be so great!
+	set {AffectionKara} += 1
 	jump InitialChoices
 label 2ndDate?
-KaraRogers: We are definitely doing another date, and it will be at your house.
-- Yes
-	KaraRogers: Hey, you keep it easy like this next time and you’re getting laid.
-- No
-	KaraRogers: Don’t worry about me, plenty of other fish out there. See ya!
+if {AffectionCali} >= {AffectionThreshold.Second}:
+	KaraRogers: We are definitely doing another date, and it will be at your house.
+	- Yes
+		KaraRogers: Hey, you keep it easy like this next time and you’re getting laid.
+	- No
+		KaraRogers: Don’t worry about me, plenty of other fish out there. See ya!
+		set {AffectionKara} = -10
+else:
+	KaraRogers: I refuse
+	set {AffectionKara} = -10
 Narrator: Kara pays for the meal and then sprints out. She is very clearly in a hurry. Her face has no expression as she stares straight forward.
 leave KaraRogers
-if {DateNumber} == 2:
-	jump NightTwoFinalDateTransition/
-else:
-	jump DateThreeIntro/
+jump DateTwoInterstitial/
