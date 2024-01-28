@@ -15,7 +15,7 @@ LewisBolson (Default_Test): This place is nice. I could eat here for the rest of
 	join Narrator 2
 	Narrator (default): It's over in a second. Lewis' head is instantly turned to pulp all over the tables behind him. You are arrested and found guilty in a trial lasting a record 3 minutes to reach a verdict.
 	[end_timeline]
-- Second Date? [if {QuestionCounter} > = 5]
+- Third Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
 LewisBolson (Default_Test): What’s your query?
@@ -54,4 +54,4 @@ leave LewisBolson
 if {DateNumber} == 2:
 	jump NightTwoFinalDateTransition/
 else:
-	jump KaraFirstDate/
+	jump KaraSecondDate/

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+<<<<<<<HEADDialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 global="*res://scripts/game.gd"
 
 [dialogic]
@@ -25,17 +26,22 @@ global="*res://scripts/game.gd"
 directories/dch_directory={
 "KaraRogers": "res://dialogic/characters/KaraRogers.dch",
 "LewisBolson": "res://dialogic/characters/LewisBolson.dch",
-"Narrator": "res://dialogic/characters/Narrator.dch",
-"characters/MasonFoster": "res://dialogic/characters/MasonFoster.dch"
+"MasonFoster": "res://dialogic/characters/MasonFoster.dch",
+"Narrator": "res://dialogic/characters/Narrator.dch"
 }
 directories/dtl_directory={
 "DateOneIntro": "res://dialogic/timelines/DateOneIntro.dtl",
+"DateThreeIntro": "res://dialogic/timelines/DateThreeIntro.dtl",
 "DateTwoIntro": "res://dialogic/timelines/DateTwoIntro.dtl",
 "KaraFirstDate": "res://dialogic/timelines/KaraFirstDate.dtl",
+"KaraSecondDate": "res://dialogic/timelines/KaraSecondDate.dtl",
+"KaraThirdDate": "res://dialogic/timelines/KaraThirdDate.dtl",
 "LewisFirstDate": "res://dialogic/timelines/LewisFirstDate.dtl",
 "LewisSecondDate": "res://dialogic/timelines/LewisSecondDate.dtl",
+"LewisThirdDate": "res://dialogic/timelines/LewisThirdDate.dtl",
 "MasonFirstDate": "res://dialogic/timelines/MasonFirstDate.dtl",
 "MasonSecondDate": "res://dialogic/timelines/MasonSecondDate.dtl",
+"MasonThirdDate": "res://dialogic/timelines/MasonThirdDate.dtl",
 "NightOneFinalDateTransition": "res://dialogic/timelines/NightOneFinalDateTransition.dtl",
 "NightTwoFinalDateTransition": "res://dialogic/timelines/NightTwoFinalDateTransition.dtl",
 "OpeningNarration": "res://dialogic/timelines/OpeningNarration.dtl"

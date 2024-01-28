@@ -15,7 +15,7 @@ KaraRogers (Default_Test): Did you know that 75% of people polled say that Spide
 	join Narrator 2
 	Narrator (default): You look down at your handiwork. Lying at your feet is a perfect, pretty corpse, her ribcage blown apart by the slug fired from your shotgun. The world goes numb as the police put you in cuffs.
 	[end_timeline]
-- Second Date? [if {QuestionCounter} > = 5]
+- Second Date? [if {QuestionCounter} >= 5]
 	jump 2ndDate?
 label Questions
 KaraRogers (Default_Test): Shoot. What do you wanna know?
@@ -24,12 +24,12 @@ KaraRogers (Default_Test): Shoot. What do you wanna know?
 	jump InitialChoices
 - How are you still single?
 	if {Skinwalker} == "Kara":
-		<Empty Text Event>
+		KaraRogers: <Empty Text Event>
 	else:
 		KaraRogers (Default_Test): I have no idea hahahahaha, guess I just haven’t found the one! Have you done this poll about what beetle you are?
 	jump InitialChoices
 - Tell me something secret about yourself.
-	KaraRogers (Default_Test): Well, I am a Saggitarius, and I’ve got this really good Mac and Cheese recipe. I can’t tell you the secret ingredient though…
+	KaraRogers (Default_Test): Well, I am a Sagittarius, and I’ve got this really good Mac and Cheese recipe. I can’t tell you the secret ingredient though…
 	jump InitialChoices
 label Flirtations
 KaraRogers (Default_Test): My favourite movie is Misery. Wanna roleplay?
@@ -53,7 +53,8 @@ KaraRogers: I don’t bang until the third date. I’ve never made it that far, 
 - No
 	KaraRogers: Well fine. I’ll just finger myself then.
 Narrator: Kara gets up and smiles at you. With a flourish, she turns on her heels and leaves the cafe.
+leave KaraRogers
 if {DateNumber} == 2:
 	jump NightOneFinalDateTransition/
 else:
-	jump MasonFirstDate/
+	jump DateTwoIntro/
