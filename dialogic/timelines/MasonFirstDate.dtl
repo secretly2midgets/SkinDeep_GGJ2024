@@ -15,7 +15,7 @@ MasonFoster: I love this cafe. Their Chai Lattes are the best in town, you'll se
 	join Narrator 2
 	Narrator (default): You pull the trigger. You are promptly arrested for the murder of Mason Foster by blowing his head off with a shotgun.
 	[end_timeline]
-- Second date? [if {QuestionCounter} >= 0]
+- Second date? [if {QuestionCounter} >= 5]
 	jump SecondDate?
 label Questions
 MasonFoster: Ask away.
